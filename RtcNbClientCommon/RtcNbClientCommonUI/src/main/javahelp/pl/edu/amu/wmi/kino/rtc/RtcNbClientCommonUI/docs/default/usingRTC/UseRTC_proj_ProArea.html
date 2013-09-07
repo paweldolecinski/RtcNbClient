@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="helpIndexHtml" lang="en" xml:lang="en" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+
+  <title>Project area</title>
+  <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css" rel=
+  "stylesheet" type="text/css" />
+  <link href=
+  "nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+  rel="stylesheet" type="text/css" />
+</head>
+
+<body id="c_project_area" onload="javascript:resizeAtPageLoad();"
+onresize="javascript:resizeAllImages();">
+  <a name="c_project_area" id="c_project_area"></a>
+
+  <h1 class="topictitle1">Project area</h1><a name="conbody" id=
+  "conbody"></a>The project area is the system's representation of
+  a software project. The project area defines the project
+  deliverables, team structure, process, and schedule.
+
+  <p class="p">A project area is stored as a top-level or root item
+  in a repository. A project area references project artifacts and
+  stores the relationships between these artifacts. Access to a
+  project area and its artifacts is controlled by permissions. A
+  project area cannot be deleted from the repository; however, it
+  can be archived, which places it in an inactive state.</p>
+
+  <p class="p"></p>
+
+  <h2 class="sectiontitle">Project deliverables as lines of
+  development</h2>
+
+  <div class="p">
+    A project can be quite simple or complex in terms of its
+    committed product deliverables, process, and schedules. An
+    established project can have multiple active lines of
+    development, known as <em class="i">timelines</em>, such as:
+
+    <ul class="ul">
+      <li class="li">Maintenance for one or more shipped
+      releases</li>
+
+      <li class="li">Development of a new release</li>
+
+      <li class="li">Exploratory development for a future
+      release</li>
+    </ul>
+  </div>
+
+  <p class="p">All of these timelines can work in parallel, each in
+  a different state. Each timeline can have one or more iterations
+  in which some set of deliverables and functional improvements are
+  committed.</p>
+
+  <div class="note">
+    <span class="notetitle">Note:</span> You can also create
+    separate project areas to manage different activities related
+    to the same artifacts, and one project area can reference
+    artifacts from another. For example, if your team has developed
+    a code base in a development project area, you can create a
+    separate project area to maintain the same code. This is done
+    in the stream editor in the maintenance project by replacing a
+    component with a component from a snapshot in the development
+    project. This enables the maintenance team to work on the same
+    code artifacts but with completely different process
+    iterations, roles, rules, and work items.
+  </div>
+
+  <h2 class="sectiontitle">Project teams as team areas</h2>
+
+  <p class="p">The structure of the project teams is defined by one
+  or more team areas. Complex projects can have a hierarchy of team
+  areas. Typically, one or more teams are assigned to each line of
+  development. Users might have multiple assignments that require
+  them to work on more than one team. Some members, such as the
+  project lead, might not belong to a team area, but are defined as
+  members at the project level in the project area overview.</p>
+
+  <h2 class="sectiontitle">Projects without team areas</h2>
+
+  <p class="p">You can create a project area that does not include
+  any team areas. Typically, this type of project area might be
+  appropriate for a small team of developers who want to get up and
+  running quickly and do not need to organize their work into
+  multiple teams. The Simple Team process template defines a
+  project area without team areas. You can also create a process
+  template that does not specify team areas.</p>
+
+  <h2 class="sectiontitle">Project process</h2>
+
+  <p class="p">Process is the collection of practices, rules, and
+  guidelines used to organize and control the flow of work. The
+  project process is defined in a project area and can be further
+  customized in a team area, timeline, and iteration. In
+  Jazz&trade;, you use process to define user roles and their
+  permissions for performing operations within the tool, such as
+  changing the state of a work item. Because each component in Jazz
+  is process aware, you can add operation behavior rules in the
+  form of preconditions and follow-up actions.</p>
+
+  <p class="p">Process is typically based on a template and then
+  modified to meet the overall project and team area needs. The
+  basic process structure is defined as a set of timelines and
+  iterations in the project area overview. Process details for
+  roles, permissions, reports, work items types and workflows,
+  operation behavior preconditions and follow-up actions can be
+  customized in the process configuration.</p>
+
+  <h2 class="sectiontitle">Project schedule as iterations</h2>
+
+  <p class="p">The project schedule is specified by process
+  iterations, which represent intervals in the life of the project.
+  Each set of iterations is specific to one line of development.
+  Teams can configure iterations in a hierarchy; for example a
+  timeline could have multiple milestone iterations. Each of those
+  milestones could contain one or more phase iterations. The
+  iteration hierarchy and names are user-defined.</p>
+
+  <p class="p">You can define the timelines and an iteration
+  hierarchy in the project area overview. The overview contains
+  controls for adding timelines, start and end dates for iterations
+  and a designation for the current iteration. After iterations are
+  defined, work items can be assigned to an iteration and tracked
+  in an iteration plan.</p>
+
+  <div class="example">
+  <h2 class="title">Example project area</h2>
+
+  <p class="p">The following graphic provides an example of a
+  project area that has team areas and process configurations that
+  are specific to timelines and their iterations. The project area
+  can include some users, such as administrators, project managers,
+  and business analysts, at the project level; others users are
+  added to team areas. The process specification includes
+  project-wide roles, permissions, and process behaviors; these are
+  inherited by all iterations within the project area. Other roles,
+  permissions, and behaviors are defined at the timeline or
+  iteration level; these override the project-level process
+  configuration. Team members are assigned roles that have specific
+  permissions, as defined in the process specification.</p>
+
+  <div class="fignone">
+    <span class="figcap">Figure 1. An example project area that
+    defines team areas, timelines, iterations, and process
+    configurations</span>
+  </div>
+
+  <div class="image"></div><img alt=
+  "The graphic shows a repository with one project area, which includes team areas, timelines and iterations, and process configurations."
+  class="image" src="../images/project_area.gif" /></div>
+
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+  <span class="runningfooter"><object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+    <param name="text" value="Feedback " />
+  </object></span>
+
+  <p><span class="runningheader" style="color: #666;">Did this
+  help? You can provide feedback at Jazz.net (registration
+  required): <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://jazz.net/forums/viewforum.php" />
+    <param name="text" value="Comment in the forums " />
+  </object> or <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value="https://jazz.net/bugs/bugs.jsp" />
+    <param name="text" value="submit a bug " />
+  </object></span></p>
+</body>
+</html>

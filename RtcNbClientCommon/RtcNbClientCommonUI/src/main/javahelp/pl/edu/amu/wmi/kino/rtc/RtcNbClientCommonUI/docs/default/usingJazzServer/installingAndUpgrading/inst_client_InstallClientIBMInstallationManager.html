@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Installing the client using the IBM Installation
+    Manager</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_client_installation"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_client_InstallingRTCClientM.html"
+  shape="rect">Installing Rational Team Concert Client</a></div>
+  <a id="t_client_installation" name="t_client_installation"></a>
+  <h1 class="topictitle1">Installing the client using the IBM
+  Installation Manager</h1>The client is distributed as a
+  downloadable file via the IBM&#174; Installation Manager. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <div class="note">
+   <span class="notetitle">Note: </span> If you want to install the
+  client into an existing Eclipse workbench, use the IBM
+  Installation Manager. The IBM Installation Manager install
+  prompts you for the workbench you want to extend and takes care
+  of managing future workbench updates, rollbacks, and
+  modifications</div>
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Download one of the following installation
+      packages. </span> 
+      <p class="p">There are three methods to install the
+       <span class="keyword">Rational Team
+      Concert&#8482; </span> client.</p>
+      <ul class="ul">
+        <li class="li">
+        <strong class="b">Client CD Contents .zip file -
+        Installation Manager local install for client </strong>:
+        This archive file contains the Installation Manager
+        launchpad program and a local copy of the 
+         <span class="keyword">Rational Team Concert </span> client.
+        The benefit of using the local install package is that it
+        allows the installation to proceed without an Internet
+        connection. This is a .zip file that is not self
+        extracting.</li>
+        <li class="li">
+        <strong class="b">Installation Manager Web install for
+        client, server, and optional components </strong>: This
+        archive file contains the Installation Manager launchpad
+        program and the predefined installation repository
+        locations. This is a self extracting file that will start
+        the IBM Installation Manager launchpad program after
+        extracting the contents. The benefit of using the Web
+        install package is that it reduces the initial download and
+        the installation process only downloads the resources you
+        choose to install. 
+        <div class="note">
+         <span class="notetitle">Note: </span> The Web install
+        requires an Internet connection during the installation
+        process.</div></li>
+        <li class="li">
+        <strong class="b">Full DVD Contents .zip file </strong>:
+        This archive file contains the Installation Manager
+        launchpad program and a local copy of all the installable
+        resources. The benefit of using the local install package
+        is that it allows the installation to proceed without an
+        Internet connection. This is a .zip file that is not self
+        extracting.</li>
+      </ul>
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Start the launchpad program. </span> 
+    <p class="p">If the Installation Manager is not already
+    running, complete the following steps to start it.</p>
+    <div class="note">
+     <span class="notetitle">Note: </span> You must have administrator
+    privileges to run the launchpad program.</div>
+    <div class="note">
+     <span class="notetitle">Note: </span> The Linux commands to start
+    the launchpad program are only for the 
+     <span class="keyword">Rational Team Concert </span> for Eclipse
+    IDE.</div>To start the launchpad program file on: 
+    <ul class="ul choices">
+      <li class="li choice">If you are using the 
+      <strong class="b">Client CD Contents .zip file </strong>,
+      extract the contents of the archive into a temporary
+      directory and run the launchpad program. To start the
+      launchpad program file on: 
+      <ul class="ul" compact="compact">
+        <li class="li">To run the file on Windows, run this
+        command: 
+        <pre class="pre">
+launchpad.exe
+</pre></li>
+        <li class="li">To run the file on Linux, run this command: 
+        <pre class="pre">
+sh launchpad.sh
+</pre></li>
+      </ul></li>
+      <li class="li choice">If you are using the 
+      <strong class="b">Installation Manager Web install </strong>,
+      run the executable file. The files are extracted to a
+      directory and a launchpad program appears. To start the
+      executable file on: 
+      <ul class="ul" compact="compact">
+        <li class="li">To run the file on Windows, run this
+        command: 
+        <pre class="pre">
+RTC-
+<var class="varname">edition</var>-Full-
+<var class="varname">version</var>-Win-Web.exe
+</pre></li>
+        <li class="li">To run the file on Linux, run this command: 
+        <pre class="pre">
+sh RTC-
+<var class="varname">edition</var>-Full-
+<var class="varname">version</var>-Linux-Web.sh
+</pre></li>
+      </ul></li>
+      <li class="li choice">If you are using the 
+      <strong class="b">Full DVD Contents .zip file </strong>,
+      extract the contents of the archive into a temporary
+      directory and run the launchpad program. To start the
+      launchpad program file on: 
+      <ul class="ul" compact="compact">
+        <li class="li">To run the file on Windows, run this
+        command: 
+        <pre class="pre">
+launchpad.exe
+</pre></li>
+        <li class="li">To run the file on Linux, run this command: 
+        <pre class="pre">
+sh launchpad.sh
+</pre></li>
+      </ul></li>
+    </ul></li>
+    <li class="li step stepexpand">
+     <span class="cmd">You can install the following clients: </span> 
+    <ul class="ul choices">
+      <li class="li choice">To install 
+       <span class="keyword">Rational Team Concert </span> client for
+      Eclipse, click 
+      <strong class="b">
+       <span class="keyword">Rational Team Concert </span> Client for
+      Eclipse IDE </strong>link.</li>
+      <li class="li choice">To install 
+       <span class="keyword">Rational Team Concert </span> client for
+      Microsoft Visual Studio, click 
+      <strong class="b">
+         <span class="keyword">Rational Team Concert Client for
+        Microsoft&#174; Visual Studio IDE </span> 
+       </strong>link.</li>
+    </ul>The 
+     <span class="wintitle">Installation Manager </span> wizard is
+    displayed. The wizard guides you through to install the
+    client.</li>
+    <li class="li step stepexpand">
+       <span class="cmd">Start the client by clicking the 
+       <span class="keyword">Rational Team Concert </span> shortcut
+      created by the installation. </span> 
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Connect to the server. </span> The easiest way
+    to connect to a server is using the Team Invitation. If you do
+    not have an invitation you can connect manually. 
+    <ol class="ol substeps" type="a">
+      <li class="li substep substepexpand">
+         <span class="cmd">Click 
+         <span class="menucascade">
+         <span class="uicontrol">File </span> &gt; 
+         <span class="uicontrol">Accept team
+        invitation </span>  </span> . The wizard guides you through the
+        process. </span> 
+        <div class="note">
+         <span class="notetitle">Note: </span> If you do not have an
+        invitation you need the URI or URL from your server admin.
+        (an example format is: https://example.com:9443/jazz).
+        Click on the 
+         <span class="uicontrol">connecting to an existing project
+        area </span> hyperlink that appears in the bottom right
+        corner of the 
+         <span class="uicontrol">Accept Team
+        Invitation </span> window.</div>
+      </li>
+      <li class="li substep substepexpand">
+         <span class="cmd">Follow the instructions in the wizard to
+        set up your connection. </span> 
+      </li>
+    </ol></li>
+  </ol>
+  <div class="example">
+    <div class="tasklabel">
+      <strong>Example </strong>
+    </div>
+    <div class="p">
+    <strong class="b">Trouble Shooting </strong>: Here are some
+    suggested problem management techniques. 
+    <ul class="ul">
+      <li class="li">Start with an empty workspace.</li>
+      <li class="li">The client and the server builds must match.
+      Make sure the build ID's match for both the client and server
+      distributions.</li>
+      <li class="li">Make sure the server is up. Confirm using the
+      status URL: 
+       <span class="filepath">
+      https://example.com:9443/jazz </span> .</li>
+      <li class="li">On Linux, if you want to start the client from
+      outside of the directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse </span> you must change
+      each file in 
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse/links/ and include the
+      absolute path to the named directory. By default, relative
+      paths are used. For example, 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse/links/build.link </span> contains
+      the text "path=
+       <span class="filepath">jazz/build </span> ". If your client is
+      installed in the directory /home/username/teamconcert, edit
+      the file to look like "path=
+       <span class="filepath">
+      /home/username/teamconcert/jazz/client/eclipse/build </span> ".</li>
+    </ul></div>
+  </div>
+  <div class="tasklabel">
+    <strong>What to do next </strong>
+  </div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+
+
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

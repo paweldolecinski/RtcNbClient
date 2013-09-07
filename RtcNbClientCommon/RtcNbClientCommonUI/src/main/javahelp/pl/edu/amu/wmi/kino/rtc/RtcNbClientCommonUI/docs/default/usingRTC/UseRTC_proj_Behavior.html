@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="helpIndexHtml" lang="en" xml:lang="en" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+
+  <title>Behavior</title>
+  <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css" rel=
+  "stylesheet" type="text/css" />
+  <link href=
+  "nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+  rel="stylesheet" type="text/css" />
+</head>
+
+<body id="c_behavior" onload="javascript:resizeAtPageLoad();"
+onresize="javascript:resizeAllImages();">
+  <a name="c_behavior" id="c_behavior"></a>
+
+  <h1 class="topictitle1">Behavior</h1>Process behavior defines
+  preconditions and follow-up actions for individual operations.
+  This behavior encourages or enforces process rules for your
+  project and your teams. Behavior is defined in the project's
+  process configuration and can be customized by team areas.
+
+  <p class="p">Preconditions and follow-up actions are applied in
+  the context of an operation. For example, for the <strong class=
+  "b">Work Item Save</strong> operation, you can use a precondition
+  to define which fields in a work item must be filled in before it
+  can be saved. If a required field is incomplete, then the save
+  operation is blocked and details are provided in the Team Advisor
+  view and in the title bar of the work item. The following figure
+  provides an example of a precondition that must be met before
+  delivering code to source control.</p>
+ <div class="note">
+          This screenschot is taken from Eclipse Client</div>
+  <div class="fignone"><span class="figcap">Figure 1. Precondition
+  alerts are displayed in the Team Advisor view</span>
+
+  <div class="image"></div><img alt=
+  "This picture shows an alert in the Team Advisor view. A deliver operation has failed, and the alert tells the user that the operation failed because they failed to associate a work item with the change set."
+  class="image" src="../images/save_operation_advisor.gif" /></div>
+
+  <p class="p">Follow-up actions can make additional changes to
+  artifacts in the repository after an operation is successfully
+  completed, as defined by the process. For example, The Scrum
+  process currently generates three work items in response to the
+  operation of joining a team: <strong class="b">Create a
+  Repository Workspace</strong> , <strong class="b">Find Your Work
+  Items</strong> , and <strong class="b">Set Up Instant
+  Messaging</strong> .</p>
+
+  <p class="p">Jazz&trade; process templates include a collection
+  of process operations with preconditions and follow-up actions.
+  The predefined operations vary in the different process
+  templates. The table below shows operations in the Scrum process
+  template, as an example; some of these operations are common to
+  all predefined process templates.</p>
+
+  <div class="tablenoborder">
+    <table border="1" cellpadding="4" cellspacing="0" class="table"
+    frame="border" rules="all" summary="">
+      <caption>
+        Table 1. Predefined operations, preconditions, and
+        follow-up actions in the Scrum process template
+      </caption>
+
+      <thead align="left" class="thead">
+        <tr class="row" valign="bottom">
+          <th class="entry" id="d5761e61" valign="bottom">
+          Operation</th>
+
+          <th class="entry" id="d5761e63" valign="bottom">
+          Precondition/Follow-up action</th>
+
+          <th class="entry" id="d5761e65" valign="bottom">
+          Comments</th>
+        </tr>
+      </thead>
+
+      <tbody class="tbody">
+        <tr class="row">
+          <td class="entry" headers="d5761e61" valign="top">
+          Generate Team Invitation</td>
+
+          <td class="entry" headers="d5761e63" valign="top">Create
+          initial work items</td>
+
+          <td class="entry" headers="d5761e65" valign="top">This
+          follow-up action creates a set of work items for the
+          tasks you need to perform to complete the process of
+          joining the team.</td>
+        </tr>
+
+        <tr class="row">
+          <td class="entry" headers="d5761e61" valign="top">Accept
+          Team Invitation</td>
+
+          <td class="entry" headers="d5761e63" valign="top">Show
+          work items</td>
+
+          <td class="entry" headers="d5761e65" valign="top">When
+          you accept the invitation to join the team, a query is
+          run to display your assigned work items.</td>
+        </tr>
+
+        <tr class="row">
+          <td class="entry" headers="d5761e61" valign="top">Work
+          Item Save Operation</td>
+
+          <td class="entry" headers="d5761e63" valign="top">
+          Required properties</td>
+
+          <td class="entry" headers="d5761e65" valign="top">Team
+          members are advised to complete certain fields in work
+          items before they can be saved.</td>
+        </tr>
+
+        <tr class="row">
+          <td class="entry" headers="d5761e61" rowspan="3" valign=
+          "top">Source Control Deliver Operation</td>
+
+          <td class="entry cellrowborder" headers="d5761e63"
+          rowspan="3" valign="top">Descriptive change sets</td>
+
+          <td class="entry" headers="d5761e65" rowspan="3" valign=
+          "top">Team members are advised to associate a work item
+          with every code delivery.</td>
+        </tr>
+
+        <tr class="row">
+          <td class="entry" headers="d5761e61" valign="top">
+          &nbsp;</td>
+        </tr>
+
+        <tr class="row">
+          <td class="entry" headers="d5761e61" valign="top">
+          &nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+
+  <p class="p">Process permissions and behavior are configured
+  independently. Your team can choose to customize only an
+  operation's permissions, only the behavior, or both.</p>
+
+  <p class="p">Process permissions and behavior can be shared
+  across multiple iterations and timelines, and they can be
+  configured at any level of the team configuration. The process
+  framework uses the permissions and behavior configured for the
+  most specific iteration. For example, if your team defines
+  behavior at the top level, that behavior applies for all
+  iterations. But if your team then adds a reference to a specific
+  iteration and configures the behavior for that iteration, this
+  behavior is used when that iteration is current.</p>
+
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+  <span class="runningfooter"><object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+    <param name="text" value="Feedback " />
+  </object></span>
+
+  <p><span class="runningheader" style="color: #666;">Did this
+  help? You can provide feedback at Jazz.net (registration
+  required): <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://jazz.net/forums/viewforum.php" />
+    <param name="text" value="Comment in the forums " />
+  </object> or <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value="https://jazz.net/bugs/bugs.jsp" />
+    <param name="text" value="submit a bug " />
+  </object></span></p>
+</body>
+</html>

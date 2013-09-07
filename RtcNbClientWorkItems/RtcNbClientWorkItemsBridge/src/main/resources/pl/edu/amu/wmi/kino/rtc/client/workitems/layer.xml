@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.0//EN" "http://www.netbeans.org/dtds/filesystem-1_0.dtd">
+<filesystem>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="WorkItems">
+                <folder name="Layouts">
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-facade-impl-workitems-layout-DefaultFieldsLayoutProvider.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.facade.impl.workitems.layout.DefaultFieldsLayoutProvider"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-facade-impl-workitems-layout-QueryResultsFieldsLayoutProvider.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.facade.impl.workitems.layout.QueryResultsFieldsLayoutProvider"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-facade-impl-workitems-layout-MainEditorFieldsLayoutProvider.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.facade.impl.workitems.layout.MainEditorFieldsLayoutProvider"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>    
+    </folder>
+</filesystem>

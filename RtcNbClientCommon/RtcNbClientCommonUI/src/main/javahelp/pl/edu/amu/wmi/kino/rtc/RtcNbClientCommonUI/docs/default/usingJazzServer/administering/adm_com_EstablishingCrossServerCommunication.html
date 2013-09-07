@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Establishing cross-server communication</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="tservertoserverestablish"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"
+  shape="rect">Administering</a>&gt;
+  <a href="../../usingJazzServer/administering/adm_srv__ConfiguringTheServer.html"
+  shape="rect">Configuring the server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm_com__ConfiguringCrossServerCommunication.html"
+  shape="rect">Configuring server-to-server communication</a></div>
+  <a id="tservertoserverestablish" name="tservertoserverestablish">
+  </a>
+  <h1 class="topictitle1">Establishing cross-server
+  communication</h1>You can establish cross-server communication by
+  using the location information of another 
+   <span class="keyword">Jazz&#8482; Team Server </span> and an OAuth
+  secret code phrase. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>You must be a member of the JazzAdmins group.</div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>To establish cross-server communication: 
+  <ol class="ol steps">
+    <li class="li step">
+       <span class="cmd">Click the 
+       <span class="uicontrol">Server </span> tab. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">In the 
+       <span class="wintitle">Configuration </span> pane, click 
+       <span class="uicontrol">Cross-Server
+      Communication </span> . </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">On the 
+       <span class="wintitle">Cross-Server Communication </span> page,
+      in the 
+       <span class="uicontrol">Title </span> field, type a title to
+      identify the other server. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">In the 
+       <span class="uicontrol">Root Services URI </span> field, verify
+      the correct default input for Root Services URI. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">In the 
+       <span class="uicontrol">OAuth Secret </span> and 
+       <span class="uicontrol">Re-type Secret </span> field, type an
+      OAuth Secret code phrase to associate with the new OAuth
+      consumer key. </span> 
+    </li>
+    <li class="li step">Optional: 
+     <span class="cmd">Select the 
+     <span class="uicontrol">Trusted </span> check box. </span> Trusted
+    consumers can share authorization with other trusted consumers
+    and do not require user approval to access data.</li>
+    <li class="li step">
+     <span class="cmd">Click 
+     <span class="uicontrol">Request Access </span> . </span> A
+    provisional key is requested on the other server and the access
+    information is added to the server friends list. A new entry is
+    added to the Authorize Keys section, including the new OAuth
+    key and a link to authorize the key on the other server.</li>
+  </ol>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

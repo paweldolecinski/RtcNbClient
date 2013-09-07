@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="helpIndexHtml" lang="en" xml:lang="en" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+
+  <title>Permissions</title>
+  <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css" rel=
+  "stylesheet" type="text/css" />
+  <link href=
+  "nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+  rel="stylesheet" type="text/css" />
+</head>
+
+<body id="c_permissions" onload="javascript:resizeAtPageLoad();"
+onresize="javascript:resizeAllImages();">
+  <a name="c_permissions" id="c_permissions"></a>
+
+  <h1 class="topictitle1">Permissions</h1>Permissions for
+  performing operations are assigned to individual roles in the
+  project's process configuration. Permissions for operations can
+  be assigned to roles at the project level or within a team area.
+  The default role permissions apply to all users in the
+  repository. Besides role-based permissions, new users are also
+  assigned repository permissions based on repository groups.
+  Repository permissions are configured for each user in the user
+  editor.
+
+  <p class="p"><strong class="b">Roles-based
+  permissions</strong></p>
+
+  <p class="p">Settings for role-based permissions are defined on
+  the <span class="uicontrol">Process Configuration</span> tab or
+  the <span class="uicontrol">Process Configuration Source</span>
+  tab of the Project Area editor or Process Template editor. These
+  settings apply to the entire project. To modify permissions for a
+  team area, use the <span class="uicontrol">Process
+  Customization</span> tab or <span class="uicontrol">Process
+  Customization Source</span> tab of the Team Area editor.</p>
+
+  <p class="p">Process permissions and behavior are configured
+  independently. Your team can choose to customize only an
+  operation's permissions, only the behavior, or both.</p>
+
+  <p class="p">Process permissions and behavior can be shared
+  across multiple iterations and timelines, and they can be
+  configured at any level of the team configuration. The process
+  framework uses the permissions and behavior configured for the
+  most specific iteration. For example, if your team defines
+  permissions at the top level, those permissions apply to all
+  iterations. But if your team then adds a reference to a specific
+  iteration and configures the permissions for that iteration,
+  these permissions are used when that iteration is current.</p>
+
+  <p class="p"><strong class="b">Repository group
+  permissions</strong></p>
+
+  <div class="p">
+    When creating a user, you can assign repository permissions
+    using group designations. Repository group assignments control
+    the user's access to the Jazz&trade; repository. Assign one or
+    more of the following groups for a new user:
+
+    <ul class="ul">
+      <li class="li"><span class="uicontrol">JazzAdmins</span>:
+      Administrators of a Jazz Repository with full read-write
+      access</li>
+
+      <li class="li"><span class="uicontrol">JazzDWAdmins</span>:
+      Administrators of a Jazz Repository with specific permissions
+      to control the data warehouse on a Jazz Server</li>
+
+      <li class="li"><span class="uicontrol">JazzGuests</span>:
+      Users with read-only access to the Jazz Repository</li>
+
+      <li class="li"><span class="uicontrol">JazzUsers</span>:
+      Users with regular read-write access to the Jazz
+      Repository</li>
+    </ul>
+  </div>
+
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+  <span class="runningfooter"><object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+    <param name="text" value="Feedback " />
+  </object></span>
+
+  <p><span class="runningheader" style="color: #666;">Did this
+  help? You can provide feedback at Jazz.net (registration
+  required): <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://jazz.net/forums/viewforum.php" />
+    <param name="text" value="Comment in the forums " />
+  </object> or <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value="https://jazz.net/bugs/bugs.jsp" />
+    <param name="text" value="submit a bug " />
+  </object></span></p>
+</body>
+</html>

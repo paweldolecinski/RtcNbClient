@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>-import</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="r_repotools_import"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig_tools__RepositoryToolsOverview.html"
+  shape="rect">Repository Tools Overview</a></div>
+  <a id="r_repotools_import" name="r_repotools_import"></a>
+  <h1 class="topictitle1">-import</h1>Repotools command used to
+  import the contents of a TAR file into a new database. 
+  <h2 class="sectiontitle">Purpose</h2>The 
+   <span class="synph">
+     <span class="kwd">import </span> 
+   </span> command is used to import the contents of a TAR file,
+  using the current system encoding, into a new database. This
+  encoding must match the encoding used when the TAR file was
+  created. 
+  <div class="section refsyn"></div>
+  <h2 class="sectiontitle">Parameters</h2>
+  <table border="1" cellpadding="4" cellspacing="0"
+  class="simpletable" summary="">
+    <tr class="sthead">
+      <th align="left" class="stentry" id="d12726e30"
+      valign="bottom">Attribute</th>
+      <th align="left" class="stentry" id="d12726e32"
+      valign="bottom">Description</th>
+      <th align="left" class="stentry" id="d12726e34"
+      valign="bottom">Required</th>
+      <th align="left" class="stentry" id="d12726e36"
+      valign="bottom">Default</th>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d12726e30" valign="top">
+         <span class="synph">
+           <span class="kwd">fromFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d12726e32" valign="top">The name
+      of the TAR file from which to import data.</td>
+      <td class="stentry" headers="d12726e34" valign="top">Yes</td>
+      <td class="stentry" headers="d12726e36" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d12726e30" valign="top">
+         <span class="synph">
+           <span class="kwd">teamserver.properties </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d12726e32" valign="top">The file
+      system path to the teamserver.properties file.</td>
+      <td class="stentry" headers="d12726e34" valign="top">No</td>
+      <td class="stentry" headers="d12726e36" valign="top">
+      teamserver.properties</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d12726e30" valign="top">
+         <span class="synph">
+           <span class="kwd">logFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d12726e32" valign="top">Path to
+      the log file.</td>
+      <td class="stentry" headers="d12726e34" valign="top">No</td>
+      <td class="stentry" headers="d12726e36" valign="top">
+      repotools_import.log</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d12726e30" valign="top">
+         <span class="synph">
+           <span class="kwd">noPrompt </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d12726e32" valign="top">Cause
+      the database tables to be created without confirmation from
+      the user. This option is useful when writing automated
+      scripts.</td>
+      <td class="stentry" headers="d12726e34" valign="top">No</td>
+      <td class="stentry" headers="d12726e36" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d12726e30" valign="top">
+         <span class="synph">
+           <span class="kwd">noVerify </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d12726e32" valign="top">Skip the
+      post-import verification phase. Performing verification is
+      recommended, and if necessary, can be done separately using
+      the -verify option.</td>
+      <td class="stentry" headers="d12726e34" valign="top">No</td>
+      <td class="stentry" headers="d12726e36" valign="top">N/A</td>
+    </tr>
+  </table>
+  <div class="example">
+    <h2 class="title">Example</h2>
+    <pre class="pre">
+repotools -import fromFile=export.tar
+</pre>
+  </div>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

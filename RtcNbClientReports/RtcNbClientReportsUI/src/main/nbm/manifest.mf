@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/rtc/client/reports/gui/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/rtc/client/reports/gui/layer.xml
+OpenIDE-Module-Display-Category: RTC
+AutoUpdate-Show-In-Client: false

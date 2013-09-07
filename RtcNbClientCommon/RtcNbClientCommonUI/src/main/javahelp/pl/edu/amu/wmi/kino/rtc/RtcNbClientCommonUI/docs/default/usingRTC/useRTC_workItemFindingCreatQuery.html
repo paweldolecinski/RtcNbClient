@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Project Conductor</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+     <div class="breadcrumbs">
+        <a href="../under_construction.html" shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>&gt;
+        <a href=""  shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>
+    </div>
+    <h1 class="topictitle1">Creating a query</h1>
+    <p class="p">Use a query to retrieve a set of work items that meet specific conditions.</p>
+    <p class="p"> When you create a query you specify the conditions and the work item properties to display in the results table. You can create the query for your own use or for shared use among team members.</p>
+     <p class="p"> You can create query using:</p>
+            <ul>
+                <li><a href="#Netbeans"> Netbeans </a></li>
+                <li><a href="#Web"> the Web interface </a></li>
+            </ul>
+
+    <h2 class="sectiontitle"> Creating a query in the Netbeans</h2>
+    <a name="Netbeans"></a>
+    <ol>
+        <li> On the <span class="keyword"> RTC </span> tab double click on Project's area name.</li>
+        <li> Navigate to <span class="keyword">Work Items > My queries </span></li>
+        <li> Right click on <span class="keyword"> My queries</span> and choose <span class="keyword">Add query</span></li>
+        <li>In the query editor enter a query name in the Name field.</li>
+        <li>Define conditions that work items must match:
+            <ul>
+                <li>You can add expression by clicking <span class="keyword">+Add expression</span>. You will see pop-up window with available expressions.  For example if you want to display all work items with new status: click status. Choose expression and click OK.</li>
+                <li>Define details of expression:
+                    <ul>
+                    <li>Define attribute values that work items must match. For example if you want to display all work items with new status set status on new.</li>
+                </ul></li>
+                <li>To add new group of expressions click <span class="keyword">+Add group.</span>
+                    <ul><li>Define what operator use in group. Choose between AND - OR.Use AND when all of the conditions you specify must be met for the query to return a work item. Use OR when any one of the conditions must be met</li></ul>
+                </li>
+
+
+            </ul>
+                    </li>
+        <li>To see query results click Run.</li>
+        <li>To save query clicks Save. After that it will be available in My queries folder.</li>
+    </ol>
+    <h2 class="sectiontitle"> Creating a query in the Web interface</h2>
+    <a name="Web"></a>
+    <ol>
+        <li>Click the <span class="keyword">Work Items</span>link.</li>
+        <li>In the navigation pane on the left, click<span class="keyword"> Create New Query</span>. </li>
+        <li>In the <span class="keyword">query editor </span>, if you plan to save the query, enter a name for it in the <span class="keyword">Name field. </span> </li>
+        <li>In the <span class="keyword">Conditions</span> tab, click the plus sign icon, then select an attribute that you want to use as a query condition. Click<span class="keyword"> Add attribute condition </span>. Specify the value or condition that must be met for the attribute. For example, for the Due Date attribute you can use a specific date or a relative date, such as 15 days from now. If you select or specify more than one value, they are joined by OR statements, meaning that the condition is true for any one of those values. You can add groups of conditions by clicking Add OR Condition. For each group, click All must match or Any can match. Use AND when all of the conditions you specify must be met for the query to return a work item. Use OR when any one of the conditions must be met. Queries for string-based fields, such as <span class="keyword">Summary</span> and <span class="keyword">Description</span> are case-insensitive.</li>
+        <li>Click the <span class="keyword">Details </span>tab. Enter a description of the query so that other users can understand what work items the query returns without having to read the Conditions tab. By default, new queries are private. To share a query with members of a team, click <span class="keyword">Add Team Area</span> and select a team. To share a query with a specific user, click<span class="keyword"> Add User</span> and select the user. </li>
+        <li>Click the <span class="keyword"> Result Layout </span>tab. In the Result Columns section, use<span class="keyword"> Add Column</span> and <span class="keyword">Remove </span> controls to specify the attributes that you want to appear as column headings in the query results grid. Use the Up and Down controls to arrange the columns in the results grid. To specify the order in which results should be displayed, click <span class="keyword"> Add Sort Column </span> and select an attribute. You can set the sort direction to Ascending or Descending for each attribute. </li>
+        <li>Click <span class="keyword"> Run</span> to run the query. Click <span class="keyword">Save </span> to save the query.  </li>
+    </ol>
+
+    <p class="p"> If you do not share the query, or if you share it with a user, it appears in your My Queries folder. If you share the query with a user, the query also shows up in Shared Queries > Individually Shared folder in that user's Jazz™ client. If you share the query with a team, it shows up in the team area folder in the Shared Queries folder.</p>
+   <div class="related-links">
+        <p class="p"> <span class="keyword">Related topics</span></p>
+        <div class="familylinks">
+            <span> To see details about work items go to  : <a href="useRTC_workItem.html">Work item.</a></span>
+        </div>
+         
+           <p class="p"> <span class="keyword">Related concepts</span></p>
+           <span> Use predefined queries : <a href="useRTC_workItemFindingUsePredefinedQuery.html">Predefined queries.</a></span>
+    </div>
+    <hr />
+    <span class="runningfooter">
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                <param name="content" value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+                <param name="text" value="Feedback " />
+        </object>
+   </span>
+   <p>
+     <span class="runningheader" style="color: #666666;">Did this help? You can provide feedback at Jazz.net (registration required):
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content" value="https://jazz.net/forums/" />
+            <param name="text" value="Comment in the forums " />
+        </object> or
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content"      value="https://jazz.net/bugs/bugs.jsp" />
+            <param name="text" value="submit a bug " />
+        </object>
+     </span>
+  </p>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/netbeans/view/customview/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/netbeans/view/customview/layer.xml
+OpenIDE-Module-Public-Packages: pl.edu.amu.wmi.kino.netbeans.view.customview.* , pl.edu.amu.wmi.kino.netbeans.view.customview.nodecontent.*, pl.edu.amu.wmi.kino.netbeans.multiview.*, pl.edu.amu.wmi.kino.netbeans.mvp.client.*,pl.edu.amu.wmi.kino.netbeans.mvp.client.handlers.*, pl.edu.amu.wmi.kino.netbeans.mvp.event.*
+OpenIDE-Module-Display-Category: RTC
+AutoUpdate-Show-In-Client: false

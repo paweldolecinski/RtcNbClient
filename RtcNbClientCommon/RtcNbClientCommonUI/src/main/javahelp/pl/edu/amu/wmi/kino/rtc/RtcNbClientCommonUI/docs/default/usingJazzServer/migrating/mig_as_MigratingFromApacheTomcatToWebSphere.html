@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Migrating from Apache Tomcat to WebSphere Application
+    Server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_migrate_tomcat_was"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig_as__content.html"
+  shape="rect">Migrating the application server</a></div>
+  <a id="t_migrate_tomcat_was" name="t_migrate_tomcat_was"></a>
+  <h1 class="topictitle1">Migrating from Apache Tomcat to WebSphere
+  Application Server</h1>Before changing the 
+   <span class="keyword">Jazz&#8482; Team Server </span> from Apache
+  Tomcat to WebSphere&#174; Application Server backup the database
+  and several files. 
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Stop the 
+       <span class="keyword">Jazz Team Server </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Backup the database </span> 
+      <ul class="ul">
+        <li class="li">Derby: Make an archive copy of the entire
+        database directory.</li>
+        <li class="li">DB2&#174;: Refer to the database
+        documentation for details. An example command is 
+        <pre class="pre">
+db2 backup database {db-name} user &lt;userName&gt;  using
+&lt;password&gt; to &lt;target-dir&gt; COMPRESS
+</pre></li>
+        <li class="li">Oracle: Refer to the database documentation
+        for details.</li>
+      </ul>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Locate the following files and create a
+      backup copy: </span> 
+      <ul class="ul">
+        <li class="li">The file 
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>/server/conf/jazz/teamserver.properties </span> .</li>
+        <li class="li">The file 
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>/server/conf/jazz/log4j.properties </span> .</li>
+        <li class="li">The file 
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>/server/tomcat/webapps/jazz.war </span> .</li>
+        <li class="li">The default repository database in the
+        directory
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>server/repositoryDB </span> .</li>
+        <li class="li">The repository tools in the directory 
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>/repotools </span> .</li>
+      </ul>
+      <div class="note">
+       <span class="notetitle">Note: </span> The files are required
+      when setting up the WebSphere Application Server.</div>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">After backing up the database and saving
+      the files, continue with setting up the WebSphere Application
+      Server. </span> 
+    </li>
+  </ol>
+  <div class="related-links">
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link"
+      href="../installingAndUpgrading/inst_ee_ss_SettingUpAWebSphereApplicationServer.html"
+      title="This topic describes how to set up the Jazz Team Server to work with WebSphere Application Server. This setup assumes that you are installing the Jazz Team Server on the same machine as the Websphere Application Server.">
+      Setting up a WebSphere Application Server</a>
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

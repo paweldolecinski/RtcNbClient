@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Preparing to install the Standard or Enterprise
+    edition</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="c_s_server_installation_prepare"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se__InstallRTCStandEditionAndEE.html"
+  shape="rect">Installing Rational Team Concert Standard edition
+  and Enterprise edition</a></div>
+  <a id="c_s_server_installation_prepare"
+  name="c_s_server_installation_prepare"></a>
+  <h1 class="topictitle1">Preparing to install the Standard or
+  Enterprise edition</h1>Before installing the server verify the
+  special considerations are met. 
+  <div class="related-links">
+    <div class="familylinks"></div>
+    <div class="relconcepts">
+      <strong>Related concepts </strong>
+      <br />
+      <a class="link"
+      href="inst_pla_pw__InstallationPlanningWorksheet.html"
+      title="This worksheet helps you plan a successful installation and choose your custom configuration options.">
+      Installation planning worksheet</a>
+    </div>
+  </div>
+  <div class="topic concept" id="c_special_considerations_linux"
+  lang="en-us" xml:lang="en-us">
+  <a id="c_special_considerations_linux"
+  name="c_special_considerations_linux"></a>
+  <h2 class="topictitle2">Special instructions for Linux</h2>Review
+  the following special instructions when the 
+   <span class="keyword">Jazz&#8482; Team Server </span> is installed
+  on Linux&#174;. 
+  <ul class="ul">
+    <li class="li">
+       <span class="ph"
+      id="c_special_considerations_linux__d3741e27">
+      <a id="c_special_considerations_linux__d3741e27"
+      name="c_special_considerations_linux__d3741e27"></a>If
+      Security-Enhanced Linux (SELinux) is enabled, you 
+      <strong class="b">
+        <u class="u">must</u>
+       </strong>disable it or change the security context of the
+      Java Runtime Environment (JREs) to allow text relocation in
+      order to install and run Rational Team Concert. For more
+      information, see 
+      <a class="xref"
+      href="inst_pla_ssi_sif_InstallRTCWithSecurityEnhancedLinux.html"
+      title="If Security-Enhanced Linux (SELinux) is enabled, you must either disable it or change the security context of the Java Runtime Environments (JREs) used for installing and running Rational Team Concert to allow text relocation.">
+      Installing Rational Team Concert with Security-Enhanced
+      Linux</a>. </span> 
+    </li>
+    <li class="li">The 
+     <span class="keyword">Jazz Team Server </span> installation path
+    names must not contain spaces. The startup script (
+     <span class="filepath">
+    <var class="varname">
+    JazzInstallDir</var>/server/server.startup </span> ) and the
+    repository tools script (
+     <span class="filepath">
+    <var class="varname">
+    JazzInstallDir</var>/server/repotools.sh </span> ) detect and
+    report this problem.</li>
+    <li class="li">Increase the maximum number of files that the
+    Apache Tomcat user can handle to 5000. On Redhat Enterprise
+    Linux, you can do this by adding the following lines to 
+     <span class="filepath">/etc/security/limits.conf </span> : 
+    <pre class="pre">
+tomcat_user hard nofile 5000 
+tomcat_user soft nofile 5000
+</pre></li>
+    <li class="li">The Reports component requires that 32-bit X11
+    libraries be installed on the server. On Redhat Enterprise
+    Linux 5, the required packages are 
+     <span class="filepath">libXp </span> , 
+     <span class="filepath">libXinerama </span> , 
+     <span class="filepath">mesa-libGL </span> , and
+    compat-libstdc++-33.</li>
+    <li class="li">If you are installing DB2 on Linux, set the
+    shmmax 1GB.</li>
+  </ul>
+  <p class="p"></p></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

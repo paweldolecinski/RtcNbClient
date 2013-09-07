@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>General Idea of source control in Rational Team Concert</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+     <div class="breadcrumbs">
+        <a href="../under_construction.html" shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>&gt;
+        <a href=""  shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>
+    </div>
+    <h1 class="topictitle1">General Idea of source control in Rational Team Concert</h1>
+    <p class="p">Although it is optimized for team development, Rational Team Concert™ source control provides all the features you need for backing up your work to a repository, comparing versions of files and folders, preserving important configurations, and restoring your work to a previous state.</p>
+    <p class="p">Rational Team Concert and Rational Team Concert source control have been designed with teams in mind. But teams are made up of individuals, and there are many ways that an individual can benefit from using Rational Team Concert source control on a development effort that has no other contributors. By checking in projects to a repository workspace, organizing them into components, and creating streams that represent specific states of component development, you can back up your work and have access to every version of it. You can also become familiar with those Rational Team Concert source control operations that handle the fundamental tasks of storing and retrieving versions of files and folders, comparing one version with another, and preserving "interesting" configurations (ones that are known to work, for example, or ones that exhibit a specific problem or other characteristic that needs attention). All of these operations will also be part of your work with a team.</p>
+    <p class="p">Rational Team Concert™ source control uses an optimistic locking model that does not require a check out operation before you can modify files or folders. All files in a local workspace are normally writable. Modified files remain private to your repository workspace until you deliver them.
+</p>
+    
+    <h2 class="sectiontitle">Organizing projects into components and streams</h2>
+    <p class="p"> Rational Team Concert™ source control supports an organizational model in which projects are grouped into components and components can be grouped into streams.</p>
+    <p class="p">In Rational Team Concert source control, the fundamental organizational unit for source code is the component. A component typically contains at least one project, and usually contains several. Most of the operations that manipulate files and folders, such as loading, unloading, and adding to a workspace, are expressed in terms of components. While you can initiate many of these operations on individual files or folders, the files and folders themselves exist in the repository as part of a component</p>
+    <h2 class="sectiontitle">Streams and components</h2>
+    <p class="p"> A stream is a repository object that includes one or more components. A component is a collection of related artifacts.</p>
+    <p class="p"> Artifacts under source control are grouped into components. Any group of files and folders that share a common root can be a component. A stream is a collection of one or more components. </p>
+    <p class="p"> Streams are similar to the branches found in other source control management systems, but have a number of additional capabilities. Any component in a repository can be included in zero or more streams. A stream can include at most one version of any component. By using multiple streams, a development organization can work on projects that use different versions of the same components. For example, a stream dedicated to the development of a new software release would include the most recent version of the release's components, while another stream dedicated to the maintenance of an earlier version of that software release would initially include the component versions that were part of that release.</p>
+
+    <div class="related-links">
+        <div class="familylinks"></div>
+    </div>
+    <hr />
+    <span class="runningfooter">
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                <param name="content" value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+                <param name="text" value="Feedback " />
+        </object>
+   </span>
+   <p>
+     <span class="runningheader" style="color: #666666;">Did this help? You can provide feedback at Jazz.net (registration required):
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content" value="https://jazz.net/forums/" />
+            <param name="text" value="Comment in the forums " />
+        </object> or
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content"      value="https://jazz.net/bugs/bugs.jsp" />
+            <param name="text" value="submit a bug " />
+        </object>
+     </span>
+  </p>
+  </body>
+</html>
+

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>RtcNbClient</artifactId>
+        <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+        <version>0.2.3.9-SNAPSHOT</version>
+    </parent>
+    <artifactId>RtcNbClientApplication</artifactId>
+    <packaging>nbm-application</packaging>
+    <name>RtcNbClient Application</name>
+    <version>3.0.0.0.0</version>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.cluster</groupId>
+            <artifactId>platform</artifactId>
+            <version>${netbeans.version}</version>
+            <type>pom</type>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.netbeans.cluster</groupId>
+            <artifactId>ide</artifactId>
+            <version>${netbeans.version}</version>
+            <type>pom</type>
+        </dependency>-->
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.netbeans</groupId>
+            <artifactId>KinoNbUtilities</artifactId>
+            <version>${kinonbutils.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-core-ide</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientPlansBridge</artifactId>
+            <version>${plans.bridge.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientReportsBridge</artifactId>
+            <version>${reports.bridge.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsBridge</artifactId>
+            <version>${workitems.bridge.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonBridge</artifactId>
+            <version>${common.bridge.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonUI</artifactId>
+            <version>${common.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientLibsWrapper</artifactId>
+            <version>${wrapper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonFacade</artifactId>
+            <version>${common.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsFacade</artifactId>
+            <version>${workitems.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientPlansFacade</artifactId>
+            <version>${plans.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientReportsFacade</artifactId>
+            <version>${reports.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientPlansUI</artifactId>
+            <version>${plans.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientReportsUI</artifactId>
+            <version>${reports.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsUI</artifactId>
+            <version>${workitems.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <configuration>
+                    <brandingToken>default</brandingToken>
+                    </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+<!--    <profiles>
+        <profile>
+            <id>deployment</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>nbm-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>updatesite</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>autoupdate</goal>
+                                </goals>
+                                <configuration>
+                                    distBase>central::default::http://repo1.maven.org/maven2</distBase
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>webstart</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>webstart-app</goal>
+                                </goals>
+                                <configuration>
+                                    <codebase>${project.build.directory}/webstart/${brandingToken}</codebase>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>-->
+    <properties>
+        <netbeans.conf.file>src/main/rtc.conf</netbeans.conf.file>
+        <netbeans.run.params.ide/>
+        <netbeans.run.params>${netbeans.run.params.ide}</netbeans.run.params>
+    </properties>
+</project>
+
+

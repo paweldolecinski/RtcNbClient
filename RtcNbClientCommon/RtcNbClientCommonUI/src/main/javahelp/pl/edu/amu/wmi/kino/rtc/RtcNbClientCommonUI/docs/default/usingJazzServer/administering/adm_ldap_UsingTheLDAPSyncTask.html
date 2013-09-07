@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Using the LDAP sync task</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="cldapsynctask" onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"
+  shape="rect">Administering</a>&gt;
+  <a href="../../usingJazzServer/administering/adm_srv__ConfiguringTheServer.html"
+  shape="rect">Configuring the server</a></div>
+  <a id="cldapsynctask" name="cldapsynctask"></a>
+  <h1 class="topictitle1">Using the LDAP sync task</h1>The LDAP
+  Nightly sync task synchronizes the user information present in
+  the Jazz&#8482; repository with the information in the LDAP
+  directory. The LDAP sync task creates new user records, updates
+  names and user information, identifies ambiguous entries, and
+  lists errors. 
+  <div class="p">The LDAP nightly sync task: 
+  <ul class="ul">
+    <li class="li">Creates new user records in the Jazz repository.
+    New user records are created in the Jazz repository for all
+    users present in the LDAP user directory who are members of the
+    mapped LDAP groups and do not already exist in the Jazz
+    repository.</li>
+    <li class="li">Updates name or e-mail address information in
+    the Jazz repository. Name and e-mail address fields in the Jazz
+    repository are updated if the values in Jazz repository and the
+    LDAP user directory do not match.</li>
+    <li class="li">Lists the ambiguous entries in the LDAP user
+    directory. Ambiguous records are created when the LDAP nightly
+    sync task cannot uniquely update the name or e-mail address
+    fields of a user in the Jazz repository. For example: A user
+    has multiple names in the LDAP user directory. None of those
+    names match the entry in the Jazz repository. In this case, the
+    sync task will record an event indicating the ambiguous account
+    and an administrator can manually use the UI to refresh the
+    user record.</li>
+    <li class="li">Lists the errors in the LDAP user directory.
+    Error records are created if there are multiple user ids for a
+    user in the LDAP user directory or if a user referenced by an
+    LDAP group does not exist. For example: The JazzAdmins group in
+    LDAP directory has a member Joe. Joe's record does not exist in
+    the LDAP user directory. This may be an indication that the
+    user is no longer part of the organization, in which case the
+    user needs to be archived in the repository.</li>
+  </ul></div>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

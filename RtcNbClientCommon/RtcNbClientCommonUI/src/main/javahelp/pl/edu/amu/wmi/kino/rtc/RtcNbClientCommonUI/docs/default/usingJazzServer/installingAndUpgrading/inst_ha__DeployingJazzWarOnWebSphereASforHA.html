@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Deploying jazz.war on WebSphere Application Server for
+    high availability environments</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="depolyingjazz.waronwebsphereapplicationserverforhighavailabilityusingidlestandby"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a></div>
+  <a id="depolyingjazz.waronwebsphereapplicationserverforhighavailabilityusingidlestandby"
+  name="depolyingjazz.waronwebsphereapplicationserverforhighavailabilityusingidlestandby">
+  </a>
+  <h1 class="topictitle1">Deploying jazz.war on WebSphere
+  Application Server for high availability environments</h1>Deploy
+  the jazz.war on both the primary and backup servers so that you
+  can use idle standby as a strategy for failover in high
+  availability environments. 
+  <p class="p">The 
+   <span class="keyword">Rational Team Concert&#8482; </span> Idle
+  Standby configuration enables recovery from failover to help
+  ensure minimal impact on business operations during planned or
+  unplanned server outages. To implement the idle standby
+  configuration, you must have the Enterprise edition of 
+   <span class="keyword">Rational Team Concert </span> and
+  WebSphere&#174; Application Server.</p>
+  <h2 class="sectiontitle">Key points</h2>
+  <div class="p">Before you decide to use the idle standby
+  configuration, consider the following key points: 
+  <ul class="ul">
+    <li class="li">
+     <span class="keyword">Rational Team Concert </span> is licensed
+    for use as a single-server configuration and cannot be used in
+    either a cloned or a clustered configuration, except if
+    implemented in an idle standby configuration. In this
+    configuration, you can activate a backup server if the primary
+    server fails, or if maintenance needs to be performed on the
+    primary server. Clustering for load balancing or anything other
+    than implementing the idle standby configuration is currently
+    not supported.</li>
+    <li class="li">Idle standby configuration is not intended to
+    provide complete support for failover. If the primary server
+    fails or if it is intentionally taken offline, some users might
+    need to authenticate to the Web again, or wait for their client
+    to refresh a view.</li>
+    <li class="li">The backup server is not intended to be run for
+    extended periods in place of the primary server. 
+    <div class="note_important">
+     <span class="importanttitle">Important: </span> 
+     <span class="keyword">Rational Team Concert </span> allows only a
+    single server to be active at any one time to a repository;
+    therefore, the backup (or Idle) server is configured to never
+    run Asynchronous (or background) tasks. If a switch is made to
+    the backup server, you must plan to bring the primary server
+    back up as quickly as possible.</div></li>
+  </ul></div>
+  <h2 class="sectiontitle">Deployment topology</h2>
+  <p class="p">The following topology diagram illustrates the
+  configuration for the 
+   <span class="keyword">Rational Team Concert </span> basic high
+  availability when using idle standby. In the following figure,
+  the IBM&#174; HTTP Server is used to direct incoming traffic to
+  one of the two WebSphere Application Servers, Primary Server A or
+  Backup Server B. The WebSphere servers represent a primary and
+  secondary node in the cluster. They are both members of the same
+  cluster cell. In addition to the WebSphere nodes, there is an
+  LDAP server, a file server (for Lucene index), and a Database
+  server.</p>
+  <div class="image"></div>
+  <img alt="Idle Standby - Server configuration" class="image"
+  src="../../images/basic_ha.gif" />
+  <h2 class="sectiontitle">Requirements</h2>
+  <p class="p">The following table lists the basic high
+  availability requirements:</p>
+  <div class="p">
+    <div class="tablenoborder">
+      <table border="1" cellpadding="4" cellspacing="0"
+      class="table" frame="border" rules="all" summary="">
+        <caption>Table 1. Basic high availability
+        requirements</caption>
+        <thead align="left" class="thead">
+          <tr class="row" valign="bottom">
+            <th class="entry" id="d5296e95" valign="bottom">
+            Server</th>
+            <th class="entry" id="d5296e97" valign="bottom">
+            Software</th>
+            <th class="entry" id="d5296e99" valign="bottom">
+            Operating system</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr class="row">
+            <td class="entry" headers="d5296e95" valign="top">IBM
+            HTTP Server</td>
+            <td class="entry" headers="d5296e97" valign="top">
+              <ul class="ul">
+                <li class="li">IBM HTTP Server v6.1.0.17+</li>
+                <li class="li">Web server plug-ins for WebSphere
+                Application Server v6.1.0.17+</li>
+                <li class="li">WebSphere maintenance package
+                SDKPK85942</li>
+                <li class="li">IBM Key Management v7.0.3.28</li>
+              </ul>
+            </td>
+            <td class="entry" headers="d5296e99" valign="top">
+            Windows&#174;, Linux&#174;</td>
+          </tr>
+          <tr class="row">
+            <td class="entry" headers="d5296e95" valign="top">
+            WebSphere Application Server Primary Server A</td>
+            <td class="entry" headers="d5296e97" valign="top">
+              <ul class="ul">
+                <li class="li">WebSphere Application Server
+                v6.1.0.19</li>
+                <li class="li">
+                 <span class="keyword">Rational Team
+                Concert </span> v2.0 - Enterprise edition</li>
+              </ul>
+            </td>
+            <td class="entry" headers="d5296e99" valign="top">
+            Windows, Linux</td>
+          </tr>
+          <tr class="row">
+            <td class="entry" headers="d5296e95" valign="top">
+            WebSphere Application Server Primary Server B</td>
+            <td class="entry" headers="d5296e97" valign="top">
+              <ul class="ul">
+                <li class="li">WebSphere Application Server
+                v6.1.0.19</li>
+                <li class="li">
+                 <span class="keyword">Rational Team
+                Concert </span> v2.0 - Enterprise edition</li>
+              </ul>
+            </td>
+            <td class="entry" headers="d5296e99" valign="top">
+            Windows, Linux</td>
+          </tr>
+          <tr class="row">
+            <td class="entry" headers="d5296e95" valign="top">
+            Optional - File Server, Shared Disk</td>
+            <td class="entry" headers="d5296e97" valign="top">
+            Lucene Index - full text index</td>
+            <td class="entry" headers="d5296e99" valign="top">
+            Windows, Linux</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="related-links">
+    <ul class="ullinks">
+      <li class="link ulchildlink">
+      <strong>
+        <a href="inst_ha_SettingUpABasicHighAvailabilityConfiguration.html">Setting up a basic
+        high availability configuration</a>
+       </strong>
+      <br />Setup and configure your primary and backup servers for
+      a basic high availability environment.</li>
+      <li class="link ulchildlink">
+      <strong>
+        <a href="inst_ha_TakingThePrimaryServerOffline.html">Taking the
+        primary server offline</a>
+       </strong>
+      <br />If your primary server fails, or if you suspect your
+      server is experiencing problems and needs maintenance, the
+      first priority is to redirect clients to a backup server so
+      that client applications work with as little interruption as
+      possible.</li>
+      <li class="link ulchildlink">
+      <strong>
+        <a href="inst_ha_RestoringThePrimaryServer.html">Restoring the
+        primary server</a>
+       </strong>
+      <br />To restore the primary server to its operational
+      status, you must schedule the server startup and switch the 
+      <samp class="codeph">LoadBalanceWeight </samp>attributes so
+      that you prevent the primary and backup server from talking
+      to the repository at the same time.</li>
+    </ul>
+    <div class="relconcepts">
+      <strong>Related concepts </strong>
+      <br />
+      <a class="link" href="inst__UpgradingToRationalTeamConcert_2_0.html"
+      title="Generally, you can upgrade Rational Team Concert clients and servers by either performing a zip or IBM Installation Manager install.">
+      Upgrading to Rational Team Concert 2.0.0.2</a> <br/>
+      <a class="link" href="inst__InstallationOverview.html"
+      title="Information to help you understand the requirements for a successful installation.">
+      Installation overview</a>
+    </div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link" href="inst_build__InstallingTheBuildSystemToolkitM.html"
+      title="The Build System Toolkit can be installed on the build machines using a .zip file or the IBM Installation Manager.">
+      Installing the Build System Toolkit</a><br/>
+      <a class="link" href="inst_con__Connectors.html"
+      title="To install the ClearCase Connector and ClearQuest Connector connectors:">
+      Installing Rational Team Concert Connectors</a>
+    </div>
+    <div class="relref">
+      <strong>Related reference </strong>
+      <br />
+      <a class="link" href="inst__ReleaseNotesRTCV_2_0.html"
+      title="This document contains information about system requirements, installation, and known issues forIBM Rational Team Concert V 2.0. It also provides information about contacting IBM Rational Software Support.">
+      Release notes - Rational Team Concert V 2.0</a>
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

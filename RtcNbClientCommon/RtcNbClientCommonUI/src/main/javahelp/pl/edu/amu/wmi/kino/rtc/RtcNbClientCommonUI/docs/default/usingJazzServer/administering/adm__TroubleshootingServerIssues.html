@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Troubleshooting server issues</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_troubleshooting"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"
+  shape="rect">Administering</a>&gt;
+  <a href="../../usingJazzServer/administering/adm_srv__ConfiguringTheServer.html"
+  shape="rect">Configuring the server</a></div>
+  <a id="t_troubleshooting" name="t_troubleshooting"></a>
+  <h1 class="topictitle1">Troubleshooting server issues</h1>You can
+  use the administrative Web interface to troubleshoot server
+  issues. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>You must be logged in to the 
+   <span class="wintitle">Admin Web UI </span> and be a member of the
+  JazzAdmins group.</div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <p class="p">To troubleshoot server issues, in the 
+   <span class="wintitle">Admin Web UI </span> , click the 
+   <span class="uicontrol">Server </span> tab. On this page, you can
+  find server state information that can help you troubleshoot
+  problems.</p>
+  <div class="p">
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> Go to 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://jazz.net/library/#type=technote" />
+      <param name="text" value="Jazz.net Tech Notes " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/wiki/bin/view/Main/ServerTroubleshootingFAQ" />
+      <param name="text" value="Server troubleshooting FAQ " />
+    </object>to find additional troubleshooting tips.</div>
+  </div>
+  <p class="p">The table below lists common problems and ways to
+  troubleshoot them.</p>
+  <table border="1" cellpadding="4" cellspacing="0"
+  class="simpletable" summary="">
+    <tr class="sthead">
+      <th align="left" class="stentry" id="d7993e45"
+      valign="bottom">
+        <p class="p">Problem</p>
+      </th>
+      <th align="left" class="stentry" id="d7993e48"
+      valign="bottom">
+        <p class="p">What to check</p>
+      </th>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d7993e45" valign="top">
+        <p class="p">Database is not available</p>
+      </td>
+      <td class="stentry" headers="d7993e48" valign="top">
+        <p class="p">Check the server status: click 
+         <span class="uicontrol">Status summary </span> .</p>
+        <ul class="ul">
+          <li class="li">On the 
+           <span class="wintitle">Status Summary </span> page, in the 
+           <span class="wintitle">Server Status </span> pane, verify
+          that the database status is connected. If the status is
+          unavailable, check the 
+           <span class="wintitle">Database Status </span> pane for
+          details. Possible failures include a database
+          configuration that is not valid and a valid configuration
+          to a database that is not initialized. 
+          <div class="note">
+           <span class="notetitle">Note: </span> The Derby database
+          supports only one connection; if another server instance
+          is running, it might be using the only database
+          connection. If this problem occurs, the 
+           <span class="wintitle">Service Error Summary </span> pane
+          lists multiple errors.</div></li>
+          <li class="li">In the 
+           <span class="wintitle">Server VM </span> pane, verify that
+          the server is running the correct JDK.</li>
+        </ul>
+        <ul class="ul">
+          <li class="li">In the 
+           <span class="wintitle">Service Error Summary </span> pane,
+          check for error messages.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d7993e45" valign="top">
+        <p class="p">Unable to change configuration properties</p>
+      </td>
+      <td class="stentry" headers="d7993e48" valign="top">
+        <p class="p"></p>
+        <p class="p">Check the server configuration properties:
+        under 
+         <span class="wintitle">Configuration </span> , click one of
+        the following items:</p>
+        <ul class="ul">
+          <li class="li">
+             <span class="uicontrol">E-mail Settings </span> 
+          </li>
+          <li class="li">
+             <span class="uicontrol">Database Connections </span> 
+          </li>
+          <li class="li">
+             <span class="uicontrol">Feed Settings </span> 
+          </li>
+          <li class="li">
+             <span class="uicontrol">License Key Management </span> 
+          </li>
+          <li class="li">
+             <span class="uicontrol">Advanced Properties </span> 
+          </li>
+        </ul>
+        <p class="p">On these pages, you can view and update
+        configuration properties. When you save changes to
+        configuration properties, they are propagated to the
+        teamserver.properties file. If the database is not
+        connected, you can change configuration properties only by
+        editing the teamserver.properties file.</p>
+      </td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d7993e45" valign="top">
+        <p class="p">Failing services</p>
+      </td>
+      <td class="stentry" headers="d7993e48" valign="top">
+        <p class="p">Check the status of services: click 
+         <span class="uicontrol">Component Status </span> .</p>
+        <p class="p">On the 
+         <span class="wintitle">Component Status </span> page, check
+        the stack trace for more information about failing
+        services.</p>
+      </td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d7993e45" valign="top">
+        <p class="p">Slow server activity</p>
+      </td>
+      <td class="stentry" headers="d7993e48" valign="top">
+        <p class="p">Check the running services: click 
+         <span class="uicontrol">Active Services </span> .</p>
+        <p class="p">On the 
+         <span class="wintitle">Active Services </span> page, check
+        the running services and their stack traces. Check for
+        services that run for an extended period of time.</p>
+        <p class="p">Check the server activity: click 
+         <span class="uicontrol">Statistics </span> .</p>
+        <p class="p">On the 
+         <span class="wintitle">Server Statistics </span> page, check
+        the server activity, such as statistics for Web services,
+        asynchronous tasks, and cache behavior.</p>
+      </td>
+    </tr>
+  </table>
+  <p class="p">
+    <strong class="b">Additional resources and tips </strong>
+  </p>
+  <p class="p">For more information, you can access the log
+  feed:</p>
+  <ul class="ul">
+    <li class="li">If you are running a secure connection, access
+    the log feed from this location: 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://localhost:9443/jazz/service/com.ibm.team.repository.common.internal.IFeedService?category=SystemLog" />
+      <param name="text"
+      value="https://localhost:9443/jazz/service/com.ibm.team.repository.common.internal.IFeedService?category=SystemLog " />
+    </object></li>
+    <li class="li">If you are not running a secure connection,
+    access the log feed from this location: 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://localhost:9080/jazz/service/com.ibm.team.repository.common.internal.IFeedService?category=SystemLog" />
+      <param name="text"
+      value="http://localhost:9080/jazz/service/com.ibm.team.repository.common.internal.IFeedService?category=SystemLog " />
+    </object></li>
+  </ul>
+  <p class="p">If the log feed is not available, view the Tomcat
+  log file from a Windows&#174; console window or at 
+   <span class="filepath">JazzInstallDir/logs/jazz.out </span> , where
+  
+  <var class="varname">JazzInstallDir</var>is the location where
+  you installed the server.</p>
+  <p class="p">If the teamserver.properties file is not located
+  during startup, the server does not work properly and the Tomcat
+  log and log feed contains errors. The server.startup script
+  provides the path to the property file.</p>
+  <p class="p">Ensure that the default Tomcat connection ports 9080
+  and 9443 are not in use. The connection ports are defined in the 
+   <span class="filepath">
+  installdir/tomcat/conf/server.xml </span> file, where 
+  <var class="varname">JazzInstallDir</var>is the location where
+  you installed the server.</p>
+  <p class="p">If the problems persist, consider reinstalling the
+  database or the Web archive (WAR) file. You can reinstall the
+  database from the original distribution file (repositoryDB.zip)
+  or from a backup file.</p>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

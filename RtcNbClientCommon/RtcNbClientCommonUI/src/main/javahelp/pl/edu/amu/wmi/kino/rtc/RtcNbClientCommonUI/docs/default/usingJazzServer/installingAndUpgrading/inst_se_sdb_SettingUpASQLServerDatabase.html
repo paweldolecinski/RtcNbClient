@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Setting up a SQL Server database</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="sqldb" onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se__InstallRTCStandEditionAndEE.html"
+  shape="rect">Installing Rational Team Concert Standard edition
+  and Enterprise edition</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se_sdb__SettingUpTheDatabase.html"
+  shape="rect">Setting up the database</a></div>
+  <a id="sqldb" name="sqldb"></a>
+  <h1 class="topictitle1">Setting up a SQL Server database</h1>Set
+  up a SQL Server database to work with the 
+   <span class="keyword">Jazz&#8482; Team Server </span> . 
+  <p class="p">This procedure assumes that the following
+  prerequisites have been met:</p>
+  <ul class="ul">
+    <li class="li">You have SQL Server installed</li>
+    <li class="li">SQL Server service is started</li>
+    <li class="li">You have the SQL Server JDBC drivers installed.
+    For more information, see 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://msdn2.microsoft.com/en-us/data/aa937724.aspx" />
+      <param name="text"
+      value="http://msdn2.microsoft.com/en-us/data/aa937724.aspx " />
+    </object></li>
+    <li class="li">The TCP protocol is enabled for SQL Server</li>
+    <li class="li">The user who creates the DB table must have one
+    of the following permissions: 
+    <ul class="ul">
+      <li class="li">A membership in the 
+      <strong class="b">sysadmin </strong>fixed server role, or
+      ownership of the database (
+      <strong class="b">dbo </strong>)</li>
+    </ul></li>
+  </ul>
+  <div class="note remember">
+   <span class="remembertitle">Remember: </span> The default login
+  name defined in 
+   <span class="filepath">
+  JazzInstallDir/server/teamserver.properties </span> file for a SQL
+  Server database is 
+  <kbd class="userinput">jazzDBuser </kbd>and the default password
+  is 
+  <kbd class="userinput">jazzDBpswd </kbd>. These values are used in
+  the steps below for creating a database. You can substitute these
+  values with the user name and password for your database.</div>
+  <h2 class="sectiontitle">Setting up a database</h2>
+  <p class="p">This section describes how to set up the SQL Server
+  database by using the command line tool 
+  <var class="varname">sqlcmd</var>, which is provided with the SQL
+  Server installation. You can also use a visual tool, such as SQL
+  Server Studio Management, which is also available for the
+  Express&#8482; version as SQL Server Studio Management Express.
+  See the SQL Server documentation or an SQL Server database
+  administrator (DBA) for more information.</p>
+  <p class="p">To set up an SQL Server database by using the
+  command tool 
+  <var class="varname">sqlcmd</var>:</p>
+  <ol class="ol">
+    <li class="li">Create a 
+     <span class="keyword">Jazz Team Server </span> database. From the
+    command line tool, type: 
+    <pre class="pre">
+CREATE DATABASE jazz 
+GO 
+</pre></li>
+    <li class="li">Create a user and password and change the
+    ownership of the 
+     <span class="keyword">Jazz Team Server </span> database. From the
+    command line tool, type: 
+    <pre class="pre">
+CREATE LOGIN jazzDBuser
+WITH PASSWORD = 'jazzDBpswd';
+USE jazz;
+exec sp_changedbowner 'jazzDBuser'
+GO 
+</pre></li>
+    <li class="li">Change the collation of the 
+     <span class="keyword">Jazz Team Server </span> database. From the
+    command line tool, type: 
+    <pre class="pre">
+ALTER DATABASE jazz COLLATE SQL_Latin1_General_CP437_CS_AS 
+GO
+</pre></li>
+  </ol>
+  <h2 class="sectiontitle">Configuring the server</h2>
+  <div class="note remember">
+   <span class="remembertitle">Remember: </span> By default, the 
+   <span class="filepath">teamserver.properties </span> file in 
+   <span class="filepath">JazzInstallDir/server </span> directory is
+  not set up to connect to a SQL Server database. All default
+  settings, along with SQL Server-specific settings, are contained
+  in the 
+   <span class="filepath">teamserver.sqlserver.properties </span> file
+  in the same directory.</div>
+  <p class="p">To configure the server:</p>
+  <ol class="ol">
+    <li class="li">Rename the following files: 
+    <ul class="ul">
+      <li class="li">Rename the 
+       <span class="filepath">
+      JazzInstallDir/server/conf/jazz/teamserver.properties </span> file
+      to 
+       <span class="filepath">teamserver.
+      <var class="varname">
+      OtherDBProvider</var>.properties </span> </li>
+      <li class="li">Rename the 
+       <span class="filepath">
+      teamserver.sqlserver.properties </span> file to 
+       <span class="filepath">teamserver.properties </span> </li>
+    </ul>
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> Renaming the original 
+     <span class="filepath">teamserver.properties </span> file enables
+    you to restore the file to the previous working version. By
+    default, the DB Provider is 
+    <kbd class="userinput">derby </kbd>.</div></li>
+    <li class="li">Edit the server configuration file if you used a
+    different user name, password, or db name, installed SQL server
+    on a different machine than 
+     <span class="keyword">Jazz Team Server </span> , or are using a
+    port other than the default. Open the file 
+     <span class="filepath">teamserver.properties </span> in 
+     <span class="filepath">
+    JazzInstallDir/server/conf/jazz </span> directory, and change the
+    information listed below to match your setup. 
+    <pre class="pre">
+com.ibm.team.repository.db.vendor = SQLSERVER
+com.ibm.team.repository.db.jdbc.location=//
+<var class="varname">SQL SERVER MACHINE IP</var>:
+<var class="varname">SQL SERVER TCIP PORT</var>;databaseName=
+<var class="varname">JAZZ DATABASE NAME</var>;user=
+<var class="varname">JAZZ USERNAME</var>;password={password}
+com.ibm.team.repository.db.jdbc.password=
+<var class="varname">JAZZ LOGIN PASSWORD</var>
+</pre>
+    <div class="note_important">
+     <span class="importanttitle">Important: </span> Do not change the
+    password={password} text in the property 
+     <span class="parmname parmname">
+    com.ibm.team.repository.db.jdbc.location </span> . The user
+    password must be specified in the property 
+     <span class="parmname parmname">
+    com.ibm.team.repository.db.jdbc.password </span> .</div></li>
+  </ol>
+  <div class="p">To specify the jar file location for JDBC: 
+  <ol class="ol">
+    <li class="li">In the same directory as the server scripts (
+     <span class="filepath">JazzInstallDir/server </span> ), create a
+    directory named sqlserver.</li>
+    <li class="li">Locate the SQL Server JDBC driver JAR file,
+    named 
+     <span class="filepath">sqljdbc.jar </span> . The location can
+    vary depending on where the drivers were installed, as noted in
+    the prerequisites section. Copy the file into the newly created
+    sqlserver directory.</li>
+    <li class="li">Specify the JDBC JAR file location for JDBC by
+    completing the following task: 
+    <ul class="ul">
+      <li class="li">Set up the environment variable 
+      <var class="varname">SQLSERVER_ABSPATH</var>to point to the
+      directory that contains the JAR file. If the path contains
+      space characters, you must include them with quotations. 
+      <div class="note_tip">
+       <span class="tiptitle">Tip: </span> If you use WebSphere&#174;
+      Application Server, configure a property named 
+      <var class="varname">SQLSERVER_JDBC</var>; then set it to the
+      absolute file path (not URL) to the SQL Server JDBC drivers
+      directory. For more information, see the WebSphere
+      Application Server setup instructions. Note the file path for
+      later use in these instructions.</div></li>
+    </ul></li>
+  </ol></div>
+  <p class="p">You have completed setting up your database. Now,
+  create the 
+   <span class="keyword">Jazz Team Server </span> database tables. For
+  more information, see 
+  <a class="xref"
+  href="inst_se_sdb_CreatJTServerDTOnDB2_andOracle.html"
+  title="Create the database tables using the repository tools.">
+  Creating the Jazz Team Server database tables on DB2 and
+  Oracle</a>.</p>
+  <h2 class="sectiontitle">Troubleshooting</h2>
+  <p class="p">If the repotools command does not succeed, check the
+  log file named 
+   <span class="filepath">repotools_createTables.log </span> , located
+  in the 
+   <span class="filepath">JazzInstallDir/server </span> directory.</p>
+  <p class="p">Also, verify the following:</p>
+  <ul class="ul">
+    <li class="li">The SQL Server is configured to allow
+    connections using the TCP/IP protocol. If required, restart the
+    SQL service.</li>
+    <li class="li">The SQL Server machine host name, and the port
+    is correctly reflected in the 
+     <span class="filepath">teamserver.properties </span> file.</li>
+    <li class="li">The login name, password, and database name are
+    properly reflected in the 
+     <span class="filepath">teamserver.properties </span> file.</li>
+    <li class="li">A firewall does not prevent you from accessing
+    the SQL Server. Use a telnet command to telnet to the machine
+    using hostname and port from the 
+     <span class="filepath">teamserver.properties </span> file.</li>
+    <li class="li">The created user has proper permissions in the 
+     <span class="keyword">Jazz Team Server </span> database.</li>
+  </ul>
+  <div class="note">
+   <span class="notetitle">Note: </span> The database code for 
+   <span class="keyword">Jazz Team Server </span> was designed to be
+  generic and standard in order to run on multiple database
+  platforms; however, differences between the enterprise database
+  vendors exist in syntax, optimization strategies, and locking
+  semantics. The server has been tested on SQL Server using a
+  combination of automated tests and simulations of normal
+  workloads and stress testing. The simulation of normal workloads
+  showed acceptable performance. In some instances database
+  deadlocks have been observed in automated concurrency tests;
+  however, these have not been consistently reproduced on different
+  server hardware. 
+  <p class="p">The server is designed to service a large number of
+  simultaneous requests. In exceptional cases, deadlocks can occur
+  in the repository database, as similar or equal objects are
+  updated concurrently in transactions associated with the
+  requests. These are rare, but normal events. The system is
+  designed to be defensive against this, and data integrity is
+  maintained; there is no loss of data. Occasionally, deadlocks are
+  logged by tasks, such as build engine execution. Generally, the
+  condition is detected, and the task is re-tried. The deadlock can
+  result in a failed build. In very rare cases, it can be a user
+  action, such as working with work items or source code, that is
+  aborted to resolve a deadlock. In that case, the user action
+  fails and an error with details regarding a deadlock is displayed
+  to the user. The user can then retry the action.</p>
+  <p class="p">All deadlocks encountered are logged on the server
+  to provide information about what happened when the deadlock
+  occurred. The log entry has text similar to the following: 
+  <tt class="systemoutput">
+  com.ibm.team.repository.common.RetryableDatabaseException:
+  Serialization failure</tt>.</p>
+  <p class="p">If your system encounters deadlocks, see the error
+  log, which is available at 
+   <span class="filepath">
+  https://servername:9443/jazz/service/com.ibm.team.repository.common.internal.IFeedService?category=SystemLog </span> .</p>
+  <p class="p">If you encounter frequent deadlock exceptions,
+  contact your product support, or check the forums on jazz.net for
+  the latest information, updates, or mitigating
+  techniques.</p></div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

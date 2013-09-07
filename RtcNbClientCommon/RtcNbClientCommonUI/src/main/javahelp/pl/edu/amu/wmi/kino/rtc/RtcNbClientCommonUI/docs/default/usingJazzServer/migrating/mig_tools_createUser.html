@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>-createUser</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="createuser" onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig_tools__RepositoryToolsOverview.html"
+  shape="rect">Repository Tools Overview</a></div>
+  <a id="createuser" name="createuser"></a>
+  <h1 class="topictitle1">-createUser</h1>Repotools command that
+  creates new user and assigns a license, or updates existing user.
+  
+  <h2 class="sectiontitle">Purpose</h2>The 
+   <span class="uicontrol">createUser </span> command creates a new
+  user and assigns a license. If a user with the specified user ID
+  exists, that user will be updated with the name, email address,
+  and license provided. The 
+   <span class="uicontrol">createUser </span> command requires a
+  running server. 
+  <h2 class="sectiontitle">Parameters</h2>
+  <table border="1" cellpadding="4" cellspacing="0"
+  class="simpletable" summary="">
+    <tr class="sthead">
+      <th align="left" class="stentry" id="d10083e31"
+      valign="bottom">Attribute</th>
+      <th align="left" class="stentry" id="d10083e33"
+      valign="bottom">Description</th>
+      <th align="left" class="stentry" id="d10083e35"
+      valign="bottom">Required</th>
+      <th align="left" class="stentry" id="d10083e37"
+      valign="bottom">Default</th>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">userId </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The ID
+      of the user to be created or updated.</td>
+      <td class="stentry" headers="d10083e35" valign="top">Yes</td>
+      <td class="stentry" headers="d10083e37" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">name </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The name
+      of the user. The default value is the user ID.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">user
+      ID</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">emailAddress </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The
+      email address of the contributor.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      unknown</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">jazzGroup </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The
+      group that the user is the member of. Valid values are:
+      JazzAdmins, JazzProjectAdmins, JazzDWAdmins, JazzUsers,
+      JazzGuests</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      JazzUsers</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">licenseId </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The ID
+      of the license to be assigned to the user. The license must
+      exist.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      none</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">repositoryURL </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The
+      connection URL for the server where the users will be
+      stored.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      https://localhost:9443/jazz</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">adminUserId </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">Admin
+      user ID to login to the Jazz repository.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      ADMIN</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">adminPassword </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">Admin
+      password to login to the Jazz repository.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      ADMIN</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">credentialsFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">The file
+      containing the admin user's login credentials.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      credentials.properties</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d10083e31" valign="top">
+         <span class="synph">
+           <span class="kwd">logFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d10083e33" valign="top">Path to
+      the log file.</td>
+      <td class="stentry" headers="d10083e35" valign="top">No</td>
+      <td class="stentry" headers="d10083e37" valign="top">
+      repotools_createUser.log</td>
+    </tr>
+  </table>
+  <div class="example">
+    <h2 class="title">Sample</h2>
+    <pre class="pre">
+repotools -createUser userid=testID name="Test User1"
+emailAddress=test@companyABC.com
+</pre>
+  </div>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

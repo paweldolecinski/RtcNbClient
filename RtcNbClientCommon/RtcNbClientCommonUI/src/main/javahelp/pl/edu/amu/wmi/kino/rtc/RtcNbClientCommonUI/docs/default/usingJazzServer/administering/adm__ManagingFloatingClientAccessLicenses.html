@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Managing floating client access licenses</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="manaagingfloatinglicenses"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"
+  shape="rect">Administering</a></div>
+  <a id="manaagingfloatinglicenses"
+  name="manaagingfloatinglicenses"></a>
+  <h1 class="topictitle1">Managing floating client access
+  licenses</h1>You can install and configure floating client access
+  licenses (CALs) through the administrative Web interface after
+  you determine which server is the floating license server that
+  has the CAL keys installed and which server is the 
+   <span class="keyword">Jazz&#8482; Team Server </span> that assigns
+  the floating CALs. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>You must be logged in to the Admin Web UI and be a member
+  of the JazzAdmins group.</div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>To install floating CALs through the administrative Web
+  interface: 
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Install the floating CAL keys: </span> 
+      <ol class="ol substeps" type="a">
+        <li class="li substep substepexpand">
+           <span class="cmd">On the floating license server, in the
+          Admin Web UI, click the 
+           <span class="uicontrol">Server </span> tab. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">On the 
+           <span class="wintitle">License Key Management </span> page,
+          in the 
+           <span class="uicontrol">Floating License
+          Server </span> area, click 
+           <span class="uicontrol">Add </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">In the 
+           <span class="wintitle">Upload License Files </span> wizard,
+          in the 
+           <span class="uicontrol">Upload License Activation
+          key </span> field, click 
+           <span class="uicontrol">Browse </span> and navigate to the
+          floating client access license activation key
+          location. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Select the key. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">In the 
+           <span class="uicontrol">Purchased </span> field, enter the
+          number of licenses purchased. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Next </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">Optional: 
+         <span class="cmd">On the 
+         <span class="wintitle">Connect To Floating Licenser
+        Server </span> page, to configure the floating capabilities
+        on this server, select the 
+         <span class="uicontrol">Yes, I want to allow users on this
+        server to be able to acquire the floating licenses on this
+        license server </span> check box. </span> 
+        <div class="note">
+         <span class="notetitle">Note: </span> If you select this
+        check box, you do not need to complete Step 
+        <a class="xref"
+        href="#manaagingfloatinglicenses__ConfigureTheToPointToTheFloatingLi">
+        2</a>.</div></li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Finish </span> . </span> 
+        </li>
+      </ol>
+    </li>
+    <li class="li step stepexpand"
+    id="manaagingfloatinglicenses__ConfigureTheToPointToTheFloatingLi">
+
+      <a id="manaagingfloatinglicenses__ConfigureTheToPointToTheFloatingLi"
+      name="manaagingfloatinglicenses__ConfigureTheToPointToTheFloatingLi">
+      </a>
+       <span class="cmd">Configure the 
+       <span class="keyword">Jazz Team Server </span> to point to the
+      floating license server: </span> 
+      <ol class="ol substeps" type="a">
+        <li class="li substep">
+           <span class="cmd">On the 
+           <span class="keyword">Jazz Team Server </span> , in the
+          Admin Web UI, click the 
+           <span class="uicontrol">Server </span> tab. </span> 
+        </li>
+        <li class="li substep">
+           <span class="cmd">On the 
+           <span class="wintitle">License Key Management </span> page,
+          beside the 
+           <span class="uicontrol">Floating License
+          Server </span> Property, click 
+           <span class="uicontrol">Connect </span> . </span> 
+        </li>
+        <li class="li substep">
+           <span class="cmd">In the 
+           <span class="wintitle">Configure Floating License
+          Server </span> dialog box, in the 
+           <span class="uicontrol">Floating License
+          Server </span> field, type the path to the server. For
+          example, 
+           <span class="filepath">
+          http://floating-license-server:9080/jazz </span> . </span> 
+        </li>
+        <li class="li substep">
+           <span class="cmd">To test the server connection, click 
+           <span class="uicontrol">Test Connection </span> . </span> 
+        </li>
+        <li class="li substep">
+         <span class="cmd">Click 
+         <span class="uicontrol">Finish </span> . </span> The Jazz Team
+        Server is now configured so that floating CALs can be
+        assigned to users. The floating CALs are automatically
+        checked out from the floating license server when the users
+        require them.</li>
+      </ol>
+    </li>
+  </ol>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

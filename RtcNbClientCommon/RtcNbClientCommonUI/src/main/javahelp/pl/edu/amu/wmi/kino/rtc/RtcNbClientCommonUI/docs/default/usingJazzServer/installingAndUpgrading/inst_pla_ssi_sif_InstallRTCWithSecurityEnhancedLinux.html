@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Installing Rational Team Concert with Security-Enhanced
+    Linux</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_installingrationalteamconcertwithselinux"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla__PlanningTheInstallation.html"
+  shape="rect">Planning the installation</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi__SpecialServerInstructions.html"
+  shape="rect">Special server instructions</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi_sif__SpecialInstructionsForLinux.html"
+  shape="rect">Special instructions for Linux</a></div>
+  <a id="t_installingrationalteamconcertwithselinux"
+  name="t_installingrationalteamconcertwithselinux"></a>
+  <h1 class="topictitle1">Installing 
+   <span class="keyword">Rational Team Concert </span> with
+  Security-Enhanced Linux</h1>If Security-Enhanced Linux&#174;
+  (SELinux) is enabled, you must either disable it or change the
+  security context of the Java&#8482; Runtime Environments (JREs)
+  used for installing and running 
+   <span class="keyword">Rational Team Concert&#8482; </span> to allow
+  text relocation. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>If you have setup a machine for the sole purpose of
+  evaluating 
+   <span class="keyword">Rational Team Concert </span> and the SELinux
+  features are not important to you, then the easiest way to
+  proceed is to disable SELinux. 
+  <div class="note">
+     <span class="notetitle">Note: </span> 
+    <ul class="ul">
+      <li class="li">SELinux is installed and enabled by default on
+      Red Hat Enterprise Linux 5.</li>
+      <li class="li">SELinux is not installed on Suse Linux
+      Enterprise Server 10 or Suse Linux Enterprise Desktop
+      10.</li>
+    </ul>
+  </div>
+  <ul class="ul steps-unordered">
+    <li class="li step stepexpand">
+       <span class="cmd">To disable SELinux do one of the
+      following: </span> 
+      <ol class="ol substeps">
+        <li class="li substep substepexpand">
+           <span class="cmd">From the windowing system: </span> 
+          <ol class="ol" type="a">
+            <li class="li">Select 
+             <span class="menucascade">
+             <span class="uicontrol">System </span> &gt; 
+             <span class="uicontrol">Administration </span> &gt; 
+             <span class="uicontrol">Security Level and
+            Firewall </span>  </span> .</li>
+            <li class="li">Switch to the 
+             <span class="uicontrol">SELinux </span> tab.</li>
+            <li class="li">Change the 
+             <span class="uicontrol">SELinux </span> setting to
+            Disabled.</li>
+            <li class="li">Click 
+             <span class="uicontrol">OK </span> to save the new
+            setting.</li>
+          </ol>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">From the command line: </span> 
+          <ol class="ol" type="a">
+            <li class="li">Run the "setup" command (this is
+            /usr/bin/setup)</li>
+            <li class="li">Select 
+             <span class="uicontrol">Firewall
+            Configuration </span> and press Enter</li>
+            <li class="li">Use the Tab and arrow keys to change the
+            
+             <span class="uicontrol">SELinux </span> to Disabled</li>
+            <li class="li">Select 
+             <span class="uicontrol">OK </span> and press Enter</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li class="li step stepexpand"
+    id="t_installingrationalteamconcertwithselinux__change-context">
+
+      <a id="t_installingrationalteamconcertwithselinux__change-context"
+      name="t_installingrationalteamconcertwithselinux__change-context">
+      </a>
+       <span class="cmd">To change the security context of the
+      JREs: </span> 
+      <ol class="ol substeps">
+        <li class="li substep substepexpand"
+        id="t_installingrationalteamconcertwithselinux__locate-files">
+
+          <a id="t_installingrationalteamconcertwithselinux__locate-files"
+          name="t_installingrationalteamconcertwithselinux__locate-files">
+          </a>
+           <span class="cmd">If you are installing directly from DVD
+          media; skip to step 
+          <a class="xref"
+          href="#t_installingrationalteamconcertwithselinux__install-prods">
+          2</a>. Otherwise, change the security context of the
+          installation JRE. </span> 
+          <ol class="ol" type="a">
+            <li class="li">In the installation files directory,
+            locate the directory jre.
+            linux/jre_5.0.2.sr5_20070511/jre. If you extracted the
+            installation files to /tmp/rtc then the directory jre
+            is located at
+            /tmp/rtc/linux/jre_5.0.2.sr5_20070511/jre.</li>
+            <li class="li">Run the command chcon -R -t
+            textrel_shlib_t against the jre directory. This command
+            recursively processes the files and allows text
+            relocation. For example, if you extracted the
+            installation files to /tmp/rtc run the following
+            command:</li>
+          </ol>
+          <pre class="pre">
+chcon -R -t textrel_shlib_t
+/tmp/rtc/linux/jre_5.0.2.sr5_20070511/jre 
+</pre>
+        </li>
+        <li class="li substep substepexpand"
+        id="t_installingrationalteamconcertwithselinux__install-prods">
+
+          <a id="t_installingrationalteamconcertwithselinux__install-prods"
+          name="t_installingrationalteamconcertwithselinux__install-prods">
+          </a>
+           <span class="cmd">Install the 
+           <span class="keyword">Rational Team Concert </span> server,
+          client and connectors, but do not start them. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Before you start 
+           <span class="keyword">Rational Team Concert </span> , you
+          must change the security context of the product JREs. For
+          each product you install, run the same command (chcon -R
+          -t textrel_shlib_t) with the appropriate product-specific
+          JRE directory. The default directories are listed
+          below. </span> 
+          <div class="note">
+           <span class="notetitle">Note: </span> The paths are the
+          default if you installed the product as user root. If you
+          installed as a non-root user, look for these directories
+          inside an opt/IBM structure in the installation user's
+          home directory.</div>
+          <ul class="ul">
+            <li class="li">IBM&#174; Installation Manager: 
+            <ul class="ul">
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/InstallationManager/eclipse/jre_5.0.2.sr5_20070511/jre </span> 
+              </li>
+            </ul></li>
+            <li class="li">
+             <span class="keyword">Jazz&#8482; Team Server </span> : 
+            <ul class="ul">
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/JazzTeamServer/server/linux/ibm-java2-i386-50/jre </span> 
+              </li>
+            </ul></li>
+            <li class="li">
+             <span class="keyword">Rational Team Concert </span> -
+            Client: (run chcon on all 4 directories) 
+            <ul class="ul">
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/TeamConcert/jdk/bin </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/TeamConcert/jdk/lib </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/TeamConcert/jdk/jre/bin </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/TeamConcert/jdk/jre/lib </span> 
+              </li>
+            </ul></li>
+            <li class="li">
+             <span class="keyword">Rational Team Concert </span> - 
+             <span class="keyword">Build System Toolkit </span> : 
+            <ul class="ul">
+              <li class="li">not applicable (no JRE included)</li>
+            </ul></li>
+            <li class="li">
+             <span class="keyword">Rational Team Concert </span> - 
+             <span class="keyword">ClearCase&#174; Connector </span> :
+            (run chcon on all 4 directories) 
+            <ul class="ul">
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/ClearCaseConnector/jdk/bin </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/ClearCaseConnector/jdk/lib </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/ClearCaseConnector/jdk/jre/bin </span> 
+              </li>
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/ClearCaseConnector/jdk/jre/lib </span> 
+              </li>
+            </ul></li>
+            <li class="li">
+             <span class="keyword">Rational Team Concert </span> - 
+             <span class="keyword">ClearQuest&#174;
+            Connector </span> : 
+            <ul class="ul">
+              <li class="li">
+                 <span class="filepath">
+                /opt/IBM/ClearQuestConnector/gateway/linux/ibm-java2-i386-50/jre </span> 
+              </li>
+            </ul></li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+  </ul>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

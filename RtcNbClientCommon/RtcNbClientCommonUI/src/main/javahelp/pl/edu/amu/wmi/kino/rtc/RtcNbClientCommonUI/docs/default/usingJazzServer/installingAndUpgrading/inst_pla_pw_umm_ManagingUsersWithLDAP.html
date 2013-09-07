@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Managing users with Lightweight Directory Access
+    Protocol (LDAP)</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="c_plan_identity_management"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla__PlanningTheInstallation.html"
+  shape="rect">Planning the installation</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_pw_umm__ChoosingAUserManagementMethod.html"
+  shape="rect">Choosing a user management method</a></div>
+  <a id="c_plan_identity_management"
+  name="c_plan_identity_management"></a>
+  <h1 class="topictitle1">Managing users with Lightweight Directory
+  Access Protocol (LDAP)</h1>This information helps you configure
+  your LDAP registry to manage users. 
+  <p class="p">If you plan to use an LDAP registry with your 
+   <span class="keyword">Jazz&#8482; Team Server </span> , you must
+  configure your Apache Tomcat or WebSphere&#174; Application
+  Server to use an LDAP registry to authenticate users.</p>
+  <div class="p">To configure LDAP to work with 
+   <span class="keyword">Jazz Team Server </span> , follow these
+  tasks: 
+  <ol class="ol">
+    <li class="li">
+    <a class="xref"
+    href="#c_plan_identity_management__understand_ldap">
+    Understanding the LDAP configuration parameters</a>.</li>
+    <li class="li">
+    <a class="xref"
+    href="#c_plan_identity_management__ldap_config_process">LDAP
+    configuration setup process</a>.</li>
+    <li class="li">
+    <a class="xref"
+    href="#c_plan_identity_management__config_tomcat">Configure the
+    Web container for LDAP in Apache Tomcat</a>. 
+    <div class="note">
+     <span class="notetitle">Note: </span> The 
+     <span class="keyword">Jazz Team Server </span> user identity is
+    case sensitive. When using LDAP for user management, turn off
+    the case-insensitive option. Work with your server
+    administrator or consult your product documentation to ensure
+    that the settings are case-sensitive.</div></li>
+    <li class="li">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/learn/LearnItem.jsp?href=content/tech-notes/jazz-team-server-1_0-was-ldap-realm-setup/index.html" />
+      <param name="text"
+      value="Configure the WebSphere Application Server with LDAP realm " />
+    </object>.</li>
+    <li class="li">
+    Create an initial user.  It is not available via Netbeans plugin. Please use eclipse client. You can create a user and add the user as a
+    member in a project area or a team area. When creating a user, you
+    assign a name, user ID, email address, repository groups, and client
+    access licenses to the user. Optionally, you can add a photo of the
+    user. Regardless of where you create the user, the user resides in the
+    repository and is available to be added to any project area or team
+    area in the repository.This user is the initial  <span class="keyword">Jazz Team
+    Server </span> administrator.</li>
+    <li class="li">
+    <a class="xref"
+    href="../administering/adm_ldap_UsingTheLDAPSyncTaskFeed.html"
+    title="The LDAP Nightly sync task synchronizes the user information present in the Jazz repository with the information in the LDAP directory. The LDAP sync task creates new user records, updates names and user information, identifies ambiguous entries, and lists errors.">
+    Using the LDAP sync task</a>.</li>
+    <li class="li">
+    <a class="xref" href="inst_ee_RunningTheSetupWizard.html"
+    title="Running the setup wizard verifies that the server is operating properly and guides you through the steps configure the server.">
+    Use the setup wizard</a>to configure the 
+     <span class="keyword">Jazz Team Server </span> to use LDAP.</li>
+    <li class="li">
+    <a class="xref"
+    href="../../under_construction.html"
+    title="You can import users from an external registry service such as an LDAP server. You can assign repository permissions while importing the user.">
+    Import the users via Web UI</a>.</li>
+  </ol></div>
+  <a id="c_plan_identity_management__understand_ldap"
+  name="c_plan_identity_management__understand_ldap"></a>
+  <h2 class="sectiontitle">Understanding the LDAP configuration
+  parameters</h2>
+  <div class="tablenoborder">
+    <table border="1" cellpadding="4" cellspacing="0" class="table"
+    frame="border" rules="all" summary="">
+      <caption>Table 1. LDAP Parameters and descriptions</caption>
+      <thead align="left" class="thead">
+        <tr class="row" valign="bottom">
+          <th class="entry" id="d14782e112" valign="bottom">
+          Parameter</th>
+          <th class="entry" id="d14782e114" valign="bottom">Value
+          description</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">LDAP
+          Registry Location</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          URL that references your LDAP server.
+          ldap://ldap.example.com:389</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">User
+          Name</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          user name to log in to this LDAP server. Some LDAP
+          servers allow anonymous login and password. In this case,
+          this parameter is blank.</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">
+          Password</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          password associated with the user name.</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">Base
+          User DN</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          search base indicates where in the hierarchy to begin the
+          search for the users. For example, "o=company,l=your
+          city,c=your country"</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">User
+          Property Names Mapping</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          mapping of Jazz user property names to LDAP registry
+          entry attribute names. You must define the following
+          mappings: 
+          <ul class="ul">
+            <li class="li">
+            <strong class="b">userId </strong>=[LDAP user ID]</li>
+            <li class="li">
+            <strong class="b">name </strong>=[LDAP user name]</li>
+            <li class="li">
+            <strong class="b">emailAddress </strong>=[LDAP user
+            e-mail]</li>
+          </ul>
+          <p class="p">The userid property identifies the user ID
+          that is used when a user logs into the system. The name
+          property is used to render the name in the user
+          interface.</p>
+          <p class="p">For example,
+          userId=mail,name=cn,emailAddress=mail</p></td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">Base
+          Group DN</td>
+          <td class="entry" headers="d14782e114" valign="top">This
+          search base indicates where in the hierarchy to begin the
+          search of group names, for example,
+          ou=memberlist,ou=yourgroups,o=example.com</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">Jazz
+          to LDAP Group Mapping</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          mapping between Jazz groups and LDAP groups. One Jazz
+          group can be mapped to multiple LDAP groups. The LDAP
+          groups must be separated by a semicolon. For example,
+          JazzAdmins=LDAPAdmins1;LDAPAdmins2 maps JazzAdmins group
+          to LDAPAdmins1 and LDAPAdmins2. 
+           <span class="keyword">Jazz Team Server </span> defines 4
+          groups to map with: 
+          <ul class="ul">
+            <li class="li">
+            <strong class="b">JazzAdmins </strong>=[LDAP Group for
+            Jazz admins]</li>
+            <li class="li">
+            <strong class="b">JazzUsers </strong>=[LDAP Group for
+            Jazz users]</li>
+            <li class="li">
+            <strong class="b">JazzDWAdmins </strong>=[LDAP Group for
+            Jazz Data Warehouse Admin]</li>
+            <li class="li">
+            <strong class="b">JazzGuests </strong>=[LDAP Group for
+            Jazz guest]</li>
+          </ul>For example, JazzAdmins= YourGroupA, JazzUsers=
+          YourGroupB, JazzDWAdmins= YourGroupC, JazzGuests=
+          YourGroupD .</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">Group
+          Name Property</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          LDAP Property that represents the name of the Jazz groups
+          in the LDAP registry. For example, cn. This is used in
+          the query to retrieve an LDAP group. To retrieve an LDAP
+          group, a query uses a combination of the Base group DN
+          and the Group Name Property.</td>
+        </tr>
+        <tr class="row">
+          <td class="entry" headers="d14782e112" valign="top">Group
+          Member Property</td>
+          <td class="entry" headers="d14782e114" valign="top">The
+          LDAP Property that represent the members of a group in
+          the LDAP registry. For example, uniquemember.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a id="c_plan_identity_management__ldap_config_process"
+  name="c_plan_identity_management__ldap_config_process"></a>
+  <h2 class="sectiontitle">LDAP configuration setup process</h2>
+  <div class="p">To configure LDAP connection and import users
+  follow these steps: 
+  <ol class="ol">
+    <li class="li">Stop the server.</li>
+    <li class="li">If you have previously tried to install your
+    LDAP server, backup the
+    JazzInstallDir/jazz/server/tomcat/conf/server.xml file.</li>
+    <li class="li">Open the
+    JazzInstallDir/jazz/server/tomcat/conf/server.xml file for
+    editing and uncomment the following realm tag: 
+    <pre class="pre">
+&lt;Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+             resourceName="UserDatabase" 
+             digest="SHA-1"
+             digestEncoding="UTF-8"/&gt;
+</pre></li>
+    <li class="li">Save the file and restart the server.</li>
+    <li class="li">Open a Web browser window and go to
+    https://localhost:9443/jazz/setup.</li>
+    <li class="li">Login with ADMIN/ADMIN (both username and
+    password are case sensitive).</li>
+    <li class="li">Click the 
+     <span class="uicontrol">Custom Setup </span> button.</li>
+    <li class="li">click 
+     <span class="uicontrol">Next </span> until you reach page 5, 
+     <span class="uicontrol">Setup User Registry </span> .</li>
+    <li class="li">In the Step 1 section under 
+     <span class="uicontrol">Type </span> , select the 
+     <span class="uicontrol">Tomcat User Database </span> radio
+    button.</li>
+    <li class="li">Under Step 3, select the checkbox for 
+     <span class="uicontrol">Disable default ADMIN
+    access </span> .</li>
+    <li class="li">Under Step 4, Select the checkbox for 
+     <span class="uicontrol">Rational Team Concert -
+    Developer </span> license.</li>
+    <li class="li">Click 
+     <span class="uicontrol">Next </span> to create this first
+    user.</li>
+    <li class="li">Click 
+     <span class="uicontrol">Previous </span> to go back to page 5, 
+     <span class="uicontrol">Setup User Registry </span> .</li>
+    <li class="li">Under Step 1, select the 
+     <span class="uicontrol">LDAP </span> radio button.</li>
+    <li class="li">Fill out the fields in Section 2. For more
+    information, see 
+    <a class="xref"
+    href="#c_plan_identity_management__understand_ldap">
+    Understanding the LDAP configuration parameters</a>.</li>
+    <li class="li">Shut down the server.</li>
+    <li class="li">
+    <a class="xref"
+    href="#c_plan_identity_management__config_tomcat">Configure the
+    Web container for LDAP in Apache Tomcat</a>.</li>
+    <li class="li">Restart the server.</li>
+    <li class="li">Open a Web browser window and go to
+    https://localhost:9443/jazz/admin.</li>
+    <li class="li">Login with the user ID that you created to test
+    your connection.</li>
+  </ol></div>
+  <a id="c_plan_identity_management__config_tomcat"
+  name="c_plan_identity_management__config_tomcat"></a>
+  <h2 class="sectiontitle">Configure the Web container for LDAP in
+  Apache Tomcat</h2>
+  <div class="p">For additional information about configuring
+  Apache Tomcat for LDAP, see the related links below. To configure
+  the Web container for LDAP in Apache Tomcat follow these steps: 
+  <ol class="ol">
+    <li class="li">Open the
+    JazzInstallDir/jazz/server/tomcat/conf/server.xml file for
+    editing and comment the following tag: 
+    <pre class="pre">
+&lt;Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+             resourceName="UserDatabase" 
+             digest="SHA-1"
+             digestEncoding="UTF-8"/&gt;
+</pre></li>
+    <li class="li">Add the following tag for Oracle Internet
+    Directory (OID): 
+    <pre class="pre">
+&lt;Realm className="org.apache.catalina.realm.JNDIRealm" 
+ debug="99"
+ connectionURL="ldap://ldap.company.com:389"
+ roleBase="cn=Groups,dc=company,dc=com"
+ roleSearch="(uniquemember={0})" 
+ roleName="cn"
+ userBase="cn=Users,dc=company,dc=com"
+ userSearch="(uid={0})"/&gt;
+</pre>Add the following tag for Microsoft Active Directory: 
+    <pre class="pre">
+&lt;Realm className="org.apache.catalina.realm.JNDIRealm" 
+ debug="99"
+ connectionURL="ldap://ldap.company.com:3268"
+ authentication="simple"
+ referrals="follow"
+ connectionName="cn=LDAPUser,ou=Service Accounts,dc=company,dc=com"
+ connectionPassword="VerySecretPassword" 
+ userSearch="(sAMAccountName={0})"
+ userBase="dc=company,dc=com" 
+ userSubtree="true"
+ roleSearch="(member={0})" 
+ roleName="cn" 
+ roleSubtree="true"
+ roleBase="dc=company,dc=com"/&gt;
+</pre></li>
+    <li class="li">Open the
+    JazzInstallDir/jazz/server/tomcat/webapps/jazz/WEB-INF/web.xml
+    file for editing and link and map the security role references
+    to the security roles: 
+    <pre class="pre">
+&lt;web-app id="WebApp"&gt;
+&lt;servlet id="bridge"&gt;
+&lt;servlet-name&gt;equinoxbridgeservlet&lt;/servlet-name&gt;
+&lt;display-name&gt;Equinox Bridge Servlet&lt;/display-name&gt;
+&lt;description&gt;Equinox Bridge Servlet&lt;/description&gt;
+&lt;servlet-class&gt;org.eclipse.equinox.servletbridge.BridgeServlet&lt;/servlet-class&gt;
+&lt;init-param&gt;&lt;!-- ... --&gt;&lt;/init-param&gt;
+&lt;!-- ... --&gt;
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+
+&lt;!-- Addendum
+If the names of your LDAP Groups are the same as the default Jazz
+roles
+you don't need to add the following tags
+--&gt;
+&lt;security-role-ref&gt;
+&lt;role-name&gt;JazzAdmins&lt;/role-name&gt;
+&lt;role-link&gt;[LDAP Group for Jazz admins]&lt;role-link&gt;
+&lt;/security-role-ref&gt;
+
+&lt;security-role-ref&gt;
+&lt;role-name&gt;JazzDWAdmins&lt;/role-name&gt;
+&lt;role-link&gt;[LDAP Group for Jazz admins]&lt;role-link&gt;
+&lt;/security-role-ref&gt;
+
+&lt;security-role-ref&gt;
+&lt;role-name&gt;JazzGuests&lt;/role-name&gt;
+&lt;role-link&gt;[LDAP Group for Jazz admins]&lt;role-link&gt;
+&lt;/security-role-ref&gt;
+
+&lt;security-role-ref&gt;
+&lt;role-name&gt;JazzUsers&lt;/role-name&gt;
+&lt;role-link&gt;[LDAP Group for Jazz admins]&lt;role-link&gt;
+&lt;/security-role-ref&gt;
+
+&lt;/servlet&gt;
+&lt;!-- ... --&gt;
+&lt;/web-app&gt;
+</pre>Use the following tags to declare the LDAP groups as security
+roles: 
+    <pre class="pre">
+&lt;web-app id="WebApp"&gt;
+&lt;servlet id="bridge"&gt;
+&lt;!-- ... --&gt;
+&lt;security-role&gt;
+&lt;role-name&gt;JazzAdmins&lt;/role-name&gt;
+&lt;role-name&gt;JazzDWAdmins&lt;/role-name&gt;
+&lt;role-name&gt;JazzGuests&lt;/role-name&gt;
+&lt;role-name&gt;JazzUsers&lt;/role-name&gt;
+
+&lt;!-- Addendum
+If the names of your LDAP Groups are the same as the default Jazz
+roles
+you don't need to add the following tags
+--&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Admins]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Data Warehouse
+Admins]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Guests]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Users]&lt;/role-name&gt;
+&lt;!-- End Addendum --&gt;
+&lt;/security-role&gt;
+&lt;!-- ... --&gt;
+&lt;/web-app&gt;
+</pre>Use the following tags to update the security-constraint
+section: 
+    <pre class="pre">
+&lt;web-app id="WebApp"&gt;
+&lt;!-- ... --&gt;
+&lt;security-constraint&gt;
+&lt;web-resource-collection&gt;
+&lt;web-resource-name&gt;secure&lt;/web-resource-name&gt;
+&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/web-resource-collection&gt;
+
+&lt;auth-constraint&gt;
+&lt;role-name&gt;JazzUsers&lt;/role-name&gt;
+&lt;role-name&gt;JazzAdmins&lt;/role-name&gt;
+&lt;role-name&gt;JazzGuests&lt;/role-name&gt;
+&lt;role-name&gt;JazzDWAdmins&lt;/role-name&gt;
+
+&lt;!-- Addendum
+If the names of your LDAP Groups are the same as the default Jazz
+roles
+you don't need to add the following tags
+--&gt;
+
+&lt;role-name&gt;[LDAP Group for Jazz Admins]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Data Warehouse
+Admins]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Guests]&lt;/role-name&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Users]&lt;/role-name&gt;
+&lt;!-- End Addendum --&gt;
+
+&lt;/auth-constraint&gt;
+
+&lt;user-data-constarint&gt;
+&lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+&lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+&lt;!-- ... --&gt;
+&lt;/web-app&gt;
+</pre>Repeat the same addendum on each security-constraint
+referencing a Jazz group: 
+    <pre class="pre">
+&lt;web-app id="WebApp"&gt;
+&lt;!-- ... --&gt;
+&lt;security-constraint&gt;
+&lt;web-resource-collection&gt;
+&lt;web-resource-name&gt;adminsecure&lt;/web-resource-name&gt;
+&lt;url-pattern&gt;/admin/cmd/*&lt;/url-pattern&gt;
+&lt;/web-resource-collection&gt;
+&lt;auth-constraint&gt;
+&lt;role-name&gt;JazzAdmins&lt;/role-name&gt;
+&lt;!-- Addendum --&gt;
+&lt;role-name&gt;[LDAP Group for Jazz Admins]&lt;/role-name&gt;
+&lt;!-- End addendum --&gt;
+&lt;/auth-constraint&gt;
+&lt;user-data-constraint&gt;
+&lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+&lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+&lt;!-- ... --&gt;
+&lt;/web-app&gt;
+</pre></li>
+  </ol></div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link" href="inst_ee_RunningTheSetupWizard.html"
+      title="Running the setup wizard verifies that the server is operating properly and guides you through the steps configure the server.">
+      Running the setup wizard</a>
+    </div>
+    <strong>Related information </strong>
+       <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+ <param name="content"  value=" http://www-01.ibm.com/support/docview.wss?rs=3488&uid=swg27015746" />
+                      <param name="text" value="Supported server environments" />
+               </object>
+    <img alt="" src="../../images/sout.gif" />
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://tomcat.apache.org/tomcat-5.5-doc/realm-howto.html#JNDIRealm" />
+      <param name="text"
+      value="Apache Tomcat Realm Configuration: Configuring Apache Tomcat to use LDAP via JNDI lookups " />
+    </object>
+    <img alt="" src="../../images/sout.gif" />
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.express.doc/info/exp/ae/tsec_ldap.html" />
+      <param name="text"
+      value="Configuring Websphere to use Lightweight Directory Access Protocol user registries " />
+    </object>
+    <img alt="" src="../../images/sout.gif" />
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.express.doc/info/exp/ae/usec_tselugrad.html" />
+      <param name="text"
+      value="Mapping users to roles (Websphere) " />
+    </object>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

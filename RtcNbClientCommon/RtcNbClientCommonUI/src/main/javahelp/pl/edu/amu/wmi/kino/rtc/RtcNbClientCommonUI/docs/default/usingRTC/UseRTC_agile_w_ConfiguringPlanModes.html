@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="helpIndexHtml" lang="en" xml:lang="en" xmlns=
+"http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+
+  <title>Configuring plan modes</title>
+  <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css" rel=
+  "stylesheet" type="text/css" />
+  <link href=
+  "nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+  rel="stylesheet" type="text/css" />
+</head>
+
+<body id="configuringplanmodes" onload=
+"javascript:resizeAtPageLoad();" onresize=
+"javascript:resizeAllImages();">
+  <a name="configuringplanmodes" id="configuringplanmodes"></a>
+
+  <h1 class="topictitle1">Configuring plan modes</h1>
+
+     <div class="note_important">
+          <span class="importanttitle">Important: </span>Plans modifying plans is not available in Netbeans plugin for Rational Team Concert. Following information relates to web user interface.
+      </div>A plan mode
+  consists of various elements that are on three tabs: Content,
+  View Layout, and Colorize. You can change the elements of a plan
+  mode to group work items according to your need.
+
+  <div class="section prereq">
+    <div class="tasklabel">
+      <strong>Before you begin</strong>
+    </div>You must have a plan and a plan mode.
+  </div>
+
+  <div class="tasklabel">
+    <strong>About this task</strong>
+  </div>To configure a plan mode:
+
+  <ol class="ol steps">
+    <li class="li step stepexpand"><span class="cmd">Open a plan in
+    the Web UI.</span></li>
+
+    <li class="li step stepexpand"><span class=
+    "cmd">Click</span></li>
+  </ol><img alt="Edit" class="image" src=
+  "../images/edit_planmode.gif" />.
+
+  <ul>
+    <li class="li step stepexpand">
+      <span class="cmd">You can do the following:</span>
+
+      <table border="1" cellpadding="4" cellspacing="0" class=
+      "simpletable choicetable" frame="hsides" rules="rows"
+      summary="">
+        <thead>
+          <tr>
+            <th align="left" id="d5526e36-option" valign="bottom">
+            Tabs</th>
+
+            <th align="left" id="d5526e36-desc" valign="bottom">
+            Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="strow chrow">
+            <td class="stentry choption" headers="d5526e36-option"
+            id="d5526e43" valign="top">
+            <strong>Content</strong></td>
+
+            <td class="stentry chdesc" headers=
+            "d5526e36-desc d5526e43" valign="top">Select the
+            elements of Style, Grouping, Filtering, Sorting, and
+            Bars in the way you want to group work items.</td>
+          </tr>
+
+          <tr class="strow chrow">
+            <td class="stentry choption" headers="d5526e36-option"
+            id="d5526e48" valign="top"><strong>View
+            Layout</strong></td>
+
+            <td class="stentry chdesc" headers=
+            "d5526e36-desc d5526e48" valign="top">Displays
+            different attributes of a work item as columns in the
+            Planned Items page. Add the columns that you want to
+            view in the Planned Items page. To view a user-defined
+            column in this tab, you must first define the work item
+            attribute; and then in the <span class="uicontrol">Plan
+            Attributes</span> editor, click <span class=
+            "uicontrol">Add</span>.</td>
+          </tr>
+
+          <tr class="strow chrow">
+            <td class="stentry choption" headers="d5526e36-option"
+            id="d5526e59" valign="top">
+            <strong>Colorize</strong></td>
+
+            <td class="stentry chdesc" headers=
+            "d5526e36-desc d5526e59" valign="top">
+              Colors the work items based on expressions. Click
+              <span class="uicontrol">Add</span> to add a color
+              with label.
+
+              <ul class="ul">
+                <li class="li">To change color, click on the color
+                cell.</li>
+
+                <li class="li">To change the label, click on the
+                label cell.</li>
+
+                <li class="li">To add an expression, click on the
+                expression cell.</li>
+              </ul>Type an expression to color the work items. For
+              example, you can type <samp class=
+              "codeph">priority:high</samp> to color work items
+              whose priority is set to high. If you use multiple
+              conditions for different attributes, the work items
+              that match the all the conditions are colorize. For
+              example, for <samp class="codeph">priority:medium
+              severity:major</samp> , the work items that has both
+              priority set to medium and severity set to major are
+              colorized.
+
+              <p class="p">If you use multiple conditions for the
+              same attribute and if both the conditions are
+              matched, the work items that match the first
+              condition are colorized. For example, for
+              <samp class="codeph">priority:high
+              priority:low</samp> , the work items with priority
+              set to high are colorized.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+
+    <li class="li step stepexpand"><span class="cmd">Click
+    <span class="uicontrol">Save</span>.</span></li>
+  </ul>
+
+  <div class="related-links">
+    <div class="familylinks"></div>
+
+
+    </div>
+   <hr />
+  <span class="runningfooter"><object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+    <param name="text" value="Feedback " />
+  </object></span>
+
+  <p><span class="runningheader" style="color: #666;">Did this
+  help? You can provide feedback at Jazz.net (registration
+  required): <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value=
+    "https://jazz.net/forums/viewforum.php" />
+    <param name="text" value="Comment in the forums " />
+  </object> or <object classid=
+  "java:org.netbeans.modules.javahelp.BrowserDisplayer">
+    <param name="content" value="https://jazz.net/bugs/bugs.jsp" />
+    <param name="text" value="submit a bug " />
+  </object></span></p>
+</body>
+</html>

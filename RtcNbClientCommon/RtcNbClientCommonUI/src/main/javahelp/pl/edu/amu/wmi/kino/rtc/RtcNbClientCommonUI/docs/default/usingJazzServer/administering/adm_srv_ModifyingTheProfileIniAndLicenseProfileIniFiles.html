@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Modifying the profile.ini and license_profile.ini
+    files</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_modify_profile_ini"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"
+  shape="rect">Administering</a>&gt;
+  <a href="../../usingJazzServer/administering/adm_srv__ConfiguringTheServer.html"
+  shape="rect">Configuring the server</a></div>
+  <a id="t_modify_profile_ini" name="t_modify_profile_ini"></a>
+  <h1 class="topictitle1">Modifying the profile.ini and
+  license_profile.ini files</h1>When running repotools commands or
+  the start and stop server scripts from a directory other than the
+  default, you should modify the URL property values to contain
+  absolute directory paths. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>The profile.ini and license_profile.ini files are located
+  in the directory
+  <var class="varname">
+  JazzInstallDir</var>/server/conf/jazz/provision_profiles. 
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Open the file in a text editor. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Change the relative value to an absolute
+      value. </span> 
+      <div class="p">For example, change 
+      <pre class="pre">
+url=file:./update-site
+</pre>To 
+      <pre class="pre">
+url=file:/opt/IBM/JazzTeamServer/server/update-site
+</pre></div>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Save the file. </span> 
+      <div class="note">
+       <span class="notetitle">Note: </span> Leaving backup files in
+      the 
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz/provision_profiles can
+      cause errors. You should not store backup files in this
+      directory.</div>
+    </li>
+  </ol>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

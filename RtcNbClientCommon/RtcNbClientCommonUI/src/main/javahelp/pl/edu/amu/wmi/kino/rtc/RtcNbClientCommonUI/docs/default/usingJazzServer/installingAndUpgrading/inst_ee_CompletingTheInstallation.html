@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Completing the installation</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_e_server_installation_post_config"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ee__InstallingRationalTeamConcertExpressEdition.html"
+  shape="rect">Installing Rational Team Concert Express
+  edition</a></div>
+  <a id="t_e_server_installation_post_config"
+  name="t_e_server_installation_post_config"></a>
+  <h1 class="topictitle1">Completing the installation</h1>After the
+  server is installed, you must consider some configuration options
+  before continuing. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>After the installation, there are a few additional actions
+  to take. 
+  <ul class="ul steps-unordered">
+    <li class="li step stepexpand">
+       <span class="cmd">Some files contain passwords. Those files
+      should be protected so that they are readable only by users
+      authorized to know the password for the accounts. </span> 
+      <ul class="ul">
+        <li class="li">
+        <strong class="b">teamserver.properties </strong>- The 
+         <span class="keyword">Jazz&#8482; Team
+        Server </span> requires that the database password is stored
+        in 
+         <span class="filepath">
+        <var class="varname">
+        JazzInstallDir</var>/server/conf/jazz/teamserver.properties </span> .
+        
+        <p class="p">When properties files are saved, the
+        application always makes a backup copy of the previous
+        version in the same directory. If you want to remove all
+        files that contain the clear-text password, remove the
+        backup properties files after configuring the server for
+        the first time.</p></li>
+      </ul>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">When connecting to the server with the 
+       <span class="keyword">Rational Team
+      Concert&#8482; </span> client or a Web browser, you might see
+      security certificate warnings. To disable the warning, see 
+      <a class="xref"
+      href="inst_pla_ssi_sc__SecurityCertificates.html"
+      title="The Jazz Team Server includes a self-signed certificate for SSL with the Apache Tomcat server.">
+      Security certificates</a>. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">If you configured the application server to
+      use ports other than the defaults, these ports should also be
+      configured in the Jazz configuration. These port numbers are
+      used for composing URLs for things like feed links and item
+      links in email notifications. To update the defaults, use the
+      advanced properties configuration page of the Admin Web UI to
+      modify the following properties: </span> 
+      <ul class="ul">
+        <li class="li">
+        com.ibm.team.repository.servlet.internal.ServletConfigurationService
+        
+        <ul class="ul">
+          <li class="li">Repository HTTP port</li>
+          <li class="li">Repository HTTPS port</li>
+        </ul></li>
+        <li class="li">
+        com.ibm.team.repository.service.internal.webuiInitializer.ConfigPropertyInitializer
+        
+        <ul class="ul">
+          <li class="li">URL HTTP Port</li>
+          <li class="li">URL HTTPS Port</li>
+        </ul></li>
+      </ul>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">You are now ready to connect to the server
+      with the 
+       <span class="keyword">Rational Team Concert </span> client or a
+      Web browser. </span> 
+    </li>
+  </ul>
+  <div class="related-links">
+    <div class="familylinks"></div>
+    <div class="relconcepts">
+      <strong>Related concepts </strong>
+      <br />
+      <a class="link"
+      href="inst_pla_ssi_sc__SecurityCertificates.html"
+      title="The Jazz Team Server includes a self-signed certificate for SSL with the Apache Tomcat server.">
+      Security certificates</a>
+    </div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link"
+      href="inst_con_CCConnectorIBMInstallationManager.html"
+      title="The client is distributed as a downloadable file via the IBM Installation Manager.">
+      Installing the client using the IBM Installation Manager</a>
+      <br />
+      
+      <br />
+      
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

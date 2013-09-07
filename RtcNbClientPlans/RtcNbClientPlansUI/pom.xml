@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team / www.rtcnbclient.wmi.amu.edu.pl
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>RtcNbClientPlans</artifactId>
+        <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+        <version>0.2.3.9-SNAPSHOT</version>
+    </parent>
+    <artifactId>RtcNbClientPlansUI</artifactId>
+    <packaging>nbm</packaging>
+    <name>RtcNbClient Plans UI</name>
+    <version>0.2.3.9-SNAPSHOT</version>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <version>${netbeans.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-nodes</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-actions</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonFacade</artifactId>
+            <version>${common.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsFacade</artifactId>
+            <version>${workitems.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientPlansFacade</artifactId>
+            <version>${plans.facade.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonUI</artifactId>
+            <version>${common.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsUI</artifactId>
+            <version>${workitems.ui.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <artifactId>org-openide-awt</artifactId>
+            <groupId>org.netbeans.api</groupId>
+            <version>${netbeans.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-windows</artifactId>
+            <version>${netbeans.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-dialogs</artifactId>
+            <version>${netbeans.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.netbeans</groupId>
+            <artifactId>KinoNbUtilities</artifactId>
+            <version>${kinonbutils.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-explorer</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-progress</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-modules</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

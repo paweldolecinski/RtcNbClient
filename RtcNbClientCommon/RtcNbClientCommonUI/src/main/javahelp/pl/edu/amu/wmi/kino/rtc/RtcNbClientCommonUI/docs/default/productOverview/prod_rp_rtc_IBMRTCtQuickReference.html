@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>IBM Rational Team Concert quick reference</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="c_jazz-platform-quick-ref"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../under_construction.html" shape="rect">Rational Team
+  Concert</a>&gt;
+  <a href="../productOverview/prod_content.html" shape="rect">
+  Product Overview</a>&gt;
+  <a href="../productOverview/prod_rp_RationalProductsOverview.html"
+  shape="rect">Rational Products overwiew</a>&gt;
+  <a href="../productOverview/prod_rtc_content.html" shape="rect">
+  Rational Team Concert overview:</a></div>
+  <a id="c_jazz-platform-quick-ref"
+  name="c_jazz-platform-quick-ref"></a>
+  <h1 class="topictitle1">
+   <span class="keyword">IBM Rational Team Concert </span> architecture</h1>
+      If you want to dive right in and start exploring,
+  this quick reference covers the key concepts, terms, and visual
+  elements that you'll come across. 
+  <p class="p">This topic includes the following sections:</p>
+  <div class="p">
+    <ul class="ul">
+      <li class="li">
+        <a class="xref" href="#c_jazz-platform-quick-ref__terms">
+        Rational Team Concert terminology and concepts</a>
+      </li>
+      <li class="li">
+        <a class="xref"
+        href="#c_jazz-platform-quick-ref__rationalteamconcertclients">
+        Rational Team Concert clients</a>
+      </li>
+    </ul>
+  </div>
+  <a id="c_jazz-platform-quick-ref__terms"
+  name="c_jazz-platform-quick-ref__terms"></a>
+  <h2 class="sectiontitle">
+   <span class="keyword">Rational Team Concert </span> terminology and
+  concepts</h2>
+  <p class="p">
+   <span class="keyword">Rational Team
+  Concert&#8482; </span> artifacts are stored in a 
+  <strong class="b">repository </strong>, which can be accessed only
+  by authorized 
+  <strong class="b">users </strong>.</p>
+  <p class="p">The repository contains 
+  <strong class="b">project areas </strong>that reference the
+  artifacts for a project. Each project area has an associated 
+  <strong class="b">process </strong>, which governs how the project
+  is run and customizes the way Jazz&#8482; behaves. The process is
+  defined by a process configuration and a process description. The
+  process configuration defines the project's 
+  <strong class="b">iterations </strong>and how it behaves during
+  these iterations. The process description corresponds to a Web
+  site explaining the process.</p>
+  <p class="p"></p>
+  <div class="image"></div>
+  <img alt="This diagram shows the high-level relationship between project areas, team areas, streams, repository workspaces, and other team artifacts."
+  class="image" src="../images/proj_area_streams.gif" />
+  <p class="p">There are several predefined processes to choose
+  from: Scrum, OpenUp, and Simple. But you can also define your own
+  processes or modify an existing one. For more information, see 
+  <a class="xref" href="../usingRTC/UseRTC_proj_a_WorkingWithProcessTemplates.html"
+  title="Process templates provide a starting point and guide for a project area process configuration and iteration structure. They can include process documentation in HTML format. You apply a process template when you create a project area; the process can then be modified in the project area or its team areas, independent of the template.">
+  Process templates</a>.</p>
+  <p class="p">From within a project area, you have access to the
+  project's artifacts.</p>
+  <p class="p">Project Areas are decomposed into a set of 
+  <strong class="b">team areas </strong>, which describe the teams
+  that work on the project. Each team area has a list of team
+  members and the process role they play within the team. A user
+  can be a member of more than one team. Each team area can define
+  process customizations to tailor the process for the team and its
+  subteams.</p>
+  <p class="p">For simple projects, all activity is on a single,
+  main 
+  <strong class="b">timeline </strong>with a single stream.
+  Additional timelines can be created for things like maintenance
+  activities. Each timeline has its own team areas and process
+  customizations.</p>
+  <p class="p">The planned work is described by 
+  <strong class="b">work items </strong>. The types of work items
+  used in a project area are defined by the process. For example,
+  the Scrum process defines the following work item types:</p>
+  <div class="p">
+    <ul class="ul">
+      <li class="li">Defect</li>
+      <li class="li">Task</li>
+      <li class="li">Story</li>
+      <li class="li">Epic</li>
+      <li class="li">Track Build Item</li>
+      <li class="li">Impediment</li>
+      <li class="li">Adoption Item</li>
+      <li class="li">Retrospective</li>
+    </ul>
+  </div>
+  <p class="p">Each work item type can have its own state
+  transitions and custom fields. Work items are filed against 
+  <strong class="b">work item categories </strong>, which allow you
+  to organize work items by functional areas. Each project area
+  defines the list of available work item categories. Each team
+  area is associated with the work item category for the functional
+  area for which the team is responsible.</p>
+  <p class="p">You can find work items by executing 
+  <strong class="b">queries </strong>. Queries can be private for
+  you or shared with the team.</p>
+  <p class="p">The work in a project area is done in a sequence of 
+  <strong class="b">iterations </strong>. Each iteration can have a
+  start and end date. One of the iterations is defined as the
+  current one by the process. When planning the work, you target a
+  work item for a particular iteration. You can plan all the work
+  that should go into an iteration by creating an 
+  <strong class="b">iteration plan </strong>. You can plan the
+  overall work for a release that is broken down into iterations in
+  a 
+  <strong class="b">release plan </strong>.</p>
+  <p class="p">You use a personal 
+  <strong class="b">repository workspace </strong>to work on project
+  files that are under source control. You load the repository
+  workspace to copy the files and folders on your computer. The 
+   <span class="keyword">Jazz Team Server </span> tracks all changes
+  made to source-controlled files with 
+  <strong class="b">change sets </strong>. Each change set contains
+  changed files and folders, carries a comment, and references the
+  associated work items that motivated the changes. You check in
+  your change sets to upload the modified files and folders from
+  your IDE workspace to the repository workspace. Checked-in change
+  sets are stored in the repository, but are not yet shared with
+  the rest of the development team until you deliver the change
+  sets. The check-in and deliver process provides extra protection
+  for your changes, while giving you the flexibility to continually
+  make changes without delivering immediately.</p>
+  <p class="p">Teams use a 
+  <strong class="b">stream </strong>to store the master copy of
+  project files; each repository workspace holds a copy. A
+  repository workspace and the team's stream are connected by a
+  flow. You deliver change sets from your repository workspace to
+  the stream to incorporate your changes into the master copy;
+  these are outgoing change sets. Incoming change sets are those
+  that have been delivered to the stream by other team members. You
+  accept incoming change sets to incorporate their changes into
+  your repository workspace and your IDE workspace.</p>
+  <p class="p">The source-controlled file base is built up from the
+  steady accumulation of change sets, each one building on
+  everything that has come before it. The change history is the
+  sequence of change sets for a repository workspace or stream.</p>
+  <p class="p">The source-controlled file base can be partitioned
+  into one or more separate 
+  <strong class="b">components </strong>, each with their own tree
+  of folders and files, and their own change history. Simple
+  repository workspaces and streams consist of a single component.
+  Multiple components are useful for teams building layered
+  software in which the pieces evolve semi-independently and are
+  deployed separately.</p>
+  <p class="p">You create a 
+  <strong class="b">baseline </strong>of an individual component in
+  a repository workspace to capture an interesting point in time,
+  or create a 
+  <strong class="b">snapshot </strong>to capture simultaneous
+  baselines across all components.</p>
+  <p class="p">Each team can have its own 
+  <strong class="b">build </strong>, described in a 
+  <strong class="b">build definition </strong>associated with the
+  team area. The build definition specifies the build interval,
+  which build script to use, and which repository workspace to be
+  used for fetching files. A build can be run on different 
+  <strong class="b">build engines </strong>. A build can be promoted
+  to a release. Users can then file work items against a particular
+  release.</p>
+  <p class="p">You can use 
+  <strong class="b">feeds </strong>to be aware of what your
+  colleagues are working on, or what's happening on other teams. As
+  artifacts in the repository are modified, event notices are
+  automatically sent out to the feeds. 
+  <a id="c_jazz-platform-quick-ref__rationalteamconcertclients"
+  name="c_jazz-platform-quick-ref__rationalteamconcertclients">
+  </a></p>
+  <h2 class="sectiontitle">
+   <span class="keyword">Rational Team Concert </span> clients</h2>
+  <p class="p">You can work in 
+   <span class="keyword">Rational Team Concert </span> in any of the
+  following client user interfaces:</p>
+  <div class="related-links">
+    <ul class="ullinks">
+      <li><strong>Rational Team Concert plugin for Netbeans </strong></li>
+      <li class="link ulchildlink">
+      <strong>
+        Rational Team Concert client for Eclipse IDE
+       </strong>
+      <br />
+       <span class="keyword">Rational Team Concert </span>  includes an
+      Eclipse-based client user interface.</li>
+      <li class="link ulchildlink">
+      <strong>
+        <a href="prod_rp_rtc_RTCWebClientUI.html">Rational Team
+        Concert Web client user interface</a>
+       </strong>
+      <br />You can work in 
+       <span class="keyword">Rational Team Concert </span> in the Web
+      client user interface.</li>
+      <li class="link ulchildlink">
+      <strong>
+    
+        Rational Team Concert client for Microsoft Visual Studio
+        IDE
+       </strong>
+      <br />You can work in 
+       <span class="keyword">Rational Team Concert </span> in the 
+       <span class="keyword">Rational Team Concert Client for
+      Microsoft&#174; Visual Studio IDE </span> .</li>
+    </ul>
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

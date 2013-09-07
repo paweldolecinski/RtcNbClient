@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/rtc/client/workitems/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/rtc/client/workitems/layer.xml
+OpenIDE-Module-Public-Packages: pl.edu.amu.wmi.kino.rtc.client.**
+OpenIDE-Module-Display-Category: RTC
+AutoUpdate-Show-In-Client: false

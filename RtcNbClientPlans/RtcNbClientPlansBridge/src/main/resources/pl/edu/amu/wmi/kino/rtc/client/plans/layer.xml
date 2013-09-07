@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.0//EN" "http://www.netbeans.org/dtds/filesystem-1_0.dtd">
+<filesystem>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="PlansModule">
+                <folder name="Local">
+                    <folder name="PlanItemViewModes">
+                        <!-- All view mode factories should be declared here-->
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcWorkBreakdownFactory.instance"/>
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcTeamFoldersFactory.instance"/>
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcRankedListFactory.instance"/>
+
+                        <folder name="Sorting">
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcCreationDateSortMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcCustomSortMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcEstimateSortMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcPlannedTimeSortMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcPrioritySortMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcRankingSortMode.instance"/>
+                        </folder>
+                        <folder name="Grouping">
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcCategoryGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcFolderGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcIterationGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcNoneGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcOwnerGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcPlannedTimeGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcPriorityGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcTagsGroupMode.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcTeamGroupMode.instance"/>
+                            <!-- All grouping policies should be declared here -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlanItemGrouping -->
+                        </folder>
+                        <folder name="Filter">
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcAssignedFilter.instance"/>
+                            <!--<file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcEmptyGroupsFilter.instance"/>-->
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcEstimatedFilter.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcNotChangedFilter.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcPlannedFilter.instance"/>
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcResolvedFilter.instance"/>
+                            <!--<file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcSubIterationsFilter.instance"/>-->
+                            <!--<file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcSubTeamsFilter.instance"/>-->
+                            <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcTopLevelTypesFilter.instance"/>
+                            <!-- All filter policies should be declared here -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlanItemFilter -->
+                        </folder>
+                        <folder name="Style">
+                            <!-- All view styles have to be declared here -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlanItemViewStyle -->
+                        </folder>
+
+                        <!--Work Breakdown view mode-->
+                        <folder name="com.ibm.team.apt.viewmodes.internal.workBreakdown">
+                            <folder name="Sorting">
+                                <file name="RtcEstimateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcEstimateSortMode.instance"/>
+                                </file>
+                                <file name="RtcCreationDateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcCreationDateSortMode.instance"/>
+                                </file>
+                                <file name="RtcPrioritySortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcPrioritySortMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Grouping">
+                                <file name="RtcOwnerGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcOwnerGroupMode.instance"/>
+                                </file>
+                                <file name="RtcNoneGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcNoneGroupMode.instance"/>
+                                </file>
+                                <file name="RtcCategoryGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcCategoryGroupMode.instance"/>
+                                </file>
+                                <file name="RtcFolderGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcFolderGroupMode.instance"/>
+                                </file>
+                                <file name="RtcIterationGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcIterationGroupMode.instance"/>
+                                </file>
+                                <file name="RtcPriorityGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcPriorityGroupMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Filter">
+                                <file name="RtcResolvedFilter.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Filter/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcResolvedFilter.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Style">
+                            </folder>
+                        </folder>
+
+                        <!--Ranked list view mode-->
+                        <folder name="com.ibm.team.apt.viewmodes.internal.backlog2">
+                            <folder name="Sorting">
+                                <file name="RtcEstimateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcEstimateSortMode.instance"/>
+                                </file>
+                                <file name="RtcPrioritySortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcPrioritySortMode.instance"/>
+                                </file>
+                                <file name="RtcCreationDateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcCreationDateSortMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Grouping">
+                                <file name="RtcNoneGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcNoneGroupMode.instance"/>
+                                </file>
+                                <file name="RtcOwnerGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcOwnerGroupMode.instance"/>
+                                </file>
+                                <file name="RtcCategoryGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcCategoryGroupMode.instance"/>
+                                </file>
+                                <file name="RtcFolderGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcFolderGroupMode.instance"/>
+                                </file>
+                                <file name="RtcIterationGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcIterationGroupMode.instance"/>
+                                </file>
+                                <file name="RtcPriorityGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcPriorityGroupMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Filter">
+                                <file name="RtcResolvedFilter.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Filter/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcResolvedFilter.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Style">
+                            </folder>
+                        </folder>
+
+                        <!--team folders view mode-->
+                        <folder name="com.ibm.team.apt.viewmodes.internal.teamFolders">
+                            <folder name="Sorting">
+                                <file name="RtcEstimateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcEstimateSortMode.instance"/>
+                                </file>
+                                <file name="RtcCreationDateSortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcCreationDateSortMode.instance"/>
+                                </file>
+                                <file name="RtcPrioritySortMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Sorting/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-sortmode-RtcPrioritySortMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Grouping">
+                                <file name="RtcFolderGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcFolderGroupMode.instance"/>
+                                </file>
+                                <file name="RtcOwnerGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcOwnerGroupMode.instance"/>
+                                </file>
+                                <file name="RtcNoneGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcNoneGroupMode.instance"/>
+                                </file>
+                                <file name="RtcCategoryGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcCategoryGroupMode.instance"/>
+                                </file>
+                                <file name="RtcIterationGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcIterationGroupMode.instance"/>
+                                </file>
+                                <file name="RtcPriorityGroupMode.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Grouping/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-groupmode-RtcPriorityGroupMode.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Filter">
+                                <file name="RtcResolvedFilter.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/Filter/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-filters-RtcResolvedFilter.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="Style">
+                            </folder>
+                        </folder>
+
+                        <!--View modes for plan types-->
+                        <folder name="PlanTypeViewModeRegistration">
+                            <folder name="com.ibm.team.apt.plantype.default">
+                                <file name="RtcWorkBreakdown.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcWorkBreakdownFactory.instance"/>
+                                </file>
+                                <file name="RtcTeamFolders.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcTeamFoldersFactory.instance"/>
+                                </file>
+                                <file name="RtcRankedList.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcRankedListFactory.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.release">
+                                <file name="RtcWorkBreakdown.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcWorkBreakdownFactory.instance"/>
+                                </file>
+                                <file name="RtcTeamFolders.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcTeamFoldersFactory.instance"/>
+                                </file>
+                                <file name="RtcRankedList.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcRankedListFactory.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.release.project">
+                                <file name="RtcWorkBreakdown.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcWorkBreakdownFactory.instance"/>
+                                </file>
+                                <file name="RtcTeamFolders.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcTeamFoldersFactory.instance"/>
+                                </file>
+                                <file name="RtcRankedList.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcRankedListFactory.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.product.backlog">
+                                <file name="RtcWorkBreakdown.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcWorkBreakdownFactory.instance"/>
+                                </file>
+                                <file name="RtcTeamFolders.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcTeamFoldersFactory.instance"/>
+                                </file>
+                                <file name="RtcRankedList.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemViewModes/pl-edu-amu-wmi-kino-rtc-client-impl-plans-viewmode-RtcRankedListFactory.instance"/>
+                                </file>
+                            </folder>
+                        </folder>
+                    </folder>
+                    <folder name="PlanItemCheckers">
+                        <!-- Here you can register plan checkers -->
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcEnumerationHierarchyCheckerFactory.instance"/>
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcInvalidEstimateCheckerFactory.instance"/>
+                        <file name="pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcSchedulingCheckerFactory.instance"/>
+                        <folder name="PlanItemCheckerRegistration">
+                            <!-- Here you can put shadow files to plan item checkers for each plan type -->
+                            <folder name="com.ibm.team.apt.plantype.default">
+                                <file name="RtcInvalidEstimateCheckerFactory.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemCheckers/pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcInvalidEstimateCheckerFactory.instance"/>
+                                </file>
+                                <file name="RtcSchedulingCheckerFactory.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemCheckers/pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcSchedulingCheckerFactory.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.release">
+
+                                <file name="RtcInvalidEstimateCheckerFactory.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemCheckers/pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcInvalidEstimateCheckerFactory.instance"/>
+                                </file>
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.release.project">
+                               
+                                <file name="RtcInvalidEstimateCheckerFactory.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemCheckers/pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcInvalidEstimateCheckerFactory.instance"/>
+                                </file>
+                                
+                            </folder>
+                            <folder name="com.ibm.team.apt.plantype.product.backlog">
+                             
+                                <file name="RtcInvalidEstimateCheckerFactory.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/PlansModule/Local/PlanItemCheckers/pl-edu-amu-wmi-kino-rtc-client-impl-plans-checker-RtcInvalidEstimateCheckerFactory.instance"/>
+                                </file>
+                   
+                            </folder>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Disabling security certificate settings</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_server_certificates"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla__PlanningTheInstallation.html"
+  shape="rect">Planning the installation</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi__SpecialServerInstructions.html"
+  shape="rect">Special server instructions</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi_sc__SecurityCertificates.html"
+  shape="rect">Security certificates</a></div>
+  <a id="t_server_certificates" name="t_server_certificates"></a>
+  <h1 class="topictitle1">Disabling security certificate
+  settings</h1>If you do not require secure connections, the
+  security settings can be disabled. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <div class="note_important">
+   <span class="importanttitle">Important: </span> The information
+  below explains how to disable the SSL certificate. Following
+  these steps allows unencrypted connections to the server,
+  including user login credentials. If you require secure
+  connections, create your own self-signed certificate identifying
+  the host by its proper network name, or request a certificate
+  signed by a trusted certificate authority (CA).</div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <div class="topic task" id="modifyingtheapachetomcatsettings"
+  lang="en-us" xml:lang="en-us">
+    <a id="modifyingtheapachetomcatsettings"
+    name="modifyingtheapachetomcatsettings"></a>
+    <h2 class="topictitle2">Modifying the Apache Tomcat
+    settings</h2>
+    <ol class="ol steps">
+      <li class="li step stepexpand">
+         <span class="cmd">Make sure you have started Apache Tomcat
+        at least once already. </span> 
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Go to the 
+        <var class="varname">
+        JazzInstallDir</var>/server/tomcat/webapps/jazz/WEB-INF
+        directory. </span> 
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Edit the 
+         <span class="filepath">web.xml </span> file in this directory
+        and change all occurences of "CONFIDENTIAL" to
+        "NONE". </span> 
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Go to the 
+        <var class="varname">
+        JazzInstallDir</var>/server/tomcat/conf directory and edit
+        server.xml. </span> 
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Remove the redirectPort attribute from
+        the 9080 Connector element so that the element appears as
+        follows: </span> 
+        <pre class="pre">
+&lt;Connector port="9080" maxHttpHeaderSize="8192" 
+  maxThreads="150" minSpareThreads="25" maxSpareThreads="75" 
+  enableLookups="false" acceptCount="100" 
+  connectionTimeout="20000" disableUploadTimeout="true" 
+  URIEncoding="UTF-8"/&gt;
+</pre>
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Restart Apache Tomcat. </span> 
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">Verify that you can login using 
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+          <param name="content"
+          value="http://localhost:9080/jazz/admin" />
+          <param name="text"
+          value="http://localhost:9080/jazz/admin " />
+        </object>and do not get redirected to 
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+          <param name="content"
+          value="https://localhost:9443/jazz/admin" />
+          <param name="text"
+          value="https://localhost:9443/jazz/admin " />
+        </object>. </span> 
+      </li>
+    </ol>
+  </div>
+  <div class="topic task"
+  id="modifyingthewebsphereapplicationserversettings" lang="en-us"
+  xml:lang="en-us">
+    <a id="modifyingthewebsphereapplicationserversettings"
+    name="modifyingthewebsphereapplicationserversettings"></a>
+    <h2 class="topictitle2">Modifying the WebSphere&#174;
+    Application Server settings</h2>
+    <ol class="ol steps">
+      <li class="li step">
+         <span class="cmd">Modify the web.xml from the jazz .war
+        file that was installed into WebSphere Application Server.
+        You may need to extract the jazz .war file into a temporary
+        area first to get to the file. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Change all occurrences of "CONFIDENTIAL"
+        to "NONE" (There should be 3). </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Make sure WebSphere Application Server is
+        running and goto 
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+          <param name="content"
+          value="https://localhost:9043/ibm/console/logon.jsp" />
+          <param name="text"
+          value="https://localhost:9043/ibm/console/logon.jsp " />
+        </object>. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Goto the 
+         <span class="menucascade">
+         <span class="uicontrol">Applications </span> &gt; 
+         <span class="uicontrol">Enterprise
+        Applications </span>  </span> page. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Select the jazz_war application and click
+        the Update button. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Select the "Replace or add a single file"
+        radio button option. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">In the "Specify the path beginning with
+        the installed application archive file to the file to be
+        replaced or added." entry field, enter
+        "jazz.war/WEB-INF/web.xml". </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Click the browse button and select the
+        same web.xml that was modified in an earlier step. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Click next and follow through until the
+        application has been saved. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Go back to the
+        Applications-&gt;Enterprise Applications page and stop and
+        start the jazz_war application. </span> 
+      </li>
+      <li class="li step">
+         <span class="cmd">Verify that you can login using 
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+          <param name="content"
+          value="http://localhost:9080/jazz/admin" />
+          <param name="text"
+          value="http://localhost:9080/jazz/admin " />
+        </object>and not get redirected to 
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+          <param name="content"
+          value="https://localhost:9443/jazz/admin" />
+          <param name="text"
+          value="https://localhost:9443/jazz/admin " />
+        </object>. </span> 
+      </li>
+    </ol>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

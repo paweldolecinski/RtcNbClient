@@ -1,0 +1,107 @@
+/*General formatting*/
+body{   color: black;
+        background-color: white;
+        font-size:13px;
+        font-family:Times; }
+
+a{  font-size:13px;
+    font-family:Times;}
+
+/* titles formatting*/
+.topictitle1, .NavLIstTitle{   margin-top: 0pc;
+                margin-bottom: 10px;
+                font-size: 1.34em;
+                color:#f26721;}
+
+.sectiontitle{  color:#f26721;
+                font-size: 1.1em;
+                margin-top: 20px;
+                margin-bottom: 0px;}
+
+.importanttitle{    font-size:large;
+                    font-weight: bold;}
+
+.remembertitle{ font-weight: bold;
+                font-style: italic;}
+
+/*Text*/
+.pre{   display: block;
+        background-color:#eae4e4;
+        padding-right: 10px;
+        padding-top:10px;
+        font-size: medium;
+        font-family: monospace;
+        width:200px;
+        overflow:scroll;
+        white-space:nowrap;}
+
+.codeblock{ height:100px;
+            width:200px;
+            overflow:scroll;
+            white-space:nowrap;}
+
+.p{     margin-top: 5px;
+        margin-bottom: 5px;
+        font-size:13px;
+        font-family:Times;}
+
+.section{   margin-top: 10px;
+            margin-bottom: 10px;}
+
+span.kwd{   font-weight: bold}
+
+span.filepath{  font-family: monospace}
+
+span.keyword{   font-weight: bold;
+            }
+
+.uicontrol{ font-weight: bold}
+
+.userinput{ font-size: large}
+
+.systemoutput{  font-family: monospace}
+
+.var{  font-style : italic;
+       font-weight: normal;}
+
+.figcap{    font-weight: bold;}
+
+.fignone{   margin-top:20px;}
+
+.lines{     margin-left:30px;}
+
+/*Notes*/
+.notetitle{ font-weight: bold }
+
+.note{  background-color: #FFFFE1;
+        padding: 4px 4px 4px 26px;
+        margin: 10px 0px 10px 0px;
+        background-image:  url("nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/images/note16.gif");
+        background-position: 4px 4px;
+        background-repeat: no-repeat;}
+
+.note_important{    background-color: #ffb895;
+                    padding: 4px 4px 4px 26px;
+                    margin: 10px 0px 10px 0px;
+                    background-image:  url("nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/images/note16.gif");
+                    background-position: 4px 4px;
+                    background-repeat: no-repeat;}
+
+.note_tip{  background-color:#FFFFE1;
+            padding: 4px 4px 4px 26px;
+            margin: 10px 0px 10px 0px;
+            background-image:  url("nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/images/tip16.gif");
+            background-position: 4px 4px;
+            background-repeat: no-repeat;}
+
+.tiptitle{  font-weight: bold}
+
+.tasklabel{ margin-top: 10px;
+            margin-bottom: 10px}
+
+kbd{    font-size: large}
+
+tr.sthead{  background-color: silver;font-weight: bold}
+
+.codeph{    font-size: medium}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Taking the primary server offline</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="manualfailoverprocesstoidlestandbybackupserver"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ha__DeployingJazzWarOnWebSphereASforHA.html"
+  shape="rect">Deploying jazz.war on WebSphere Application Server
+  for high availability environments</a></div>
+  <a id="manualfailoverprocesstoidlestandbybackupserver"
+  name="manualfailoverprocesstoidlestandbybackupserver"></a>
+  <h1 class="topictitle1">Taking the primary server offline</h1>If
+  your primary server fails, or if you suspect your server is
+  experiencing problems and needs maintenance, the first priority
+  is to redirect clients to a backup server so that client
+  applications work with as little interruption as possible. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>Sometimes, you can fix the failed application server by
+  restarting it. If you suspect the repair or maintenance of the
+  primary application server might take more time to fix, then it
+  is best to mark the primary server as unavailable. 
+  <p class="p">To make the primary server unavailable, you must
+  make the following changes to the plugin-cfg.xml file on the Web
+  server:</p>
+  <ol class="ol steps">
+    <li class="li step">
+       <span class="cmd">In the Web server plugin-cfg.xml file,
+      locate the following line:
+      <samp class="codeph">&amp;lt;Server
+      &lt;nop&gt;LoadBalanceWeight ="1" &lt;nop&gt;ConnectTimeout
+      ="0" &lt;nop&gt;ExtendedHandshake ="false"
+      &lt;nop&gt;MaxConnections ="-1" Name="PrimaryNode01_server1"
+      &lt;nop&gt;ServerIOTimeout ="0" &lt;nop&gt;WaitForContinue
+      ="false"&amp;gt;&lt;br /&gt; </samp> </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">Change the 
+      <samp class="codeph">
+      &lt;nop&gt;LoadBalanceWeight </samp>attribute from "1" to
+      "0" </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">Save the plugin-cfg.xml file. </span> 
+    </li>
+  </ol>
+  <div class="section result">
+  <div class="tasklabel">
+    <strong>Results </strong>
+  </div>When 
+  <samp class="codeph">LoadBalanceWeight </samp>set to "0", no
+  requests can be sent to the server even if it becomes available.
+  To restore availability to the server, change the 
+  <samp class="codeph">LoadBalanceWeight </samp>attribute back to
+  "1".</div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

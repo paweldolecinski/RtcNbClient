@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Jazz kernel components</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="c_jazz-kernel" onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../under_construction.html" shape="rect">Rational Team
+  Concert</a>&gt;
+  <a href="../productOverview/prod_content.html" shape="rect">
+  Product Overview</a>&gt;
+  <a href="../productOverview/prod__jazz_JazzOverview.html"
+  shape="rect">Jazz overview</a></div>
+  <a id="c_jazz-kernel" name="c_jazz-kernel"></a>
+  <h1 class="topictitle1">Jazz kernel components</h1>The 
+   <span class="keyword">Jazz&#8482; technology
+  platform </span> kernel includes the repository and team process
+  components. 
+  <h2 class="sectiontitle">Repository component</h2>
+  <p class="p">Most application lifecycle tools store tool-specific
+  information in a central place where it can be made available to
+  all team members. Jazz provides this facility in an extensible
+  repository. The Repository component is in the kernel, so its
+  facilities are available to other components in all client and
+  server configurations.</p>
+  <p class="p">Each item in the repository has a unique item id,
+  which can be used as a key to retrieve it. In fact, the item ids
+  are universally unique identifiers (UUIDs), so that an item
+  created in one repository can be replicated to another repository
+  and retain its identity. Similarly, item states and content
+  values are assigned universally unique identifiers, so that any
+  state of an item can be replicated to other repositories and
+  retain its identity.</p>
+  <p class="p">Repository read and write operations are atomic. The
+  server-side APIs also include an operation for explicitly
+  bracketing an arbitrary sequence of read and write operations
+  into a single atomic transaction. Jazz has server-side API for
+  streaming content objects to and from the repository, designed so
+  that the streaming can be done safely outside of a repository
+  transaction.</p>
+  <h2 class="sectiontitle">Team Process component</h2>
+  <p class="p">The Team Process component is the foundation of
+  process support in the 
+   <span class="keyword">Jazz technology platform </span> . In this
+  context, process refers to the collection of practices, rules,
+  guidelines, and conventions that a team uses to organize their
+  work. For a very small team, the process is usually informal and
+  undocumented. As a team grows, parts of the process may get
+  documented on the team's project home page so that new team
+  members can absorb them quickly. A large organization may have
+  written descriptions of the general practices and procedures
+  their project teams are expected to follow; a project team is
+  expected to start with standard process templates and customize
+  them to suit the project and team. Some organizations and teams
+  go one step further, and create formal models covering
+  significant portions of their processes.</p>
+  <div class="p">Jazz supports process in several ways: 
+  <ul class="ul">
+    <li class="li">The 
+     <span class="keyword">Jazz technology platform </span> is
+    process-aware. In general, a team's process can affect any
+    aspect of the work a team member does. The notion of process is
+    designed in to the 
+     <span class="keyword">Jazz technology platform </span> . The
+    team's process is explicitly represented, and all the work that
+    team members do within the system happens within the context of
+    the process.</li>
+    <li class="li">Jazz components are process-enabled. All Jazz
+    components, including the initial core, have been designed to
+    allow the prevailing process to exert influence over the
+    component's operations and items.</li>
+    <li class="li">The 
+     <span class="keyword">Jazz technology platform </span> represents
+    the process using standard Jazz items which are stored in the
+    repository. This process representation can describe processes
+    of all kinds, and can capture and enact as much (or as little)
+    of the team's process as practical.</li>
+    <li class="li">The 
+     <span class="keyword">Jazz technology platform </span> is
+    process-neutral. Jazz itself has no built in process enforcing
+    what is done on any particular occasion. It's left up to the
+    team to define an appropriate governing process to make such
+    decisions for their project. This release includes several
+    process templates, including a version of the one encapsulating
+    the process used by the Jazz project team itself.</li>
+  </ul></div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

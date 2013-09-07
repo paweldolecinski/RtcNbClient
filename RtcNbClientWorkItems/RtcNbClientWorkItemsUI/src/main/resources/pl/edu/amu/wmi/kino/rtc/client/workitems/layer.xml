@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Rtc">
+            <folder name="WorkItems">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-workitems-actions-RtcAddWorkItemAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.workitems.actions.RtcAddWorkItemAction.getDefault"/>
+                </file>
+            </folder>
+            <folder name="Queries">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddListAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.AddListAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-OpenAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.OpenAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.AddQueryAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-EditAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.EditAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-RenameAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.RenameAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-DeleteAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.DeleteAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-DuplicateAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.DuplicateAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.ReloadAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-SaveAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.SaveAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.RtcAddToFavoritesAction"/>
+                </file>
+            </folder>
+            <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-development-DevQueryWindow.instance">
+                <attr name="delegate" newvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.development.DevQueryWindow"/>
+                <attr name="displayName" bundlevalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.development.Bundle#CTL_DevQueryWindow"/>
+                <attr name="instanceCreate" methodvalue="org.openide.awt.Actions.alwaysEnabled"/>
+                <attr name="noIconInMenu" boolvalue="false"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Window">
+            <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-development-DevQueryWindow.shadow">
+                <attr name="originalFile" stringvalue="Actions/Rtc/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-development-DevQueryWindow.instance"/>
+                <attr name="position" intvalue="250"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="ProjectAreaNodeFactories">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-QueriesModuleFactory.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.QueriesModuleFactory.getDefault"/>
+                </file>
+            </folder>
+            <folder name="WorkItems">
+                <folder name="Displays">
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.node.NodeDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.node.NodeTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeTextDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.node.NodeTextDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeDateDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.node.NodeDateDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeEnumerationDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.node.NodeEnumerationDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorHeaderDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorHeaderDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorCustomTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorCustomTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorOverviewTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorOverviewTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorLinksTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorLinksTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorApprovalsTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorApprovalsTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorHistoryTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorHistoryTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorHTabDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.tabs.MainEditorHTabDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorSmallTextDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorSmallTextDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorLargeTextDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorLargeTextDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorEnumerationDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorEnumerationDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorDateDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorDateDisplayFactory"/>
+                    </file>
+                    <file name="pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorAttachmentsDisplayFactory.instance">
+                        <attr name="instanceClass" stringvalue="pl.edu.amu.wmi.kino.rtc.client.ui.workitems.view.MainEditorAttachmentsDisplayFactory"/>
+                    </file>
+                </folder>
+                <folder name="Node">
+                    <folder name="Display">
+                        <folder name="queries">
+                            <file name="NodeDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeDisplayFactory.instance"/>
+                                <attr name="position" intvalue="100"/>
+                            </file>
+                            <file name="NodeTextDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeTextDisplayFactory.instance"/>
+                                <attr name="position" intvalue="200"/>
+                            </file>
+                            <file name="NodeDateDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeDateDisplayFactory.instance"/>
+                                <attr name="position" intvalue="300"/>
+                            </file>
+                            <file name="NodeEnumerationDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeEnumerationDisplayFactory.instance"/>
+                                <attr name="position" intvalue="400"/>
+                            </file>
+                            <folder name="overview">
+                                <file name="NodeTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="links">
+                                <file name="NodeTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-node-NodeTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                        </folder>
+                    </folder>
+                </folder>
+                <folder name="Editor">
+                    <folder name="Display">
+                        <folder name="main">
+                            <file name="MainEditorDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorDisplayFactory.instance"/>
+                                <attr name="position" intvalue="100"/>
+                            </file>
+                            <file name="MainEditorHeaderDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorHeaderDisplayFactory.instance"/>
+                                <attr name="position" intvalue="200"/>
+                            </file>
+                            <file name="MainEditorSmallTextDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorSmallTextDisplayFactory.instance"/>
+                                <attr name="position" intvalue="1100"/>
+                            </file>                            
+                            <file name="MainEditorLargeTextDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorLargeTextDisplayFactory.instance"/>
+                                <attr name="position" intvalue="1200"/>
+                            </file>
+                            <file name="MainEditorEnumerationDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorEnumerationDisplayFactory.instance"/>
+                                <attr name="position" intvalue="1300"/>
+                            </file>                            
+                            <file name="MainEditorDateDisplay.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorDateDisplayFactory.instance"/>
+                                <attr name="position" intvalue="1400"/>
+                            </file>                            
+                            <file name="MainEditorAttachmentsDisplayFactory.shadow">
+                                <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-MainEditorAttachmentsDisplayFactory.instance"/>
+                                <attr name="position" intvalue="2100"/>
+                            </file> 
+                            <folder name="custom">
+                                <file name="MainEditorCustomTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorCustomTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="overview">
+                                <file name="MainEditorOverviewTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorOverviewTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="approvals">
+                                <file name="MainEditorApprovalsTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorApprovalsTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="h_tab">
+                                <file name="MainEditorHTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorHTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="links">
+                                <file name="MainEditorLinksTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorLinksTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                            <folder name="history">
+                                <file name="MainEditorHistoryTabDisplay.shadow">
+                                    <attr name="originalFile" stringvalue="Rtc/Modules/WorkItems/Displays/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-view-tabs-MainEditorHistoryTabDisplayFactory.instance"/>
+                                    <attr name="position" intvalue="100"/>
+                                </file>
+                            </folder>
+                        </folder>
+                    </folder>
+                </folder>
+            </folder>
+
+            <folder name="QueriesModule">
+                <folder name="AttributeExpressionWidgetFactories">
+                </folder>
+                <folder name="QueryActions">
+                    <file name="OpenAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-OpenAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="EditAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-EditAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="SaveAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-SaveAction.instance"/>
+                        <attr name="position" intvalue="300"/>
+                    </file>
+                    <file name="DuplicateAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-DuplicateAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="600"/>
+                    </file>
+                    <file name="DeleteAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-DeleteAction.instance"/>
+                        <attr name="position" intvalue="700"/>
+                    </file>
+                    <file name="RenameAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-RenameAction.instance"/>
+                        <attr name="position" intvalue="800"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                    <file name="RtcAddToFavoritesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queriespl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.instance"/>
+                        <attr name="position" intvalue="1001"/>
+                    </file>
+                </folder>
+                <folder name="EditableQueriesSetActions">
+                    <file name="AddQueryAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="SharedQueriesActions">
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="QueriesSetActions">
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="AddActions">
+                    <file name="RtcAddWorkItemAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/WorkItems/pl-edu-amu-wmi-kino-rtc-client-workitems-actions-RtcAddWorkItemAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="AddQueryAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                </folder>
+                <folder name="QueriesNodeActions">
+                    <file name="AddListAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddListAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Shortcuts">
+        <file name="DOS-Q.shadow">
+            <attr name="originalFile" stringvalue="Actions/Rtc/pl-edu-amu-wmi-kino-rtc-client-ui-workitems-development-DevQueryWindow.instance"/>
+        </file>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="RtcWorkItemTopComponent.settings" url="RtcWorkItemTopComponentSettings.xml"/>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="RtcWorkItemTopComponent.wstcref" url="RtcWorkItemTopComponentWstcref.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Starting the Apache Tomcat server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+    <div class="breadcrumbs">
+    <a href="../../under_construction.html" shape="rect">Rational
+    Team Concert</a>&gt;
+    <a href="../../usingJazzServer/useJazz_content.html"
+    shape="rect">Using jazz server</a>&gt;
+    <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+    shape="rect">Installing and upgrading.</a>&gt;
+    <a href="../../usingJazzServer/installingAndUpgrading/inst_exc__InstallingRationalTeamConcertExpressCEdition.html"
+    shape="rect">Installing Rational Team Concert Express-C
+    Edition</a></div>
+    <div class="nested0"
+    id="c_server_installation_start_imbeded_tomcat">
+    <a id="c_server_installation_start_imbeded_tomcat"
+    name="c_server_installation_start_imbeded_tomcat"></a>
+    <h1 class="topictitle1">Starting the Apache Tomcat
+    server</h1>You are now ready to start the Apache Tomcat server.
+    
+    <div class="p">Apache Tomcat has been installed in the
+    directory 
+     <span class="filepath">
+    <var class="varname">JazzInstallDir</var>/server/tomcat </span> .
+    The Web application (
+     <span class="filepath">jazz.war </span> ) has been installed in
+    the Apache Tomcat directory 
+     <span class="filepath">webapps </span> . In a command window, set
+    your current directory to 
+     <span class="filepath">
+    <var class="varname">JazzInstallDir</var>/server </span> . The
+    server startup and shutdown scripts are located in this
+    directory. 
+    <ul class="ul">
+      <li class="li">If you want to run the start and stop scripts
+      from any other directory, you must change the profiles.ini
+      file in 
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz/provision_profiles to
+      use an absolute path. 
+       <span class="ph">See 
+      <a class="xref"
+      href="../administering/adm_srv_ModifyingTheProfileIniAndLicenseProfileIniFiles.html"
+      title="When running repotools commands or the start and stop server scripts from a directory other than the default, you should modify the URL property values to contain absolute directory paths.">
+      Modifying the profile.ini and license_profile.ini
+      files</a>. </span> </li>
+      <li class="li">Apache Tomcat is configured to use the ports
+      9080 and 9443 in file 
+      <var class="varname">
+      JazzInstallDir</var>/server/tomcat/conf/server.xml. If
+      necessary, change them as appropriate for your system. If
+      necessary, also update the configuration settings of Jazz
+      server Repository HTTP ports in the Advanced Properties
+      configuration page of in the Jazz Admin Web UI.</li>
+      <li class="li">The directory 
+      <var class="varname">JazzInstallDir</var>/server/logs
+      contains the server log files. If you have trouble starting
+      the server, check the log files.</li>
+      <li class="li">The 
+      <var class="varname">
+      JazzInstallDir</var>/server/tomcat/conf/server.xml file
+      contains SSL settings that specify an algorithm only
+      available in the IBM JRE. To run the server with a Sun JRE,
+      in the server.xml file, change the settings for 
+      <var class="varname">Connector port="9443"</var>, so that 
+      <var class="varname">sslProtocol="TLS"</var>instead of 
+      <var class="varname">"SSL"</var>. Also remove the algorithm
+      parameter.</li>
+    </ul></div>
+    <div class="related-links">
+      <div class="familylinks"></div>
+      <div class="reltasks">
+        <strong>Related tasks </strong>
+        <br />
+        <a class="link" href="#t_server_installation_start_windows"
+        title="Run the startup file to start your server on Windows.">
+        Starting the server on Windows</a>
+        <br />
+        <a class="link" href="#t_server_installation_start_linux"
+        title="Run the startup file to start server on Linux.">
+        Starting the server on Linux</a>
+      </div>
+    </div></div>
+    <div class="topic task"
+    id="t_server_installation_start_windows" lang="en-us"
+    xml:lang="en-us">
+    <a id="t_server_installation_start_windows"
+    name="t_server_installation_start_windows"></a>
+    <h1 class="topictitle1">Starting the server on Windows</h1>Run
+    the startup file to start your server on Windows. 
+    <div class="tasklabel">
+      <strong>About this task </strong>
+    </div>
+    <ol class="ol steps">
+      <li class="li step stepexpand">
+         <span class="cmd">To start the server, from the 
+         <span class="filepath">
+        JazzInstallDir/server </span> directory, run this
+        command: </span> 
+        <pre class="pre">
+<kbd class="userinput">server.startup.bat  </kbd>
+</pre>
+        <div class="note">
+         <span class="notetitle">Note: </span> A separate Apache
+        Tomcat console window opens. Do not close this window or
+        the server will stop working. Also, several informational
+        messages launch, including a message about the Apache
+        Tomcat Native Library. These informational messages do not
+        affect the 
+         <span class="keyword">Jazz&#8482; Team
+        Server </span> functionality.</div>
+      </li>
+      <li class="li step stepexpand">
+         <span class="cmd">To stop the server, from the 
+         <span class="filepath">
+        JazzInstallDir/server </span> directory, run this
+        command: </span> 
+        <pre class="pre">
+<kbd class="userinput">server.shutdown.bat  </kbd>
+</pre>
+      </li>
+    </ol>
+    <div class="tasklabel">
+      <strong>What to do next </strong>
+    </div>
+    <div class="note">
+     <span class="notetitle">Note: </span> The example above runs the
+    start and stop scripts directly from the directory 
+     <span class="filepath">
+    <var class="varname">JazzInstallDir</var>/server </span> . If you
+    installed 
+     <span class="keyword">Jazz Team Server </span> using IBM&#174;
+    Installation Manager, you can also run the commands from the 
+     <span class="uicontrol">
+       <span class="keyword">Jazz Team Server </span> 
+     </span> Windows start menu.</div>
+    <p class="p">After the server is started, proceed to 
+    <a class="xref" href="inst_exc_RunningTheSetupWizard.html"
+    title="Running the setup wizard verifies that the server is operating properly and guides you through the steps configure the server.">
+    Running the setup wizard</a>.</p></div>
+    <div class="topic task" id="t_server_installation_start_linux"
+    lang="en-us" xml:lang="en-us">
+    <a id="t_server_installation_start_linux"
+    name="t_server_installation_start_linux"></a>
+    <h1 class="topictitle1">Starting the server on Linux</h1>Run
+    the startup file to start server on Linux. 
+    <div class="tasklabel">
+      <strong>About this task </strong>
+    </div>
+    <ol class="ol steps">
+      <li class="li step stepexpand">
+       <span class="cmd">To start the server, from the 
+       <span class="filepath">JazzInstallDir/server </span> directory,
+      as user root, run this command: </span> 
+      <pre class="pre">
+<kbd class="userinput">./server.startup  </kbd>
+</pre>If your user ID has administrator access, run this command: 
+      <pre class="pre">
+<kbd class="userinput">sudo ./server.startup  </kbd>
+</pre>
+      <p class="p">A separate Apache Tomcat console window is not
+      visible. You can check the server startup progress by viewing
+      the log file at 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/logs/jazz.log </span> .</p></li>
+      <li class="li step stepexpand">
+       <span class="cmd">To stop the server, from the 
+       <span class="filepath">JazzInstallDir/server </span> directory,
+      as user root, run this command: </span> 
+      <pre class="pre">
+<kbd class="userinput">./server.shutdown  </kbd>
+</pre>If your user ID has administrator access, run this command: 
+      <pre class="pre">
+<kbd class="userinput">sudo ./server.shutdown  </kbd>
+</pre></li>
+    </ol>
+    <div class="tasklabel">
+      <strong>What to do next </strong>
+    </div>
+    <div class="note">
+     <span class="notetitle">Note: </span> This example runs the start
+    and stop scripts directly from the directory 
+     <span class="filepath">
+    <var class="varname">JazzInstallDir</var>/server </span> . If you
+    installed 
+     <span class="keyword">Jazz Team Server </span> by using IBM
+    Installation Manager, you can also run the commands from the 
+     <span class="uicontrol">
+       <span class="keyword">Jazz Team Server </span> 
+     </span> application start menu.</div>
+    <p class="p">After the server is started, proceed to 
+    <a class="xref" href="inst_exc_RunningTheSetupWizard.html"
+    title="Running the setup wizard verifies that the server is operating properly and guides you through the steps configure the server.">
+    Running the setup wizard</a>.</p></div>
+    <hr />
+     <span class="runningfooter">
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+        <param name="content"
+        value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+        <param name="text" value="Feedback " />
+      </object>
+     </span> 
+    <p>
+       <span class="runningheader" style="color: #666666;">Did this
+      help? You can provide feedback at Jazz.net (registration
+      required): 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+        <param name="content"
+        value="https://jazz.net/forums/" />
+        <param name="text" value="Comment in the forums " />
+      </object>or 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+        <param name="content"
+        value="https://jazz.net/bugs/bugs.jsp" />
+        <param name="text" value="submit a bug " />
+      </object> </span> 
+    </p>
+  </body>
+</html>

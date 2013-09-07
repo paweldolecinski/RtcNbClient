@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Jazz technology platform architecture</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="c_jazz-architecture"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../under_construction.html" shape="rect">Rational Team
+  Concert</a>&gt;
+  <a href="../productOverview/prod_content.html" shape="rect">
+  Product Overview</a>&gt;
+  <a href="../productOverview/prod__jazz_JazzOverview.html"
+  shape="rect">Jazz overview</a></div>
+  <a id="c_jazz-architecture" name="c_jazz-architecture"></a>
+  <h1 class="topictitle1">
+   <span class="keyword">Jazz technology
+  platform </span>  architecture</h1>The
+   <span class="keyword">Jazz&#8482; technology platform </span> is
+  based on a client-server architecture. The 
+   <span class="keyword">Jazz Team Server </span> , normally running
+  on a secured server-class machine, hosts a set of services and a
+  repository. Remote clients communicate with the 
+   <span class="keyword">Jazz Team Server </span> over the network
+  using HTTP. 
+  <h2 class="sectiontitle">Remote clients</h2>
+  <div class="p">Remote clients come in many forms, with the
+  typical one being an integrated development environment (IDE)
+  such as Eclipse. Other remote clients, such as Jazz-specific
+  command line tools or Ant scripts, operate without a graphical
+  interface. Jazz Web clients access the server directly using a
+  web browser, without having to install any Jazz platform software
+  on their machine. 
+  <div class="fignone" id="c_jazz-architecture__jazz-clients">
+    <a id="c_jazz-architecture__jazz-clients"
+    name="c_jazz-architecture__jazz-clients"></a>
+     <span class="figcap">Figure 1. Jazz clients </span> 
+    <div class="image"></div>
+    <img alt="This diagram shows the types of Jazz clients."
+    class="image" src="../images/jazz_clients.gif" />
+  </div></div>
+  <h2 class="sectiontitle">The 
+   <span class="keyword">Jazz Team Server </span> </h2>
+  <p class="p">The 
+   <span class="keyword">Jazz Team Server </span> is a Java-based web
+  application that runs within any Java EE 1.4 compliant
+  application server. Two different application servers are
+  supported in this release: Apache Tomcat and 
+   <span class="keyword">IBM&#174; WebSphere&#174; Application
+  Server </span> . Apache Tomcat is an open source servlet container
+  which can be installed on desktop class machines. 
+   <span class="keyword">IBM WebSphere Application Server </span> is a
+  commercially available product offering solutions at various
+  scales.</p>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

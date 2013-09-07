@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.0//EN" "http://www.netbeans.org/dtds/filesystem-1_0.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Rtc">
+            <folder name="Queries">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddListAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.AddListAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-OpenAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.OpenAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.AddQueryAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-EditAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.EditAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-RenameAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.RenameAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-DeleteAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.DeleteAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-DuplicateAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.DuplicateAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.ReloadAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-actions-SaveAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.actions.SaveAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.RtcAddToFavoritesAction"/>
+                </file>
+            </folder>
+        </folder>
+
+    </folder>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="NodeFactories">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-queries-QueriesModuleFactory.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.queries.QueriesModuleFactory.getDefault"/>
+                </file>
+            </folder>
+            <folder name="QueriesModule">
+                <folder name="AttributeExpressionWidgetFactories">
+                </folder>
+                <folder name="QueryActions">
+                    <file name="OpenAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-OpenAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="EditAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-EditAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="SaveAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-SaveAction.instance"/>
+                        <attr name="position" intvalue="300"/>
+                    </file>
+                    <file name="DuplicateAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-DuplicateAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="600"/>
+                    </file>
+                    <file name="DeleteAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-DeleteAction.instance"/>
+                        <attr name="position" intvalue="700"/>
+                    </file>
+                    <file name="RenameAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-RenameAction.instance"/>
+                        <attr name="position" intvalue="800"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                    <file name="RtcAddToFavoritesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queriespl-edu-amu-wmi-kino-rtc-client-favorites-api-helpers-RtcAddToFavoritesAction.instance"/>
+                        <attr name="position" intvalue="1001"/>
+                    </file>
+                </folder>
+                <folder name="EditableQueriesSetActions">
+                    <file name="AddQueryAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="SharedQueriesActions">
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="QueriesSetActions">
+                    <file name="ReloadAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-ReloadAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+                <folder name="AddActions">
+                    <file name="AddQueryAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddQueryAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                </folder>
+                <folder name="QueriesNodeActions">
+                    <file name="AddListAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/Queries/pl-edu-amu-wmi-kino-rtc-client-queries-actions-AddListAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="Separator1.instance">
+                        <attr name="instanceClass" stringvalue="javax.swing.JSeparator"/>
+                        <attr name="position" intvalue="900"/>
+                    </file>
+                    <file name="PropertiesAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-PropertiesAction.instance"/>
+                        <attr name="position" intvalue="1000"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Setting up a basic high availability
+    configuration</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="settingupabasichighavailabilityconfiguration"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ha__DeployingJazzWarOnWebSphereASforHA.html"
+  shape="rect">Deploying jazz.war on WebSphere Application Server
+  for high availability environments</a></div>
+  <a id="settingupabasichighavailabilityconfiguration"
+  name="settingupabasichighavailabilityconfiguration"></a>
+  <h1 class="topictitle1">Setting up a basic high availability
+  configuration</h1>Setup and configure your primary and backup
+  servers for a basic high availability environment. 
+  <h2 class="sectiontitle">Installing and configuring the IBM HTTP
+  Server and Web server plug-ins</h2>
+  <div class="p">To install and configure the IBM HTTP Server and
+  Web server plug-ins, follow these steps: 
+  <ol class="ol">
+    <li class="li">Install the IBM HTTP Server. See 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webserver.html" />
+      <param name="text"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webserver.html " />
+    </object>.</li>
+    <li class="li">Install the Web server plug-ins. See 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webplugins.html" />
+      <param name="text"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webplugins.html " />
+    </object>.</li>
+    <li class="li">Configure a Web server and an application server
+    on separate machines (remote). See 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webplugins_remotesa.html" />
+      <param name="text"
+      value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp?topic=/com.ibm.websphere.base.doc/info/aes/ae/tins_webplugins_remotesa.html " />
+    </object>.</li>
+    <li class="li">To secure transmissions between the Web server
+    and the client, enable SSL on the IBM HTTP Server. See 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://www-01.ibm.com/support/docview.wss?rs=177&amp;context=SSEQTJ&amp;q1=SSL+certificate&amp;uid=swg21179559&amp;loc=en_US&amp;cs=utf-8&amp;lang=en" />
+      <param name="text"
+      value="Guide to properly setting up SSL within the IBM HTTP Server " />
+    </object></li>
+  </ol></div>
+  <h2 class="sectiontitle">Installing and configuring 
+   <span class="keyword">Rational Team Concert </span> on primary and
+  backup servers</h2>
+  <div class="p">To install and configure two instances of 
+   <span class="keyword">Rational Team Concert&#8482; </span> on
+  WebSphere Application Server, see 
+  <a class="xref"
+  href="inst_ee_ss_SettingUpAWebSphereApplicationServer.html">
+  Setting up a WebSphere&#174; Application Server</a>. 
+  <div class="note remember">
+   <span class="remembertitle">Remember: </span> Install one server at
+  a time. Each server references the same database in its
+  teamserver.properties. Make sure that the first server is shut
+  down and not attached to the repository before beginning second
+  installation.</div></div>
+  <h2 class="sectiontitle">Configuring high availability for both
+  primary and backup servers</h2>
+  <p class="p">The jazz.war application normally installs with a
+  single application server as its target. With the introduction of
+  the Web server, the jazz.war application must be modified to
+  allow routing through the Web server.</p>
+  <div class="p">To modify the application: 
+  <ol class="ol">
+    <li class="li">In the WebSphere Console, click the jazz.war
+    application link under 
+     <span class="uicontrol">Enterprise Applications </span> .</li>
+    <li class="li">Select 
+     <span class="uicontrol">Manage Modules </span> .</li>
+    <li class="li">Select the check box for the jazz.war
+    application module.</li>
+    <li class="li">In the list of clusters and servers, choose both
+    the Web server and application server, then click 
+     <span class="uicontrol">Apply </span> .</li>
+    <li class="li">Click 
+     <span class="uicontrol">OK </span> , then 
+     <span class="uicontrol">Save changes </span> .</li>
+    <li class="li">Restart the jazz.war application.</li>
+  </ol></div>
+  <div class="p">Reconfigure the 
+   <span class="keyword">Rational Team Concert </span> application on
+  the primary application server to turn off security for the
+  jazz.war application: 
+  <ol class="ol">
+    <li class="li">Modify the web.xml from the WAR file that was
+    installed into WebSphere Application Server. 
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> You might need to uncompress
+    the WAR file into a temporary directory to get to the web.xml
+    file.</div></li>
+    <li class="li">Change each occurrence of "CONFIDENTIAL" to
+    "NONE".</li>
+    <li class="li">Make sure WebSphere Application Server is
+    running, open a browser and go to: 
+    <samp class="codeph">
+    https://localhost:9043/ibm/console/logon.jsp </samp></li>
+    <li class="li">Go to the Applications -&gt; Enterprise
+    Applications page.</li>
+    <li class="li">Select the jazz_war application and click 
+     <span class="uicontrol">Update </span> .</li>
+    <li class="li">Select 
+     <span class="uicontrol">Replace or add a single
+    file </span> .</li>
+    <li class="li">In the "Specify the path beginning with the
+    installed application archive file to the file to be replaced
+    or added" field enter 
+    <kbd class="userinput">jazz.war\WEB-INF\web.xml </kbd>.</li>
+    <li class="li">Click 
+     <span class="uicontrol">Browse </span> and select the web.xml
+    file that you modified in step 1.</li>
+    <li class="li">Click 
+     <span class="uicontrol">Next </span> and follow through until the
+    application is saved.</li>
+    <li class="li">Go back to the Applications -&gt; Enterprise
+    Applications page and stop and start the jazz_war
+    application.</li>
+  </ol></div>
+  <div class="p">Reconfigure both the primary and backup 
+   <span class="keyword">Rational Team Concert </span> servers to
+  reference the same location for the full text index. To keep the
+  index up to date and available to both the primary and back up
+  server, update the com.ibm.team.fulltext.indexLocation in
+  teamserver.properties on both the primary and backup servers to
+  store the index on a shared drive. Modify the following property
+  in the teamserver.properties file on the primary and backup
+  servers: 
+  <ul class="ul">
+    <li class="li">The following property value is an example of
+    what you can see on Windows: 
+    <pre class="pre">
+com.ibm.team.fulltext.indexLocation=I\:/sharedIndexFolder/workitemindex
+</pre></li>
+    <li class="li">The following property setting is an example of
+    what you can see on Linux: 
+    <pre class="pre">
+com.ibm.team.fulltext.indexLocation=/net/LinuxHost/sharedIndex/workitemindex
+</pre></li>
+  </ul></div>
+  <h2 class="sectiontitle">Turning off asynchronous tasks on the
+  backup server</h2>
+  <div class="p">To avoid any possible data contention between the
+  two running 
+   <span class="keyword">Rational Team Concert </span> servers,
+  asynchronous (or background) tasks must be turned off on the
+  backup server. 
+  <ol class="ol">
+    <li class="li">Add the following line to the
+    teamserver.properties file on the Backup server: 
+    <pre class="pre">
+com.ibm.team.repository.scheduler.migration.mode.enabled=true
+</pre></li>
+    <li class="li">Restart the jazz.war application on the Backup
+    server.</li>
+  </ol></div>
+  <h2 class="sectiontitle">Editing the Web server plugin_cfg.xml
+  file for 
+   <span class="keyword">Rational Team Concert </span> idle
+  standby</h2>
+  <div class="p">Each time a WebSphere Application Server is
+  configured to route requests through a Web server to an
+  application server, the Web server plugin.xml is updated with the
+  connection information for that application server. At this
+  point, you have partially configured the plugin-cfg.xml file.
+  Replace and then edit the following section of the plugin-cfg.xml
+  on the Web server to complete the configuration. This
+  plugin-cfg.xml file resides in the plugin\config\webserver1
+  folder of the Web server (where webserver1 is the name that you
+  assigned to the Web server in the previous section about
+  Installing and configuring the IBM HTTP Server and Web Server
+  plug-ins). 
+  <pre class="pre">
+&lt;ServerCluster CloneSeparatorChange="false" GetDWLMTable="false"
+IgnoreAffinityRequests="true" LoadBalance="Round Robin"
+Name="RTC_basicHA_Cluster" RetryInterval="60" PostBufferSize="64"
+PostSizeLimit="-1" RemoveSpecialHeaders="true"&gt;
+&lt;Server LoadBalanceWeight="1" ConnectTimeout="0"
+ExtendedHandshake="false" MaxConnections="-1"
+Name="PrimaryNode01_server1" ServerIOTimeout="0"
+WaitForContinue="false"&gt;
+&lt;Transport Hostname="primary.hostname.company.com" Port="9080"
+Protocol="http"/&gt;
+&lt;/Server&gt;
+&lt;Server LoadBalanceWeight="0" ConnectTimeout="0"
+ExtendedHandshake="false" MaxConnections="-1"
+Name="BackupNode01_server1" ServerIOTimeout="0"
+WaitForContinue="false"&gt;
+&lt;Transport Hostname="backup.hostname.company.com" Port="9080"
+Protocol="http"/&gt;
+&lt;/Server&gt;
+&lt;/ServerCluster&gt;
+&lt;UriGroup Name="default_host_RTC_basicHA_Cluster_URIs"&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/jazz/*"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/snoop/*"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/hello"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/hitcount"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="*.jsp"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="*.jsv"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="*.jsw"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/j_security_check"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/ibm_security_logout"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/servlet/*"/&gt;
+&lt;Uri AffinityCookie="JSESSIONID"
+AffinityURLIdentifier="jsessionid" Name="/ivt/*"/&gt;
+&lt;/UriGroup&gt;
+&lt;Route ServerCluster="RTC_basicHA_Cluster"
+UriGroup="default_host_RTC_basicHA_Cluster_URIs"
+VirtualHostGroup="default_host"/&gt;
+</pre></div>
+  <h2 class="sectiontitle">Verifying the server setup for manual
+  failover ability</h2>
+  <div class="p">To verify the manual failover ability of the
+  WebSphere Application Server, edit the plugin-cfg.xml file on the
+  Web server so that the PrimaryNode01 _server1 has a
+  LoadBalanceWeight ="0" and the BackupNode01_server1 has a
+  LoadBalanceWeight ="1". Save the plugin-cfg.xml file. 
+  <div class="note_important">
+   <span class="importanttitle">Important: </span> Because "true"
+  clustering and load balancing is not yet supported, at no time
+  can both the primary and backup servers have non-zero for
+  LoadBalanceWeight.</div>
+  <ol class="ol">
+    <li class="li">With both primary and backup servers online, run
+    the WebSphere sample Snoop servlet to get the name of the
+    server that is handling the request.</li>
+    <li class="li">Invoke the Snoop servlet from an HTML browser
+    using the URL: 
+    <samp class="codeph">https://webserver/snoop </samp>.</li>
+    <li class="li">The request information displays the host that
+    is serving the request as the local host - in this case, the
+    server with the LoadBalanceWeight =1 is displayed.</li>
+    <li class="li">Try trading the LoadBalanceWeight between the
+    primary and backup server and note which server handles the
+    Snoop servlet request.</li>
+  </ol></div>
+  <h2 class="sectiontitle">Detecting failure on the primary
+  server</h2>
+  <p class="p">To achieve high availability, you need to know when
+  your primary server is down. This is especially important for
+  this basic high availability solution, which does not allow for
+  automatic failover of the primary server to the backup
+  server.</p>
+  <p class="p">The process of detecting a failed server is a
+  critical and timely task. Several factors can indicate that a
+  server has failed, such as network problems, configuration
+  problems, application overloading, or user error. Whatever
+  solution you choose to detect server failures, you must ensure
+  that the alert is as instantaneous as possible.</p>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

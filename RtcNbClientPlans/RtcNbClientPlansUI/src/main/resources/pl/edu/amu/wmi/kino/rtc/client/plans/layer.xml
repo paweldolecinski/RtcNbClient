@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.0//EN" "http://www.netbeans.org/dtds/filesystem-1_0.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Rtc">
+            <folder name="PlansModule">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddAttachmentAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcOpenProblematicWorkItemAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcPageEditAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcPageRenameAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanPageAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.plans.actions.RefreshAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance">
+                    <attr name="instanceCreate" methodvalue="pl.edu.amu.wmi.kino.rtc.client.plans.actions.RtcAddPlanAction.getDefault"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcRemoveAttachmentAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcRemovePlanPageAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcShowAttachmentsTableAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcShowPlanChecksAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcToolbarAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcSelectProblematicWorkItemAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddNewPlanElementAction.instance"/>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="PlansModule">
+                <folder name="Editor">
+                    <folder name="PlannedItemViews">
+                        <folder name="Sort">
+                            <!-- All sorting policies should be declared hare -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlannedItemsFilterNodeFactory -->
+                        </folder>
+                        <folder name="Group">
+                            <!-- All group policies should be declared hare -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlannedItemsFilterNodeFactory -->
+                        </folder>
+                        <folder name="Filter">
+                            <!-- All filter policies should be declared hare -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlannedItemsFilterNodeFactory -->
+                        </folder>
+                        <folder name="Style">
+                            <!-- All view styles have to be declared here -->
+                            <!-- Declared objects have to be instances of
+                                 RtcPlannedItemsViewStyleFactory -->
+                            <folder name="Flat">
+                                    <!-- This catalog can be used by flat view to
+                                         store its layer configuration -->
+                                <folder name="Sort">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Sort/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                                <folder name="Group">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Group/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                                <folder name="Filter">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Filter/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                            </folder>
+                            <folder name="Tree">
+                                    <!-- This catalog can be used by tree view to
+                                         store its layer configuration -->
+                                <folder name="Sort">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Sort/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                                <folder name="Group">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Group/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                                <folder name="Filter">
+                                        <!-- You can declare .shadow files here
+                                             that should point to filter node factories in
+                                             Rtc/Modules/PlansModule/Editor/PlannedItemViews/Filter/
+                                             catalog. Only sorts shadowed here will be
+                                             available in this view style -->
+                                </folder>
+                            </folder>
+                        </folder>
+                    </folder>
+                </folder>
+                <folder name="IterationNodeActions">
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RtcAddPlanAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                </folder>
+                <folder name="DevelopmentLineNodeActions">
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RtcAddPlanAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                </folder>
+                <folder name="AllPlansNodeActions">
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RtcAddPlanAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                </folder>
+                <folder name="CurrentPlansNodeActions">
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RtcAddPlanAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                </folder>
+                <folder name="PlansNodeActions">
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RtcAddPlanAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RtcAddPlanAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                </folder>
+                <folder name="PlanActions">
+
+                    <file name="OpenAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-OpenAction.instance"/>
+                        <attr name="position" intvalue="100"/>
+                    </file>
+                    <file name="RefreshAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Rtc/PlansModule/pl-edu-amu-wmi-kino-rtc-client-plans-actions-RefreshAction.instance"/>
+                        <attr name="position" intvalue="200"/>
+                    </file>
+                    <file name="RenameAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/System/org-openide-actions-RenameAction.instance"/>
+                        <attr name="position" intvalue="300"/>
+                    </file>
+                    <file name="org-openide-actions-DeleteAction.shadow">
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-openide-actions-DeleteAction.instance"/>
+                        <attr name="position" intvalue="400"/>
+                    </file>
+
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="PlansViewTopComponent.settings" url="PlansViewTopComponentSettings.xml"/>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="PlansViewTopComponent.wstcref" url="PlansViewTopComponentWstcref.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

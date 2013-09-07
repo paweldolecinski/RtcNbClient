@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN" "http://java.sun.com/products/javahelp/map_2_0.dtd">
+<map version="1.0">
+    <mapID target="rtc" url="rtc.html"/>
+    <!-- Rational Team Concert > Product overview -->
+    <mapID target="productOverview.contents"   url="productOverview/prod_content.html"/>
+    <mapID target="productOverview.DesignGoalsOfTheJazzTechnologyPlatform" url="productOverview/prod_jazz_DesignGoalsOfTheJazzTechnologyPlatform.html"/>
+    <mapID target="productOverview.JazzKernelComponents"   url="productOverview/prod_jazz_JazzKernelComponents.html"/>
+    <mapID target="productOverview.JazzOverview"   url="productOverview/prod__jazz_JazzOverview.html"/>
+    <mapID target="productOverview.JazzTechnologyPlatformArchitecture"   url="productOverview/prod_jazz_JazzTechnologyPlatformArchitecture.html"/>
+    <!-- Rational Team Concert > Product overview> Rational Products Overview -->
+    <mapID target="productOverview.RationalProductsOverview"   url="productOverview/prod_rp_RationalProductsOverview.html"/>
+    <mapID target="productOverview.RationalProductsOverview.RationalQualityManager"   url="productOverview/prod_rp_QualityManager.html"/>
+    <mapID target="productOverview.RationalProductsOverview.RationalRequirementsComposer"   url="productOverview/prod_rp_ReqComposer.html"/>
+    <mapID target="productOverview.RationalProductsOverview.RationalProjectConductor"   url="productOverview/prod_rp_projConductor.html"/>
+        <!-- Rational Team Concert > Product overview> Rational Products Overview> RTC -->
+
+    <mapID target="productOverview.RTC.contents"   url="productOverview/prod_rtc_content.html"/>
+    <mapID target="productOverview.IBMRationalTeamConcertQuickReference"   url="productOverview/prod_rp_rtc_IBMRTCtQuickReference.html"/>
+    <mapID target="productOverview.NetbeansClient"   url="productOverview/prod_rp_rtc_NetbeansClient.html"/>
+    <mapID target="productOverview.What'SNewInRationalTeamConcert_2_0_0_1"   url="productOverview/prod_rp_rtc_WhatSNewInRTC_2_0_0_1.html"/>
+    <mapID target="productOverview.RationalTeamConcertWebClientUserInterface"   url="productOverview/prod_rp_rtc_RTCWebClientUI.html"/>
+    <mapID target="productOverview.DocumentationNoticesForIBMRationalTeamConcert"   url="productOverview/prod_rp_rtc_DocumentationNoticesForIBMRTC.html"/>
+    <mapID target="productOverview.RTC20EditionAndLicences"   url="productOverview/prod_rp_rtc_editionsAndLicenses.html"/>
+
+    <!--  Rational Team Concert >Getting started-->
+    <mapID target="gettingStarted.lesson1"   url="gettingStarted/getSt_l1SettingProjectAndTeamAsAdministrator.html"/>
+    <mapID target="gettingStarted.lesson2"   url="gettingStarted/getSt_l2PlanningWork.html"/>
+    <mapID target="gettingStarted.lesson3"   url="gettingStarted/getSt_l3GettingConnected.html"/>
+    <mapID target="gettingStarted.lesson4"   url="gettingStarted/getSt_l4UsingWorkItems.html"/>
+    <!--  Rational Team Concert > Using Jazz Server -->
+    <mapID target="usingJazzServer.contents"   url="usingJazzServer/useJazz_content.html"/>
+    <!--  Rational Team Concert > Using Jazz Server > Installing and Upgrading -->
+    <mapID target="usingJazzServer.InstallingAndUpgrading.contents"   url="usingJazzServer/installingAndUpgrading/inst__content.html"/>
+
+    <mapID target="usingJazzServer.installingAndUpgrading.ReleaseNotesRTCV_2_0"   url="usingJazzServer/installingAndUpgrading/inst__ReleaseNotesRTCV_2_0.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_UpgradingToRationalTeamConcert_2_0"   url="usingJazzServer/installingAndUpgrading/inst__UpgradingToRationalTeamConcert_2_0.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_InstallationOverview"   url="usingJazzServer/installingAndUpgrading/inst__InstallationOverview.html"/>
+        
+
+        <!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_PlanningTheInstallation" url="usingJazzServer/installingAndUpgrading/inst_pla__PlanningTheInstallation.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_InstallationPlanningOverview"   url="usingJazzServer/installingAndUpgrading/inst_pla_InstallationPlanningOverview.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Installation planning worksheet-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_InstallationPlanningWorksheet" url="usingJazzServer/installingAndUpgrading/inst_pla_pw__InstallationPlanningWorksheet.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_ChoosingAnApplicationServer"   url="usingJazzServer/installingAndUpgrading/inst_pla_pw_ChoosingAnApplicationServer.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Installation planning worksheet > 					choosing a database-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_cd_ChoosingADatabase"  url="usingJazzServer/installingAndUpgrading/inst_pla_pw_cd__ChoosingADatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_cd_SpecialDB2_instructions"   url="usingJazzServer/installingAndUpgrading/inst_pla_pw_cd_SpecialDB2_instructions.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Installation planning worksheet > 					Chosing A User Management Method-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ChoosingAUserManagementMethod" url="usingJazzServer/installingAndUpgrading/inst_pla_pw_umm__ChoosingAUserManagementMethod.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithApacheTomcatUserDatabase"  url="usingJazzServer/installingAndUpgrading/inst_pla_pw_umm_ManagingUsersWithApacheTomcatUserDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithLightweightDirectoryAccessProtocol_(LDAP)"  url="usingJazzServer/installingAndUpgrading/inst_pla_pw_umm_ManagingUsersWithLDAP.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithACustomRealm" url="usingJazzServer/installingAndUpgrading/inst_pla_pw_umm_ManagingUsersWithACustomRealm.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Special server instructions-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_SpecialServerInstructions" url="usingJazzServer/installingAndUpgrading/inst_pla_ssi__SpecialServerInstructions.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Special server instructions >Special instructions for Linux-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sif_SpecialInstructionsForLinux" url="usingJazzServer/installingAndUpgrading/inst_pla_ssi_sif__SpecialInstructionsForLinux.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sif_InstallRTCWithSecurityEnhancedLinux" url="usingJazzServer/installingAndUpgrading/inst_pla_ssi_sif_InstallRTCWithSecurityEnhancedLinux.html"/>
+
+		<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Planning the installation > Security certificates-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_SecurityCertificates"  	url="usingJazzServer/installingAndUpgrading/inst_pla_ssi_sc__SecurityCertificates.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_InstallingASecurityCertificate"  	url="usingJazzServer/installingAndUpgrading/inst_pla_ssi_sc_InstallingASecurityCertificate.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_DisablingSecurityCertificateSettings"  url="usingJazzServer/installingAndUpgrading/inst_pla_ssi_sc_DisablingSecurityCertificateSettings.html"/>
+
+            <!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing RTC Express - C edition-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_InstallingRationalTeamConcertExpressCEdition" url="usingJazzServer/installingAndUpgrading/inst_exc__InstallingRationalTeamConcertExpressCEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_ExpressCEditionInstallationOverview"  url="usingJazzServer/installingAndUpgrading/inst_exc_ExpressCEditionInstallationOverview.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_PreparingToInstallTheExpressCEdition"   	url="usingJazzServer/installingAndUpgrading/inst_exc_PreparingToInstallTheExpressCEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_InstallingTheExpressCEditionServer" url="usingJazzServer/installingAndUpgrading/inst_exc_InstallingTheExpressCEditionServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_StartingTheApacheTomcatServer"   url="usingJazzServer/installingAndUpgrading/inst_exc_StartingTheApacheTomcatServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_RunningTheSetupWizard"  url="usingJazzServer/installingAndUpgrading/inst_exc_RunningTheSetupWizard.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_exc_CompletingTheExpressCEditionInstallation" url="usingJazzServer/installingAndUpgrading/inst_exc_CompletingTheExpressCEditionInstallation.html"/>
+
+            <!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Express edition-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_InstallingRationalTeamConcertExpressEdition" url="usingJazzServer/installingAndUpgrading/inst_ee__InstallingRationalTeamConcertExpressEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ExpressEditionInstallationOverview" url="usingJazzServer/installingAndUpgrading/inst_ee_ExpressEditionInstallationOverview.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_PreparingToInstallExpressEdition"  url="usingJazzServer/installingAndUpgrading/inst_ee_PreparingToInstallExpressEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_RunningTheSetupWizard"   	url="usingJazzServer/installingAndUpgrading/inst_ee_RunningTheSetupWizard.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_CompletingTheInstallation"   	url="usingJazzServer/installingAndUpgrading/inst_ee_CompletingTheInstallation.html"/>
+
+            <!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Express edition > Installing the express edition -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEdition"  url="usingJazzServer/installingAndUpgrading/inst_ee_iee__InstallingTheExpressEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEditionFromTheIBMInstallationManager"   url="usingJazzServer/installingAndUpgrading/inst_ee_iee_InstallEEditionIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEditionFromTheZipFile" 	url="usingJazzServer/installingAndUpgrading/inst_ee_iee_InstallingTheExpressEditionFromTheZipFile.html"/>
+			<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Express edition > Installing the express edition > Setting up the database-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpTheDatabase" url="usingJazzServer/installingAndUpgrading/inst_ee_sdb__SettingUpTheDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpADB2_database"   url="usingJazzServer/installingAndUpgrading/inst_ee_sdb_SettingUpADB2_database.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpAnOracleDatabase"   url="usingJazzServer/installingAndUpgrading/inst_ee_sdb_SettingUpAnOracleDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpASQLServerDatabase"   	url="usingJazzServer/installingAndUpgrading/inst_ee_sdb_SettingUpASQLServerDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_CreatingTheJazzTeamServerDatabaseTablesOnDB2_andOracle"   url="usingJazzServer/installingAndUpgrading/inst_ee_sdb_CreatJazzTeamSDTablesOnDB2andOracle.html"/>
+			<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Express edition > Installing the express edition > Starting the server-->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ss_StartingTheServer"   	url="usingJazzServer/installingAndUpgrading/inst_ee_ss__StartingTheServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ss_StartingTheApacheTomcatServer"   	url="usingJazzServer/installingAndUpgrading/inst_ee_ss_StartingTheApacheTomcatServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ss_RunningJazzTeamServerInApacheTomcatAsAWindowsService"   url="usingJazzServer/installingAndUpgrading/inst_ee_ss_RunJTServerInApacheTomcatAsAWindowsService.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ss_DeployingJazzTeamServerIntoAnExistingApacheTomcat"   url="usingJazzServer/installingAndUpgrading/inst_ee_ss_DeployJTServerIntoAnExistingApacheTomcat.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_ee_ss_SettingUpAWebSphereApplicationServer"   	url="usingJazzServer/installingAndUpgrading/inst_ee_ss_SettingUpAWebSphereApplicationServer.html"/>
+            
+
+            <!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Standard edition and Enterprise edition> Installing the Standard or Enterprise edition -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_InstallingRationalTeamConcertStandardEditionAndEnterpriseEdition"   url="usingJazzServer/installingAndUpgrading/inst_se__InstallRTCStandEditionAndEE.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_StandardAndEnterpriseEditionsInstallationOverview"   	url="usingJazzServer/installingAndUpgrading/inst_se_StandardAndEnterpriseEditionsInstallationOverview.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_PreparingToInstallTheStandardOrEnterpriseEdition"   url="usingJazzServer/installingAndUpgrading/inst_se_PreparingToInstallTheStandardOrEnterpriseEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_RunningTheSetupWizard"   url="usingJazzServer/installingAndUpgrading/inst_se_RunningTheSetupWizard.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_CompletingTheInstallation"   url="usingJazzServer/installingAndUpgrading/inst_se_CompletingTheInstallation.html"/>
+			<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Standard edition and Enterprise edition > Installing the Standard or Enterprise edition -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEdition"   	url="usingJazzServer/installingAndUpgrading/inst_se_in__InstallingTheStandardOrEnterpriseEdition.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEditionFromTheIBMInstallationManager"   	url="usingJazzServer/installingAndUpgrading/inst_se_in_InstallStandardOrEETheIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEditionFromTheZipFile"   url="usingJazzServer/installingAndUpgrading/inst_se_in_InstallStandardOrEEzip.html"/>
+			<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Standard edition and Enterprise edition 
+			> Installing the Standard or Enterprise edition > Setting up the database -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpTheDatabase"   	url="usingJazzServer/installingAndUpgrading/inst_se_sdb__SettingUpTheDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpADB2_database"   	url="usingJazzServer/installingAndUpgrading/inst_se_sdb_SettingUpADB2_database.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpAnOracleDatabase"   url="usingJazzServer/installingAndUpgrading/inst_se_sdb_SettingUpAnOracleDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpASQLServerDatabase"   url="usingJazzServer/installingAndUpgrading/inst_se_sdb_SettingUpASQLServerDatabase.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_sdb_CreatingTheJazzTeamServerDatabaseTablesOnDB2_andOracle"  url="usingJazzServer/installingAndUpgrading/inst_se_sdb_CreatJTServerDTOnDB2_andOracle.html"/>
+			<!--  Rational Team Concert > Using Jazz Server > installing and Upgrading > Installing Rational Team Concert Standard edition and Enterprise edition 
+			> Installing the Standard or Enterprise edition > Starting the server -->
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_ss_StartingTheServer"   url="usingJazzServer/installingAndUpgrading/inst_se_ss__StartingTheServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_ss_StartingTheApacheTomcatServer"   url="usingJazzServer/installingAndUpgrading/inst_se_ss_StartingTheApacheTomcatServer.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_ss_RunningJazzTeamServerInApacheTomcatAsAWindowsService"   url="usingJazzServer/installingAndUpgrading/inst_se_ss_RunJTServerInApacheTomcatAsAWindowsService.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_ss_DeployingJazzTeamServerIntoAnExistingApacheTomcat"   url="usingJazzServer/installingAndUpgrading/inst_se_ss_DeployJTServerIntoAnExistingApacheTomcat.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.inst_se_ss_SettingUpAWebSphereApplicationServer"   url="usingJazzServer/installingAndUpgrading/inst_se_ss_SettingUpAWebSphereApplicationServer.html"/>
+            
+			
+		<!--  Rational Team Concert > Using Jazz Server > Installing and Upgrading >Deploying jazz.war on WebSphere Application Server for high availability environments -->
+    <mapID target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA"   url="usingJazzServer/installingAndUpgrading/inst_ha__DeployingJazzWarOnWebSphereASforHA.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.SettingUpABasicHighAvailabilityConfiguration"   url="usingJazzServer/installingAndUpgrading/inst_ha_SettingUpABasicHighAvailabilityConfiguration.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.TakingThePrimaryServerOffline"   url="usingJazzServer/installingAndUpgrading/inst_ha_TakingThePrimaryServerOffline.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.RestoringThePrimaryServer"   url="usingJazzServer/installingAndUpgrading/inst_ha_RestoringThePrimaryServer.html"/>
+
+        <!--  Rational Team Concert > Using Jazz Server > Installing and Upgrading > Installing the Build System Toolkit-->
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallBuildSystemToolkitZipFile"   url="usingJazzServer/installingAndUpgrading/inst_build_InstallBuildSystemToolkitZipFile.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallBuildSystemToolkitIBMInstallationManager"   url="usingJazzServer/installingAndUpgrading/inst_build_InstallBuildSystemToolkitIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallingTheBuildSystemToolkit"   url="usingJazzServer/installingAndUpgrading/inst_build__InstallingTheBuildSystemToolkitM.html"/>
+
+        <!--  Rational Team Concert > Using Jazz Server > Installing and Upgrading >Installing Rational Team Concert Connectors-->
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallingRationalTeamConcertConnectors"   url="usingJazzServer/installingAndUpgrading/inst_con__Connectors.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallingRTC_CCConnector"   url="usingJazzServer/installingAndUpgrading/inst_con__CCConnectorM.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallRTC_CCConnectorIBMInstallationManager"   url="usingJazzServer/installingAndUpgrading/inst_con_CCConnectorIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallRTC_CCConnectorZip"   url="usingJazzServer/installingAndUpgrading/inst_con_CCConnectorZip.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallRTC_CCQuestConnector"   url="usingJazzServer/installingAndUpgrading/inst_con__CCQuestConnector.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallRTC_CQConnectorIBMInstallationManager"   url="usingJazzServer/installingAndUpgrading/inst_con_CQConnectorIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallRTC_CQConnectorZipFile"   url="usingJazzServer/installingAndUpgrading/inst_con_CQConnectorZipFile.html"/>
+
+        <!--  Rational Team Concert > Using Jazz Server > Installing and Upgrading >Installing Rational Team Concert Client-->
+    <mapID target="usingJazzServer.installingAndUpgrading.ClientInstallationOverview"   url="usingJazzServer/installingAndUpgrading/inst_client_ClientInstallationOverview.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallClientIBMInstallationManager"   url="usingJazzServer/installingAndUpgrading/inst_client_InstallClientIBMInstallationManager.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallClientZip"   url="usingJazzServer/installingAndUpgrading/inst_client_InstallClientZip.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.InstallingRTCClient"   url="usingJazzServer/installingAndUpgrading/inst_client_InstallingRTCClientM.html"/>
+    <mapID target="usingJazzServer.installingAndUpgrading.NetbeansInstallationOverview"   url="usingJazzServer/installingAndUpgrading/inst_client_Netbeans.html"/>
+
+
+    <!--  Rational Team Concert > Using Jazz Server > Migrating -->
+    <mapID target="usingJazzServer.migrating.MigratingJazzRepositoryAfterUpgradingJazz" url="usingJazzServer/migrating/mig__MigratingJazzRepositoryAfterUpgradingJazz.html"/>
+    <mapID target="usingJazzServer.migrating" url="usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"/>
+        <!--  Rational Team Concert > Using Jazz Server > Migrating > Migrating the application server-->
+    <mapID target="usingJazzServer.migrating.migratingTheApplicationServer.tomcatToWeb"   url="usingJazzServer/migrating/mig_as_MigratingFromApacheTomcatToWebSphere.html"/>
+    <mapID target="usingJazzServer.migrating.migratingTheApplicationServer.content"   url="usingJazzServer/migrating/mig_as__content.html"/>
+        <!--  Rational Team Concert > Using Jazz Server > Migrating > Migrating the database-->
+    <mapID target="usingJazzServer.migrating.migratingTheDatabase.content" url="usingJazzServer/migrating/mig_db__content.html"/>
+    <mapID target="usingJazzServer.migrating.migratingTheDatabase.derbyToDb2" url="usingJazzServer/migrating/mig_db_MigratingFromDerbyToDB2.html"/>
+    <mapID target="usingJazzServer.migrating.migratingTheDatabase.derbyToOracle" url="usingJazzServer/migrating/mig_db_MigratingFromDerbyToOracle.html"/>
+    <mapID target="usingJazzServer.migrating.migratingTheDatabase.derbyToSqlServer" url="usingJazzServer/migrating/mig_db_MigratingFromDerbyToSQLServer.html"/>
+
+        <!--  Rational Team Concert > Using Jazz Server > Migrating > Repository Tools Overview-->
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview"   url="usingJazzServer/migrating/mig_tools__RepositoryToolsOverview.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.backupServer" url="usingJazzServer/migrating/mig_tools_BackingUpTheJazzTeamServer.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.addTables" url="usingJazzServer/migrating/mig_tools_addTables.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.archiveUser" url="usingJazzServer/migrating/mig_tools_archiveUser.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.clone" url="usingJazzServer/migrating/mig_tools_clone.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.convertTomcatUsers" url="usingJazzServer/migrating/mig_tools_convertTomcatUsers.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.copy" url="usingJazzServer/migrating/mig_tools_copy.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.createTables" url="usingJazzServer/migrating/mig_tools_createTables.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.createUser" url="usingJazzServer/migrating/mig_tools_createUser.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.createUsers" url="usingJazzServer/migrating/mig_tools_createUsers.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.dropTables" url="usingJazzServer/migrating/mig_tools_dropTables.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.export" url="usingJazzServer/migrating/mig_tools_export.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.exportUsers" url="usingJazzServer/migrating/mig_tools_exportUsers.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.help" url="usingJazzServer/migrating/mig_tools_help.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.import" url="usingJazzServer/migrating/mig_tools_import.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.importUsers" url="usingJazzServer/migrating/mig_tools_importUsers.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.isServerRunning" url="usingJazzServer/migrating/mig_tools_isServerRunning.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.listLicenses" url="usingJazzServer/migrating/mig_tools_listLicenses.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.rebuildIndices" url="usingJazzServer/migrating/mig_tools_rebuildIndices.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.rebuildTextIndices" url="usingJazzServer/migrating/mig_tools_rebuildTextIndices.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.syncUsers" url="usingJazzServer/migrating/mig_tools_syncUsers.html"/>
+    <mapID target="usingJazzServer.migrating.repositoryToolsOverview.verify" url="usingJazzServer/migrating/mig_tools_verify.html"/>
+
+    <!--  Rational Team Concert > Using Jazz Server > Administering -->
+    <mapID target="usingJazzServer.administering.AdministeringTheJazzTeamServerThroughWebUI"    url="usingJazzServer/administering/adm___AdministeringTheJazzTeamServerThroughWebUI.html"/>
+    <mapID target="usingJazzServer.administering.loggingIntoAdminWebUI"    url="usingJazzServer/administering/adm__LoggingInToTheAdminWebUI.html"/>
+    <mapID target="usingJazzServer.administering.managingLicenceKeys"    url="usingJazzServer/administering/adm__ManagingLicenseKeys.html"/>
+    <mapID target="usingJazzServer.administering.managingFloatingLicencesAccess"    url="usingJazzServer/administering/adm__ManagingFloatingClientAccessLicenses.html"/>
+    <mapID target="usingJazzServer.administering.managingFloatingLicencesUsage"    url="usingJazzServer/administering/adm__MonitoringFloatingLicenseUsage.html"/>
+    <mapID target="usingJazzServer.administering.troubleshootingServerIssues"    url="usingJazzServer/administering/adm__TroubleshootingServerIssues.html"/>
+
+    <!--  Rational Team Concert > Using Jazz Server > Administering > Managing users-->
+    <mapID target="usingJazzServer.administering.managingUsers"    url="usingJazzServer/administering/adm_usr__ManagingUsers.html"/>
+    <mapID target="usingJazzServer.administering.managingUsers.creatingUser"    url="usingJazzServer/administering/adm_usr_CreatingAUser.html"/>
+    <mapID target="usingJazzServer.administering.managingUsers.managingClientAccessLicences"    url="usingJazzServer/administering/adm_usr_ManagingClientAccessLicenses.html"/>
+    <mapID target="usingJazzServer.administering.managingUsers.assigningDefaultLicences"    url="usingJazzServer/administering/adm_usr_AssigningDefaultLicensesToNewUsers.html"/>
+    <mapID target="usingJazzServer.administering.managingUsers.disablingDefaultAdministrativeUser"    url="usingJazzServer/administering/adm_usr_DisablingTheDefaultAdministrativeUser.html"/>
+    <mapID target="usingJazzServer.administering.managingUsers.archivingUser"    url="usingJazzServer/administering/adm_usr_ArchivingAUser.html"/>
+
+    <!--  Rational Team Concert > Using Jazz Server > Administering > Configuring the Server-->
+    <mapID target="usingJazzServer.administering.configuringServer"    url="usingJazzServer/administering/adm_srv__ConfiguringTheServer.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringEmailSettings"    url="usingJazzServer/administering/adm_srv_ConfiguringEMailSettings.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringDatabaseConnections"    url="usingJazzServer/administering/adm_srv_ConfiguringDatabaseConnections.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringFeedSettings"    url="usingJazzServer/administering/adm_srv_ConfiguringFeedSettings.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringThemes"    url="usingJazzServer/administering/adm_srv_ConfiguringThemes.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringAdvancedProperties"    url="usingJazzServer/administering/adm_srv_ConfiguringAdvancedProperties.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.filteringAdvancedProperties"    url="usingJazzServer/administering/adm_srv_FilteringAdvancedProperties.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.storingPasswordsClearText"    url="usingJazzServer/administering/adm_srv_ConfiguringServerToUseClearTextPasswords.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.modifyingProfileIni"    url="usingJazzServer/administering/adm_srv_ModifyingTheProfileIniAndLicenseProfileIniFiles.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.customizingLog"    url="usingJazzServer/administering/adm_srv_ManagingTheLogFile.html"/>
+        <!--  Rational Team Concert > Using Jazz Server > Administering > Configuring the Server >
+        Configuring OAuth-->
+    <mapID target="usingJazzServer.administering.configuringServer.configuringOAuth"        url="usingJazzServer/administering/adm_oauth__ConfiguringOAuth.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringOAuth.creatingConsumerKey"        url="usingJazzServer/administering/adm_oauth_CreatingConsumerKeys.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringOAuth.approvingConsumerKey"        url="usingJazzServer/administering/adm_oauth_ApprovingConsumerKeys.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringOAuth.editingKey"        url="usingJazzServer/administering/adm_oauth_EditingConsumerKeys.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringOAuth.deletingKey"        url="usingJazzServer/administering/adm_oauth_DeletingConsumerKeys.html"/>
+        <!--  Rational Team Concert > Using Jazz Server > Administering > Configuring the Server >
+        Configuring server-to-server communication-->
+    <mapID target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication"        url="usingJazzServer/administering/adm_com__ConfiguringCrossServerCommunication.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.establishingServerToServerCommunication"        url="usingJazzServer/administering/adm_com_EstablishingCrossServerCommunication.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.editingEntriesFromServerFriendsList"        url="usingJazzServer/administering/adm_com_EditingServerFriendsListEntries.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.deletingEntriesFromServerFriendsList"        url="usingJazzServer/administering/adm_com_DeletingServerFriendsListEntries.html"/>
+        <!--  Rational Team Concert > Using Jazz Server > Administering > Configuring the Server >
+        Using the LDAP sync task-->
+    <mapID target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask"        url="usingJazzServer/administering/adm_ldap_UsingTheLDAPSyncTask.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask.usingLDAPsyncTaskFeed"        url="usingJazzServer/administering/adm_ldap_UsingTheLDAPSyncTaskFeed.html"/>
+    <mapID target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask.modifyingLDAPsyncTask"        url="usingJazzServer/administering/adm_ldap_ModifyingTheLDAPSyncTask.html"/>
+    <mapID target="template"  url="usingJazzServer/administering/template_2.html"/>
+
+<!--  Rational Team Concert > Using Rational Team Concert > -->
+
+    
+
+    <!--  Rational Team Concert > Using Rational Team Concert > Project, teams, and processes -->
+        <!--  Rational Team Concert > Using Rational Team  > Project, teams, and processes >Project and process concepts-->
+    <mapID target="usingRationalTeamConcert.Wokflow"  url="usingRTC/UseRTC_proj_WorkflowForProjectsTeamsAndProcess.html"/>
+    <mapID target="usingRationalTeamConcert.Repository"  url="usingRTC/UseRTC_proj_Repository.html"/>
+    <mapID target="usingRationalTeamConcert.ProjectArea"  url="usingRTC/UseRTC_proj_ProArea.html"/>
+    <mapID target="usingRationalTeamConcert.WorkItemCategory"  url="usingRTC/UseRTC_proj_WorkItemCategory.html"/>
+    <mapID target="usingRationalTeamConcert.Process"  url="usingRTC/UseRTC_proj_Process.html"/>
+    <mapID target="usingRationalTeamConcert.DevelopmentLine"  url="usingRTC/UseRTC_proj_Timeline.html"/>
+    <mapID target="usingRationalTeamConcert.Iteration"  url="usingRTC/UseRTC_proj_Iteration.html"/>
+    <mapID target="usingRationalTeamConcert.Roles"  url="usingRTC/UseRTC_proj_Roles.html"/>
+    <mapID target="usingRationalTeamConcert.Behavior"  url="usingRTC/UseRTC_proj_Behavior.html"/>
+    <mapID target="usingRationalTeamConcert.Permission"  url="usingRTC/UseRTC_proj_Permissions.html"/>
+    <mapID target="usingRationalTeamConcert.Timeline"  url="usingRTC/UseRTC_proj_Timeline.html"/>
+
+   
+    <!--  Rational Team Concert > Using Rational Team Concert > Plans and work item management-->
+        <!--  Rational Team Concert > Using Rational Team Concert > Plans concepts -->
+    <mapID target="usingRationalTeamConcert.PlanAndWorkItemManagement"  url="usingRTC/UseRTC_agile_PlansAndWorkItemManagement.html"/>
+    <mapID target="usingRationalTeamConcert.ProjectReleasePlan"  url="usingRTC/UseRTC_agile_ProjectReleasePlan.html"/>
+    <mapID target="usingRationalTeamConcert.TeamReleasePlan"  url="usingRTC/UseRTC_agile_TeamReleasePlan.html"/>
+    <mapID target="usingRationalTeamConcert.IterationPlan"  url="usingRTC/UseRTC_agile_IterationPlan.html"/>
+    <mapID target="usingRationalTeamConcert.ScheduleRiskAssessmentPlan" url="usingRTC/UseRTC_agile_ScheduleRiskAssessmentPlan.html"/>
+    
+    <!--  Rational Team Concert > Using Rational Team Concert > Repository connection -->
+    <mapID target="usingRationalTeamConcert.ConnectionToArepository"  url="usingRTC/useRTC_con.html"/>
+  
+
+    <!--  Rational Team Concert > Using Rational Team Concert > Work Items -->
+        <!--  Rational Team Concert > Using Rational Team Concert > Work Item concepts -->
+    <mapID target="usingRationalTeamConcert.WorkItems"  url="usingRTC/useRTC_workItem.html"/>
+            <!--  Rational Team Concert > Using Rational Team Concert > Working with Work Items-->
+    <mapID target="usingRationalTeamConcert.CreatingWorkItems"  url="usingRTC/useRTC_workItemCreating.html"/>
+    <mapID target="usingRationalTeamConcert.EditingWorkItems"  url="usingRTC/useRTC_workItemEditing.html"/>
+            <!--  Rational Team Concert > Using Rational Team Concert > Working with Work Items > Finding Work Items-->
+    <mapID target="usingRationalTeamConcert.FindingWorkItems"  url="usingRTC/useRTC_workItemFinding.html"/>
+    <mapID target="usingRationalTeamConcert.FindingWorkItems.CreatingdQueries"  url="usingRTC/useRTC_workItemFindingCreatQuery.html"/>
+    <mapID target="usingRationalTeamConcert.FindingWorkItems.UsingPredefinedQueries"  url="usingRTC/useRTC_workItemFindingUsePredefinedQuery.html"/>
+
+    <!--  Rational Team Concert > Using Rational Team Concert > Source Control -->
+    <mapID target="usingRationalTeamConcert.GeneralIdeaOfSourceControl"  url="usingRTC/UseRTC_sc_generalIdeaOfSourceControlnRationalTeamConcert.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcConnectToProjectAreaAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcConnectToRepositoryAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcDisconnectFromProjectAreaAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcDisconnectFromRepositoryAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcRefreshProjectAreasActiion" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcRefreshRepositoryConnectionsAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcRemoveRepositoryConnectionAction" url="usingRTC/con_UseRTC_RTCservicesTab.html"/>
+
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.actions.RtcAddConnectionAction" url="usingRTC/useRTC_con.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.wizards.RtcAddConnectionWizardPanel1" url="usingRTC/con_AddNewRepositoryWizard.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.services.RtcRepositoryConnectionsNode" url="usingRTC/useRTC_con.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.services.RtcProjectAreaNode" url="usingRTC/con_RTCtab.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.connections.tab.RtcTabTopComponent" url="usingRTC/con_RTCtab.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.favorites.nodes.RtcFavoritesNode" url="usingRTC/con_useRTCfavoritesFolder.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.QueriesModuleNode" url="usingRTC/con_UseRTCWorkItemNode.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.querylist.nodes.RtcQueriesSetNode" url="usingRTC/con_UseRTCMyQueriesFolder.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.querylist.nodes.RtcSharedQueriesNode" url="usingRTC/con_UseRTCsharedFolder.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.editor.QueryEditorTopComponent" url="usingRTC/con_queryEditor.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.editor.TermWidget" url="usingRTC/con_queryEditor.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.editor.panels.PossibleValuesSelectionPanel" url="usingRTC/con_queryEditor.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.queries.result.ResultsTopComponent" url="usingRTC/con_UserRTCworkItemsView.html"/>
+	
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.topcomponents.RtcWorkItemTopComponent" url="usingRTC/con_useRTCworkItemEditorMainView.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.panels.RtcWorkItemOverviewCategory" url="usingRTC/con_useRTCworkItemEditorMainView.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.panels.RtcWorkItemApprovalsCategory" url="usingRTC/con_workItemEditorApprovals.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.panels.RtcWorkItemHeaderCategory" url="usingRTC/con_useRTCworkItemEditorMainView.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.panels.RtcWorkItemHistoryCategory" url="usingRTC/con_workItemEditorHistory.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.workitems.panels.RtcWorkItemLinksCategory" url="usingRTC/con_workItemEditorLink.html"/>
+	
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.reports.RtcReportNode" url="usingRTC/useRTC_reports.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.reports.RtcReportAction" url="usingRTC/useRTC_reports.html"/>
+
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.RtcPlansModuleNode" url="usingRTC/UseRTC_agile_PlansAndWorkItemManagement.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.hierarchy.RtcAllPlansNode" url="usingRTC/UseRTC_agile_PlansAndWorkItemManagement.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.hierarchy.RtcCurrentPlansNode" url="usingRTC/UseRTC_agile_PlansAndWorkItemManagement.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.hierarchy.RtcDevelopmentLineNode" url="usingRTC/UseRTC_agile_Plans.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.hierarchy.RtcIterationNode" url="usingRTC/UseRTC_agile_Plans.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.hierarchy.RtcPlanNode" url="usingRTC/UseRTC_agile_Plans.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.actions.dialogs.RtcAddPlanDialog" url="usingRTC/UseRTC_agile_pl_CreatePlan.html"/>
+    <mapID target="pl.edu.amu.wmi.kino.rtc.client.plans.actions.RtcAddPlanAction" url="usingRTC/UseRTC_agile_pl_CreatePlan.html"/>
+
+
+</map>
+

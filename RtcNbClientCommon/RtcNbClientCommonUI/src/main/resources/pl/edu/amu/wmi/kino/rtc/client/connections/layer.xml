@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.0//EN" "http://www.netbeans.org/dtds/filesystem-1_0.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Rtc">
+            <folder name="CoreModule">
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcAddConnectionAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcConnectToProjectAreaAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcConnectToRepositoryAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcDisconnectFromProjectAreaAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcDisconnectFromRepositoryAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcOpenRtcTabAction.instance">
+                    <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+                    <attr name="component" methodvalue="pl.edu.amu.wmi.kino.rtc.client.connections.tab.RtcTabTopComponent.findInstance"/>
+                    <attr name="displayName" bundlevalue="pl.edu.amu.wmi.kino.rtc.client.connections.actions.Bundle#RtcOpenRtcTabAction.name"/>
+                    <attr name="iconBase" stringvalue="pl/edu/amu/wmi/kino/rtc/client/connections/actions/icon.png"/>
+                </file>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRefreshProjectAreasAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRefreshRepositoryConnectionsAction.instance"/>
+                <file name="pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRemoveRepositoryConnectionAction.instance"/>
+            </folder>
+        </folder>
+        <folder name="Window">
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Window">
+            <folder name="RTC">
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/netbeans/modules/profiler/resources/ide/empty.gif"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="pl.edu.amu.wmi.kino.rtc.client.connections.tab.Bundle"/>
+                <attr name="position" intvalue="1600"/>
+                <file name="RtcTabAction.shadow">
+                    <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcOpenRtcTabAction.instance"/>
+                    <attr name="position" intvalue="100"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Rtc">
+        <folder name="Modules">
+            <folder name="CoreModule">
+                <folder name="Nodes">
+                    <folder name="ActiveProjectAreaActions">
+                        <file name="DisconnectFromProjectAreaAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcDisconnectFromProjectAreaAction.instance"/>
+                            <attr name="position" intvalue="100"/>
+                        </file>
+                    </folder>
+                    <folder name="ProjectAreaActions">
+                        <file name="ConnectToProjectAreaAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcConnectToProjectAreaAction.instance"/>
+                            <attr name="position" intvalue="100"/>
+                        </file>
+                        <file name="DisconnectFromProjectAreaAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcDisconnectFromProjectAreaAction.instance"/>
+                            <attr name="position" intvalue="200"/>
+                        </file>
+                    </folder>
+                    <folder name="RepositoryConnectionActions">
+                        <file name="ConnectToRepositoryAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcConnectToRepositoryAction.instance"/>
+                            <attr name="position" intvalue="100"/>
+                        </file>
+                        <file name="DisconnectFromRepositoryAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcDisconnectFromRepositoryAction.instance"/>
+                            <attr name="position" intvalue="200"/>
+                        </file>
+                        <file name="RefreshProjectAreasAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRefreshProjectAreasAction.instance"/>
+                            <attr name="position" intvalue="300"/>
+                        </file>
+                        <file name="RemoveRepositoryConnectionAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRemoveRepositoryConnectionAction.instance"/>
+                            <attr name="position" intvalue="500"/>
+                        </file>
+                    </folder>
+                    <folder name="ServicesActions">
+                        <file name="AddConnectionAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcAddConnectionAction.instance"/>
+                            <attr name="position" intvalue="100"/>
+                        </file>
+                        <file name="RefreshRepositoryConnectionsAction.shadow">
+                            <attr name="originalFile" stringvalue="Actions/Rtc/CoreModule/pl-edu-amu-wmi-kino-rtc-client-connections-actions-RtcRefreshRepositoryConnectionsAction.instance"/>
+                            <attr name="position" intvalue="200"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Services">
+        <folder name="JavaHelp">
+            <file name="rtc-helpset.xml" url="rtc-helpset.xml"/>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="RtcTabTopComponent.settings" url="RtcTabTopComponentSettings.xml"/>
+        </folder>
+        <folder name="Modes">
+            <folder name="explorer">
+                <file name="RtcTabTopComponent.wstcref" url="RtcTabTopComponentWstcref.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

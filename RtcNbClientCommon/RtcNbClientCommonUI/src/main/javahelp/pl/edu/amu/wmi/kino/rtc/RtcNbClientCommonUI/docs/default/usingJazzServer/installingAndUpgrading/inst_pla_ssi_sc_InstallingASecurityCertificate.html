@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Installing a security certificate</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_install_server_certificates"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla__PlanningTheInstallation.html"
+  shape="rect">Planning the installation</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi__SpecialServerInstructions.html"
+  shape="rect">Special server instructions</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_pla_ssi_sc__SecurityCertificates.html"
+  shape="rect">Security certificates</a></div>
+  <a id="t_install_server_certificates"
+  name="t_install_server_certificates"></a>
+  <h1 class="topictitle1">Installing a security
+  certificate</h1>Replace the self-signed certificate with a
+  certificate that belongs to your company. 
+  <ul class="ul steps-unordered">
+    <li class="li step stepexpand">
+       <span class="cmd">Configure an Apache Tomcat security
+      certificate. </span> 
+      <div class="p">In the file, 
+      <var class="varname">
+      JazzInstallDir</var>/server/tomcat/conf/server.xml, Apache
+      Tomcat is configured to read the server's certificate from 
+      <var class="varname">
+      JazzInstallDir</var>/server/tomcat/ibm-team-ssl.keystore. The
+      default keystore password is set to, ibm-team. This keystore
+      includes a self-signed certificate identifying the server as
+      "localhost". 
+      <div class="note">
+       <span class="notetitle">Note: </span> To improve security,
+      change the default keystore password.</div></div>
+      <p class="p">The IBM&#174; JRE included with 
+       <span class="keyword">Jazz&#8482; Team Server </span> includes
+      an IBM tool that is useful for managing keys on the server.
+      The tool iKeyman is located in the directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/jre/bin/ </span> (ikeyman.exe on
+      Windows&#174;).</p>
+      <p class="p">The ikeyman tool can help you create your own
+      self-signed certificate identifying the host by its proper
+      network name or you can request a certificate signed by a
+      trusted certificate authority (CA). A self-signed certificate
+      will require acceptance by the Team Concert client or web
+      browser.</p>
+      <p class="p">For more information see, 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+        <param name="content"
+        value="http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/security/50/GSK7c_SSL_IKM_Guide.pdf " />
+        <param name="text"
+        value="http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/security/50/GSK7c_SSL_IKM_Guide.pdf " />
+      </object>.</p>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Configure a WebSphere&#174; Application
+      Server security certificate. </span> 
+      <div class="p">For more information on see, 
+      <ul class="ul">
+        <li class="li">
+          <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+            <param name="content"
+            value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.base.doc/info/aes/ae/tsec_sslconfigkeystore.html" />
+            <param name="text"
+            value="Creating a keystore configuration " />
+          </object>
+        </li>
+        <li class="li">
+          <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+            <param name="content"
+            value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.base.doc/info/aes/ae/tsec_sslcreateselfsigncert.html" />
+            <param name="text"
+            value="Creating a self-signed certificate " />
+          </object>
+        </li>
+      </ul></div>
+    </li>
+  </ul>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

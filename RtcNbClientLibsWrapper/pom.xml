@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>RtcNbClient</artifactId>
+		<groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+		<version>0.2.3.9-SNAPSHOT</version>
+	</parent>
+	<version>0.3.1.0-SNAPSHOT</version>
+	<artifactId>RtcNbClientLibsWrapper</artifactId>
+	<packaging>nbm</packaging>
+	<name>RtcNbClient Libs Wrapper</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.scm.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.api.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.java.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.shared.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.planning</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.client.workitems</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.common.workitems</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.scm.admin.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.icu</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.rational.wvcm.ct</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.rational.wvcm.factory</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.rational.wvcm.interop</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.rational.wvcm.ri.repo</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.api.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.ide.core</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.api.ui</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.shared.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> <artifactId>com.ibm.team.apt.ide.ui</artifactId> 
+			<version>3.0iFix1</version> </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.setup.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.setup.ui</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.apt.viewlets.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.build.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.build.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.calm.foundation.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.connector.scm.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.connector.scm.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.connector.scm.operations</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.apt</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.build</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.repository</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.scm</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.datawarehouse.service.workitem</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.client.daemon</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.client.1.7</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.filesystem.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.foundation.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.foundation.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.foundation.rcp.core</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.interop.client.rest</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.interop.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.interop.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.process.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.process.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> -->
+		<!-- <artifactId>com.ibm.team.process.definitions.client</artifactId> -->
+		<!-- <version>3.0iFix1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.reports.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.reports.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common.json</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common.remoteaccess</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common.serialize</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common.transport</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.common.remoteaccess.auth</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.repository.rcp.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.rtc.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.scm.admin.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.scm.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.scm.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.client</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>com.ibm.team.workitem.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.core.filesystem</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.core.jobs</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.core.resources</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.core.runtime</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> -->
+		<!-- <artifactId>org.eclipse.emf.commonj.sdo</artifactId> -->
+		<!-- <version>3.0iFix1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.emf.ecore.change</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> -->
+		<!-- <artifactId>org.eclipse.emf.ecore.sdo</artifactId> -->
+		<!-- <version>3.0iFix1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.equinox.common</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.equinox.preferences</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.equinox.registry</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.jface.text</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.osgi</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.text</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.eclipse.xsd</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>javax.servlet</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>javax.wvcm</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> -->
+		<!-- <artifactId>httpcore.nio</artifactId> -->
+		<!-- <version>3.0iFix1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.apache.commons.codec</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.apache.commons.httpclient</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>org.apache.commons.logging</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>apache.mime4j</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>net.oauth</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId> -->
+		<!-- <artifactId>org.mozilla.rhino</artifactId> -->
+		<!-- <version>3.0iFix1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>pl.edu.amu.wmi.kino.rtc.libs</groupId>
+			<artifactId>js</artifactId>
+			<version>3.0iFix1</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>nbm-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<publicPackages>
+						<publicPackage>*</publicPackage>
+					</publicPackages>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<checkCerts>false</checkCerts>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
+
+
+
+
+
+
+
+
+

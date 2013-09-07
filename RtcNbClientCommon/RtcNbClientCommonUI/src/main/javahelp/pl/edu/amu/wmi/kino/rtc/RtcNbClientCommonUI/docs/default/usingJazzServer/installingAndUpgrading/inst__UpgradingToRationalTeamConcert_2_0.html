@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Upgrading to Rational Team Concert 2.0</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="upgrading" onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt; 
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt; 
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a></div>
+  <a id="upgrading" name="upgrading"></a>
+  <h1 class="topictitle1">Upgrading to 
+   <span class="keyword">Rational Team
+  Concert </span> 2.0</h1>Generally, you can upgrade 
+   <span class="keyword">Rational Team Concert&#8482; </span> clients
+  and servers by either performing a zip or IBM&#174; Installation
+  Manager install. 
+  <div class="note">
+   <span class="notetitle">Note: </span> If you use the IBM
+  Installation Manager to install 
+   <span class="keyword">Rational Team Concert </span> 2.0 on a
+  computer where 
+   <span class="keyword">Rational Team Concert </span> is not
+  currently installed, the Installation Manager prompts you to
+  select the languages to install. However if you update from an
+  earlier version to 2.0, the IBM Installation Manager assumes that
+  you want to use the current languages and does not prompt you to
+  select languages. To select the additional languages, after you
+  update to 2.0, select 
+   <span class="uicontrol">Modify </span> from the main screen in the
+  IBM Installation Manager, then select the offering. The next
+  screen shows the list of supported languages. Select the ones you
+  need. 
+  <div class="p">If you start the Jazz&#8482; Team Server after you
+  update to 2.0 and before you select 
+   <span class="uicontrol">Modify </span> to add or remove languages,
+  you must reset the server as follows: 
+  <ol class="ol">
+    <li class="li">In a Web browser, navigate to https:// 
+    <var class="varname">
+    server-host</var>:9443/jazz/admin.action=com.ibm.team.repository.admin.serverReset.</li>
+    <li class="li">Click 
+     <span class="uicontrol">Request Server Reset </span> .</li>
+    <li class="li">Shut down the server.</li>
+  </ol></div>
+  <p class="p">Then you can select 
+   <span class="uicontrol">Modify </span> in the IBM Installation
+  Manager to add or remove languages.</p></div>
+  <h2 class="sectiontitle">Upgrading a 
+   <span class="keyword">Rational Team Concert </span> Client for
+  Eclipse IDE</h2>
+  <p class="p">If you have 1.0, 1.0.1, or 1.0.1.1 versions of the
+  Client for Eclipse IDE, it is required that you obtain the 2.0
+  client to connect to your new version 2.0 server. You can install
+  this using a zip file, or you can update your prior IBM
+  Installation Manager installs.</p>
+  <h2 class="sectiontitle">Installing a 
+   <span class="keyword">Rational Team Concert </span> Client for
+  Microsoft Visual Studio IDE</h2>
+  <div class="p">If you have 1.0.1.1 version of the Client for
+  Microsoft&#174; Visual Studio IDE, it is required that you obtain
+  the 2.0 client to connect to your new version 2.0 server. 
+  <div class="note remember">
+   <span class="remembertitle">Remember: </span> A .zip file is not
+  provided for the Client for Microsoft Visual Studio. To install
+  or upgrade to version 2.0, you must use IBM Installation
+  Manager.</div></div>
+  <h2 class="sectiontitle">Upgrading a Server from a Trial or Early
+  Access release to a Permanent release</h2>
+  <p class="p">If you are running an Early Access release of 
+   <span class="keyword">Rational Team Concert </span> , first upgrade
+  to the 2.0 Trial release.</p>
+  <p class="p">From the 2.0 Trial release, you can make your server
+  Permanent by purchasing and installing the Server Activation Kit
+  for your edition, which is available here: 
+  <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+    <param name="content"
+    value="http://www.ibm.com/software/awdtools/rtc/" />
+    <param name="text"
+    value="http://www.ibm.com/software/awdtools/rtc/ " />
+  </object>. The activation kit consists of a JAR file containing
+  the Permanent server key. It is installed using the License Key
+  Management page of your server's administrative Web
+  interface.</p>
+  <h2 class="sectiontitle">Upgrading a Server from 1.0, 1.0.1, or
+  1.0.1.1</h2>
+  <p class="p">You can upgrade directly to the 2.0 release of 
+   <span class="keyword">Rational Team Concert </span> from the
+  previous releases. A database migration is required for 1.x to
+  2.x updates.</p>
+  <div class="note">
+   <span class="notetitle">Note: </span> Before you begin upgrading a
+  WebSphere&#174; Application Server, reset the server by
+  navigating to 
+   <span class="filepath">
+  https://servername:9443/jazz/admin#action=com.ibm.team.repository.admin.serverReset </span> and
+  clicking 
+   <span class="uicontrol">Request Server Reset </span> .</div>
+  <p class="p">If you installed the previous release from a zip
+  file, then there is no intersection with the previous install.
+  You can install the 2.0 release from a zip in a new location, or
+  you can use the IBM Installation Manager to install an instance
+  of 2.0.</p>
+  <p class="p">If you used IBM Installation Manager to install the
+  previous release, you can either install 2.0 as a separate
+  instance or update the previous instance to 2.0. If you install a
+  separate instance of the server for the 2.0 release, select 
+   <span class="uicontrol">Create a new package group </span> on the 
+   <span class="wintitle">Install Packages </span> page of the
+  installation wizard.</p>
+  <div class="note">
+   <span class="notetitle">Note: </span> To upgrade a WebSphere
+  Application Server deployment of the 
+   <span class="keyword">Jazz Team Server </span> , remove the
+  previous jazz.war file and deploy the 2.0 jazz.war file.</div>
+  <p class="p">To complete the upgrade, see 
+  <a class="xref" href="#upgrading__copyconfigfiles">Copying the
+  required configuration files from a previous server
+  installation</a>and 
+  <a class="xref" href="#upgrading__installing_2.0_keys">Installing
+  2.0 Activation Keys</a>.</p>
+  <h2 class="sectiontitle">Upgrading a Server from one 
+   <span class="keyword">Rational Team Concert </span> edition to
+  another</h2>
+  <p class="p">You can upgrade between 
+   <span class="keyword">Rational Team Concert </span> editions.
+  Typical upgrades include moving from Express-C to Express&#8482;,
+  or Express to Standard. You can also downgrade in the opposite
+  direction by following the same process.</p>
+  <p class="p">Because all 
+   <span class="keyword">Rational Team Concert </span> 2.0 editions
+  support Derby databases, you do not need to migrate from Derby to
+  DB2&#174; or Oracle if you are moving from Express-C to Express
+  or Standard. We recommend that you migrate your server edition
+  first, make sure things work smoothly with the existing database,
+  and then perform a database migration if required. For
+  information on performing a database migration, see 
+  <a class="xref"
+  href="../migrating/mig__MigratingJazzRepositoryAfterUpgradingJazz.html"
+  title="Repository migration is the process of converting the contents of the database from one format to another. Repository migration is necessary when you are upgrading the Jazz Team Server from version X to version Y, where version Y has schema changes.">
+  Migrating Jazz repository after upgrading Jazz Team
+  Server</a>.</p>
+  <p class="p">If you have installed a 
+   <span class="keyword">Rational Team Concert </span> 2.0 edition and
+  want to upgrade to another, download and install the new edition,
+  alongside the existing edition, and then copy the required
+  configuration files to run the new edition. The section below
+  describes the configuration files that you require.</p>
+  <p class="p">If you installed your previous edition from a zip
+  file, then there is no intersection with the previous install.
+  You can install the new edition from a zip in a new location, or
+  you can use the IBM Installation Manager install for the new
+  edition. We recommend that the IBM Installation Manager be used
+  for production servers to enable future updates to be
+  applied.</p>
+  <p class="p">If you used IBM Installation Manager to perform your
+  previous server install, and want to use IBM Installation Manager
+  to install your new edition, during the new Installation Manager
+  install, do not overlay the previous edition. On the 
+   <span class="wintitle">Install Packages </span> page of the
+  installation wizard, select 
+   <span class="uicontrol">Create a new package group </span> .</p>
+  <p class="p">This will install the new edition in a different
+  location and create program shortcuts using the new package group
+  name.</p>
+  <div class="p">If you do not perform this task, the installation
+  will fail with a file collision. This occurs if you see an error
+  dialog titled 
+  <tt class="systemoutput">Installation Failed</tt>, and the
+  details show the following text: 
+  <pre class="pre">
+Installation failed.
+  Error during "install" phase:
+    Failed to extract zip standard 1.0.1.I20081018-1820.  File
+    D:\JazzTeamServer\server\license-update-site\site.xml already
+exists.
+</pre></div>
+  <p class="p">If this occurs, it is not fatal; you can restart the
+  installation and correctly create a new package group.</p>
+  <h2 class="sectiontitle">WebSphere Application Server
+  configuration updates</h2>
+  <div class="p">The following steps are required to properly
+  configure WebSphere Application Server in 
+   <span class="keyword">Rational Team Concert </span> 2.0. 
+  <ol class="ol">
+    <li class="li">Ensure that the latest fix packs for WAS and
+    WASDK are installed. If deploying in WAS 7.0, it is critical
+    that at least WebSphere Application Server 7.0.0.3 is
+    installed.</li>
+    <li class="li">Remove the old custom JVM properties: 
+    <ol class="ol" type="a">
+      <li class="li">com.ibm.team.repository.provision.profile</li>
+      <li class="li">com.ibm.team.server.configURL</li>
+      <li class="li">log4j.configuration</li>
+    </ol></li>
+    <li class="li">Add the new custom JVM property 
+    <samp class="codeph">JAZZ_HOME </samp>and set the value to: 
+    <pre class="pre">
+file:///&lt;JazzInstallDir&gt;/server/conf
+</pre></li>
+    <li class="li">Ensure that the WAS security setting "Use
+    available authentication data when an unprotected URI is
+    accessed" is checked. If you are using the WAS Integrated
+    Solutions Console, you can do this by: 
+    <ol class="ol" type="a">
+      <li class="li">Navigating to Security -&gt; Secure
+      administration, applications, and infrastructure -&gt; Web
+      Security - General Settings.</li>
+      <li class="li">Selecting the checkbox for "Use available
+      authentication data when an unprotected URI is
+      accessed".</li>
+    </ol></li>
+  </ol></div>
+  <a id="upgrading__copyconfigfiles"
+  name="upgrading__copyconfigfiles"></a>
+  <h2 class="sectiontitle">Copying the required configuration files
+  from a previous server installation</h2>
+  <p class="p">Copy the following files from the source server to
+  the target server. First, rename the original files in the
+  upgraded server install to create backups. If you used the IBM
+  Installation Manager to update from 1.0, 1.0.1, or 1.0.1.1 to
+  2.0, a backup directory containing your 1.0.x configuration files
+  was created with a name, such as 
+   <span class="filepath">backup-config- 
+  <var class="varname">timestamp</var> </span> in the server
+  subdirectory of the installation location.</p>
+  <ul class="ul">
+    <li class="li">
+     <span class="filepath">workitemindex </span> (directory)</li>
+    <li class="li">If you are using Derby, copy the 
+     <span class="filepath">repositoryDB </span> directory tree.</li>
+    <li class="li">If you are using Tomcat and have changed the
+    configuration, copy over the 
+     <span class="filepath">tomcat/conf </span> directory.</li>
+    <li class="li">If you are using the Tomcat user database, copy
+    over 
+     <span class="filepath">tomcat-users.xml </span> .</li>
+    <li class="li">If you are using Tomcat and you have customized
+    the application deployment descriptor, copy the changes from
+    your modified 
+     <span class="filepath">web.xml </span> file for 
+     <span class="filepath">jazz.war </span> , located in 
+     <span class="filepath">
+    \JazzTeamServer\server\tomcat\webapps\jazz\WEB-INF </span> and
+    reapply them to your new 2.0-based web.xml. 
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> In 
+     <span class="keyword">Rational Team Concert </span> 2.0, the
+    web.xml file has changed significantly. It is recommended that
+    you start with the new 2.0-based web.xml and reapply any
+    changes to the new file rather than copying the old
+    version.</div></li>
+  </ul>
+  <p class="p">If you are upgrading to Standard or Enterprise
+  edition, and you have purchased the Developer Client Activation
+  Kit for Express, purchase and install the Developer Client
+  Activation Kit for Standard or Enterprise Editions, so that you
+  can use those client licenses. Your Developer license assignments
+  will still be in effect, but the Developer licenses will be
+  deactivated until the correct activation kit is installed. 
+  <a id="upgrading__installing_2.0_keys"
+  name="upgrading__installing_2.0_keys"></a></p>
+  <h2 class="sectiontitle">Installing 2.0 Activation Keys</h2>
+  <p class="p">The 2.0 release uses the 2.0 Activation keys. If a
+  server is upgraded from 1.0.x.x to 2.0, it reverts to a trial
+  license after the upgrade, and you need to obtain the 2.0
+  activation keys from Passport Advantage&#174;. Below are the
+  names of the applicable keys for each kit:</p>
+  <div class="p">
+    <ul class="ul">
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Express
+      Edition - Server License Activation Kit V2.0 Multiplatform
+      (jazz_team_server_express_release.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Express
+      Edition - Developer Client License Activation Kit V2.0
+      Multiplatform (rtc_express_developer_unlocked.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> -
+      Contributor Client License Activation Kit V2.0 Multiplatform
+      (rtc_all_contributor_unlocked.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Standard
+      Edition - Server License Activation Kit V2.0 Multiplatform
+      (jazz_team_server_standard_release.jar&#160;)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Developer
+      Client License Activation Kit V2.0 Multiplatform
+      (rtc_standard_developer_unlocked.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Floating
+      Developer Client License Activation Kit V2.0 Multiplatform
+      (rtc_standard_floating_developer_unlocked.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> - Floating
+      Contributor Client License Activation Kit V2.0 Multiplatform
+      (rtc_standard_floating-developer_unlocked.jar)</li>
+      <li class="li">IBM 
+       <span class="keyword">Rational Team Concert </span> Enterprise
+      Edition - Server License Activation Kit V2.0 Multiplatform
+      (jazz_team_server_enterprise_release.jar&#160;)</li>
+    </ul>
+  </div>
+  <h2 class="sectiontitle">Setting a project timeline</h2>
+  <p class="p">In 
+   <span class="keyword">Rational Team Concert </span> 1.x, projects
+  could have multiple timelines (previously called "development
+  lines") and all of these timelines were considered equal.</p>
+  <p class="p">In 
+   <span class="keyword">Rational Team Concert </span> 2.0, projects
+  can still have multiple timelines, but one of them can be marked
+  as the "project timeline". When migrating your database to 2.0,
+  the project's primary timeline is not known, so your projects
+  will not have a project timeline set. You can manually update
+  your projects to set the project timeline, after you upgrade to
+  2.0</p>
+  <h2 class="sectiontitle">Configuring the Source Control
+  snapshot</h2>
+  <p class="p">The Source Control Management (SCM) snapshot for the
+  Data Warehouse collects data on streams, including information
+  about the size of streams and the activity (change set and
+  file/folder changes) within it. In version 1.0, this snapshot
+  automatically collected information about all streams. As this
+  can be a costly operation, in version 2.0, the configurability
+  options are added to the SCM snapshot to let the users decide for
+  which streams the data should be collected. The immediate impact
+  of this change is that, unless you configure it, no data will be
+  collected.</p>
+  <div class="p">To configure the SCM snapshot: 
+  <ol class="ol">
+    <li class="li">You must have write permissions for the stream
+    that you want to collect data for.</li>
+    <li class="li">Go to the 
+     <span class="uicontrol">Reports </span> page in Web UI.</li>
+    <li class="li">In the left navigation panel, select 
+     <span class="uicontrol">Administer SCM Snapshot </span> . A list
+    of streams are displayed.</li>
+    <li class="li">Select the checkbox for one or more streams, and
+    then select 
+     <span class="uicontrol">Save Changes </span> .</li>
+  </ol></div>
+  <p class="p">Data will be collected for the selected streams in
+  all subsequent snapshots.</p>
+  <h2 class="sectiontitle">Incompatible changes to BIRT
+  reports</h2>
+  <div class="p">If you have used the BIRT report designer to
+  create your own report templates, you may run into one or more
+  problems when trying to use these reports in version 2.0. You
+  should be aware of the following issues: 
+  <ul class="ul">
+    <li class="li">Changes to the order in which Java and
+    JavaScript classes are resolved. If you have written JavaScript
+    code in your BIRT report which uses the 
+    <samp class="codeph">importPackage() </samp>statement to import
+    the 
+    <samp class="codeph">java.lang </samp>package, be aware that
+    unqualified references to Object in the code, which used to
+    refer to the Java class, may now refer to the JavaScript class
+    (and as a result won't work properly). Other classes which are
+    identically named between JavaScript and Java, such as 
+    <samp class="codeph">java.util.Date </samp>, may have the same
+    problem. The solution is to fully qualify your reference to the
+    Java class and remove the 
+    <samp class="codeph">importPackage() </samp>statement.</li>
+    <li class="li">Changes to the processing of data sets. In the
+    past, the simple act of binding an element (such as a Label) to
+    a data sets, caused the data set to be processed in its
+    entirety when the element was rendered. This was handy because
+    it meant one could enforce an ordering to data set processing
+    by using (hidden) labels bound to the data sets in the order
+    they should be processed. Now, such a binding will process only
+    the first row of the data set. To get the previous behavior,
+    use a Dynamic Text element and invoke some JavaScript code
+    which will force processing of the entire data set. 
+    <samp class="codeph">Total.count() </samp>is a good choice.</li>
+    <li class="li">BIRT report designer bugs can cause loss of
+    data. These problems appear when you open a BIRT report design
+    file created in BIRT 2.2.2 (i.e. RTC 1.0) with the BIRT 2.3.2
+    (i.e. RTC 2.0) report designer. The following issues have been
+    observed: 
+    <ul class="ul">
+      <li class="li">When editing a data set for the first time
+      with BIRT 2.3.2, on the "Parameters" page, the "Default
+      Value" and "Report Parameter" fields may be lost. The
+      workaround is to re-enter the values, or to copy and paste
+      the values from a previous version of the editor. After
+      saving the file with the new values entered, the problem will
+      not recur.</li>
+      <li class="li">When editing a report design file for the
+      first time with BIRT 2.3.2, the default value for report
+      parameters may be lost. This may also occur after the
+      previous problem described. The workaround is to re-enter the
+      values, or to copy and paste the values from a previous
+      version of the editor. After saving the file with the new
+      values entered, the problem will not recur.</li>
+    </ul>
+    <p class="p">These issues can be very serious if not noticed,
+    as the data gathered by the report could be incorrect. It is a
+    good practice to check each data set and each report parameter
+    when editing a report for the first time with the BIRT 2.3.2
+    report designer. These problems do not occur for new reports
+    that are created with the BIRT 2.3.2 tools.</p>
+    <p class="p">The above changes are made to all 
+     <span class="keyword">Rational Team Concert </span> 2.0
+    out-of-the-box reports - no action is required on your part.
+    However, if you have manually created report templates in your
+    project area using our out-of-the-box reports, and have not
+    specified an appropriate identifier (consistent with our
+    usage), your report template will not be refreshed when it is
+    migrated. That is, the content will be out of date, and will
+    not work. In that case, you should upload new content for the
+    affected templates, using the appropriate out-of-the-box 
+    <samp class="codeph">.rptdesign </samp>file.</p></li>
+  </ul></div>
+  <h2 class="sectiontitle">Import of the Work Items data in the
+  data warehouse</h2>
+  <p class="p">In 
+   <span class="keyword">Rational Team Concert </span> 2.0, there are
+  several schema changes to the work items tables in the data
+  warehouse. As a consequence, when migrating from 1.0 to 2.0, the
+  importer will ignore any warehoused work items data. As a result,
+  when you start the 2.0 server for the first time, your work items
+  reports may not function correctly. The workaround is either to
+  wait for the work items snapshot to run for the first time, or to
+  manually cause it to run after you start the server. On the first
+  run after migration, the work items snapshot will reconstitute
+  the entire historical work items information in the data
+  warehouse. This also means that the first run of the snapshot
+  after migration is likely to take much longer than an average
+  nightly run.</p>
+  <h2 class="sectiontitle">Discovering new reports</h2>
+  <div class="p">In 
+   <span class="keyword">Rational Team Concert </span> 2.0, several
+  new reports are added. While these reports appear in the new
+  process templates that ship with the product, they are not
+  automatically added to the existing project areas on migration.
+  We have added a new action that will help you to discover and
+  deploy these new report templates in your existing project areas
+  after migration. To deploy new report templates: 
+  <ol class="ol">
+    <li class="li">In the rich client, open the 
+     <span class="uicontrol">Team Artifacts </span> view.</li>
+    <li class="li">Expand your project area, expand 
+     <span class="uicontrol">Reports </span> .</li>
+    <li class="li">Right-click 
+     <span class="uicontrol">Report Templates </span> and select 
+     <span class="uicontrol">Deploy New Templates </span> .</li>
+  </ol></div>
+  <p class="p">The dialog will help you to discover any report
+  templates which are available but not already deployed to your
+  project area. You may select one or more of them and they will be
+  created. After creation, you may create new reports from those
+  templates using the available menu actions.</p>
+  <h2 class="sectiontitle">Customizations</h2>
+  <p class="p">Changes that you make to work item types,
+  attributes, workflows, roles, and event handlers are preserved
+  when you upgrade from 1.x to 2.0. If you customized a predefined
+  process template (such as Scrum), be aware that if you redeploy
+  the predefined template (in the Process Templates view), you will
+  overwrite your customizations. If you need to redeploy the
+  predefined template, you should first change the name and ID of
+  the predefined template that you customized, so it will not be
+  overwritten.</p>
+  <div class="related-links">
+    <div class="relconcepts">
+      <strong>Related concepts </strong>
+      <br />
+      <a class="link" href="inst__InstallationOverview.html"
+      title="Information to help you understand the requirements for a successful installation.">
+      Installation overview</a>
+    </div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link"
+      href="inst_build__InstallingTheBuildSystemToolkitM.html"
+      title="The Build System Toolkit can be installed on the build machines using a .zip file or the IBM Installation Manager.">
+      Installing the Build System Toolkit</a>
+      <br />
+      <a class="link" href="inst_con__Connectors.html"
+      title="To install the ClearCase Connector and ClearQuest Connector connectors:">
+      Installing Rational Team Concert Connectors</a>
+      <br />
+      <a class="link" href="../administering/adm__MonitoringFloatingLicenseUsage.html"
+      title="You can install and configure floating client access licenses (CALs) through the administrative Web interface after you determine which server is the floating license server that has the CAL keys installed and which server is the Jazz Team Server that assigns the floating CALs.">
+      Managing floating client access licenses</a>
+    </div>
+    <div class="relref">
+      <strong>Related reference </strong>
+      <br />
+      <a class="link" href="inst__ReleaseNotesRTCV_2_0.html"
+      title="This document contains information about system requirements, installation, and known issues forIBM Rational Team Concert V 2.0. It also provides information about contacting IBM Rational Software Support.">
+      Release notes - Rational Team Concert V 2.0</a>
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>
+

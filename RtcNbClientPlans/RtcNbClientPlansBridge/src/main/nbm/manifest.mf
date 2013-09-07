@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Install: pl/edu/amu/wmi/kino/rtc/client/impl/plans/Installer.class
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/rtc/client/plans/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/rtc/client/plans/layer.xml
+OpenIDE-Module-Display-Category: RTC
+AutoUpdate-Show-In-Client: false

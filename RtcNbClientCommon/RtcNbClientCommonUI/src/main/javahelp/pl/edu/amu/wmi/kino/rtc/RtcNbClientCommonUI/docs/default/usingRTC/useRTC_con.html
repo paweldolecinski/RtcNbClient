@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+              name="generator"/>
+        <title>Connection to repository</title>
+        <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+              rel="stylesheet" type="text/css" />
+        <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+              rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="breadcrumbs">
+            <a href="../under_construction.html" shape="rect">Rational Team Concert</a>&gt;
+            <a href="../under_construction.htm" shape="rect">Using Rational Team Concert</a>&gt;
+        </div>
+        <h1 class="topictitle1"> Connecting to the Repository </h1>
+         <p class="p">A repository is a central location to store data. Users must create a connection from the Rational Team Concert™ client to a repository for access to project areas and work with the project artifacts.
+            Your Jazz™ administrator must supply information to enable your access to the repository.
+        </p>
+        <p class="p"> You can connect to the repository using:</p>
+            <ul>
+                <li><a href="#Netbeans"> Netbeans </a></li>
+                <li><a href="#Web"> the Web interface </a></li>
+            </ul>
+        
+        <a name="Netbeans"></a>
+        <h2 class="sectiontitle">Connecting to the Repository from Netbeans</h2>
+
+       
+
+        <div class="note_important">
+            <span class="importanttitle">Important: </span> This topic assumes that your Jazz administrator has created a repository and a project area.
+        </div>
+
+        <ol>
+            <li><span class="keyword">Create Repository Connection</span>
+                <ul>
+                    <li>Click: Window > Services </li>
+                    <li> Right click on RTC Repositories and choose Add new repository</li>
+                </ul>
+            </li>
+            <li><span class="keyword">Jazz Repository Connection window</span>
+                <ul><li>Type or paste a Location URI :
+                        <div class="note"> <span class="notetitle">Note: </span> The Uniform Resource Identifier (URI) for an existing repository. Typically, this is in the form of <span class="keyword">http:/&lt;server&gt;:&lt;port&gt;/jazz </span> Secure servers require the <span class="keyword">https:// protocol. </span></div>
+                                <div class="note"> <span class="notetitle">Note: </span> If the server is running on your computer,<span class="keyword"> the server host name is localhost </span>, and you can select the localhost URI from the dropdown list; for example, https://localhost:9443/jazz. The Location Name defaults to the server host name. You can modify it to simplify or clarify the name. </div></li>
+                                <li>Type the <span class="keyword">user name and password </span>that your Jazz administrator has provided for you. </li>
+                                <li>Click <span class="keyword">Finish</span></li>
+                                </ul>
+            <li>Under created repository connection you will see available project areas. Double click on selected project area to open RTC tab and work work with it.</li>
+        </ol>
+
+    <h2 class="sectiontitle">Connecting to the repository from a Web browser </h2>
+    <a name="Web"></a>
+    <p class="p">You can use a web browser to access a Rational Team Concert repository.</p>
+    <p class="p">To access a Rational Team Concert repository through a Web browser:</p>
+    <ol>
+        <li> Open your Web browser and go to the <span class="keyword">URL for your Jazz Team Server Web interface </span>. The URL is similar to the following:https://localhost:9443/jazz/web </li>
+        <li> Log in: type your's user <span class="keyword">ID </span>and <span class="keyword">password </span>and click Prelude from the list of projects.</li>
+    </ol>
+    <p class="p">You can now browse the Prelude project area using the various pages of the Web UI.</p>
+
+                                <div class="related-links">
+                                    <div class="familylinks"></div>
+                                </div>
+                                <hr />
+                                <span class="runningfooter">
+                                    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                                        <param name="content" value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+                                        <param name="text" value="Feedback " />
+                                    </object>
+                                </span>
+                                <p>
+                                    <span class="runningheader" style="color: #666666;">Did this help? You can provide feedback at Jazz.net (registration required):
+                                        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                                            <param name="content" value="https://jazz.net/forums/" />
+                                            <param name="text" value="Comment in the forums " />
+                                        </object> or
+                                        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                                            <param name="content"      value="https://jazz.net/bugs/bugs.jsp" />
+                                            <param name="text" value="submit a bug " />
+                                        </object>
+                                    </span>
+                                </p>
+                                </body>
+                                </html>
+

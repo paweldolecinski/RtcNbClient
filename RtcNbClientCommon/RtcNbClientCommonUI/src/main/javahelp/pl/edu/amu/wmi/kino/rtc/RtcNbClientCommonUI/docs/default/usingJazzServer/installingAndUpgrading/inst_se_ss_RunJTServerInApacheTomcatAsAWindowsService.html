@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Running Jazz Team Server in Apache Tomcat as a Windows
+    service</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="runningjazzteamserverinapachetomcatasawindowsservice"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se__InstallRTCStandEditionAndEE.html"
+  shape="rect">Installing Rational Team Concert Standard edition
+  and Enterprise edition</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se_ss__StartingTheServer.html"
+  shape="rect">Starting the server</a></div>
+  <a id="runningjazzteamserverinapachetomcatasawindowsservice"
+  name="runningjazzteamserverinapachetomcatasawindowsservice"></a>
+  <h1 class="topictitle1">Running Jazz Team Server in Apache Tomcat
+  as a Windows service</h1>Apache Tomcat has the ability to run as
+  a Windows&#174; service. This can be useful if you want to run
+  the Jazz&#8482; Team Server on a Windows-based machine without
+  having to be logged on. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>This topic assumes that your Jazz Team Server deployment is
+  rooted at 
+  <samp class="codeph">C:\jazz </samp>; adjust your paths
+  accordingly based on your actual root directory.</div>
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Open a command prompt and execute the
+      following command to install the Tomcat service. </span> 
+      <pre class="pre">
+C:\jazz\server\tomcat\bin\service.bat install
+</pre>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">If you are using Derby as your database for
+      your Jazz Repository, edit 
+      <samp class="codeph">
+      C:\jazz\server\conf\jazz\teamserver.properties </samp>to make
+      the DB location an absolute path. For example, change the
+      value of 
+      <samp class="codeph">db.jdbc.location </samp>to 
+      <samp class="codeph">
+      C:\jazz\server\repositoryDB </samp>. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Execute 
+      <samp class="codeph">
+      C:\jazz\server\tomcat\bin\tomcat5w.exe </samp>to configure the
+      service. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Click the 
+       <span class="uicontrol">Java </span> tab and clear the check
+      box for 
+       <span class="uicontrol">Use default </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Add the following path to 
+       <span class="uicontrol">Java Virtual Machine </span> . You can
+      also click the ellipsis icon to browse for the 
+      <samp class="codeph">jvm.dll </samp>file. </span> 
+      <pre class="pre">
+C:\jazz\server\jre\bin\j9vm\jvm.dll
+</pre>
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Add the following lines at the bottom of the 
+     <span class="uicontrol">Java Options </span> text field </span> 
+    <pre class="pre">
+-DJAZZ_HOME=file:///c:/jazz/server/conf
+-Djava.awt.headless=true 
+-Dorg.eclipse.emf.ecore.plugin.EcorePlugin.doNotLoadResourcesPlugin=true
+
+-Dcom.ibm.team.repository.tempDir=%TEMP%
+</pre>If you are using Oracle database, add the following line: 
+    <pre class="pre">
+-DORACLE_JDBC=[path to Oracle JDBC driver jar]
+</pre>If you are using SQL Server database, also add the following
+line: 
+    <pre class="pre">
+-DSQLSERVER_JDBC=[path to SQL Server JDBC driver jar]
+</pre></li>
+    <li class="li step stepexpand">
+       <span class="cmd">Change the 
+       <span class="uicontrol">Maximum memory pool </span> size to
+      700. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">On the 
+       <span class="uicontrol">Startup </span> and 
+       <span class="uicontrol">Shutdown </span> tabs, make sure that 
+       <span class="uicontrol">jvm </span> is selected for the 
+       <span class="uicontrol">Mode </span> setting. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Click the 
+       <span class="uicontrol">General </span> tab and change the 
+       <span class="uicontrol">Startup type </span> to 
+       <span class="uicontrol">Automatic </span> if you want to start
+      the service automatically when Windows starts. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Start the service to test the
+      server. </span> 
+    </li>
+  </ol>
+  <div class="related-links">
+    <div class="familylinks"></div>
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

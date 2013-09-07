@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Restoring the primary server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="manualrecoveryprocessbacktoprimaryserver"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ha__DeployingJazzWarOnWebSphereASforHA.html"
+  shape="rect">Deploying jazz.war on WebSphere Application Server
+  for high availability environments</a></div>
+  <a id="manualrecoveryprocessbacktoprimaryserver"
+  name="manualrecoveryprocessbacktoprimaryserver"></a>
+  <h1 class="topictitle1">Restoring the primary server</h1>To
+  restore the primary server to its operational status, you must
+  schedule the server startup and switch the 
+  <samp class="codeph">LoadBalanceWeight </samp>attributes so that
+  you prevent the primary and backup server from talking to the
+  repository at the same time. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>During the recovery process, some users can experience a
+  brief disconnect or delay, but after the primary server is back
+  up, it resumes taking requests from the Web server. 
+  <p class="p">To restore the primary server to operational
+  status:</p>
+  <ol class="ol steps">
+    <li class="li step">
+       <span class="cmd">Make sure the primary server is powered
+      off. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">In the Web server plugin-cfg file, locate
+      the entry for the 
+      <samp class="codeph">PrimaryNode01_server1 </samp>and change
+      the 
+      <samp class="codeph">LoadBalanceWeight </samp>attribute from
+      "0" to "1". </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">In the Web server plugin-cfg file, locate
+      the entry for the 
+      <samp class="codeph">BackupNode01_server1 </samp>and change
+      the 
+      <samp class="codeph">LoadBalanceWeight </samp>attribute from
+      "1 to "0". </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">Save the edits to the Web server
+      plugin-cfg.xml file. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">Shut down the backup server. After it is
+      powered off, start the primary server. </span> 
+    </li>
+    <li class="li step">
+       <span class="cmd">When the primary server is back up and has
+      resumed taking requests, you can start the backup server
+      again. </span> 
+    </li>
+  </ol>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

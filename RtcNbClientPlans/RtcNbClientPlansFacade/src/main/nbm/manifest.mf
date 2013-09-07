@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/rtc/client/plans/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/rtc/client/plans/layer.xml
+OpenIDE-Module-Public-Packages: pl.edu.amu.wmi.kino.rtc.client.api.plans.**
+AutoUpdate-Show-In-Client: false

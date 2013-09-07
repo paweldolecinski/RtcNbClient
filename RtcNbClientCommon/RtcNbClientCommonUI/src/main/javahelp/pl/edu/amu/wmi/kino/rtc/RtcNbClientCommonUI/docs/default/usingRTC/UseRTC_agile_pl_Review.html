@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Reviewing and charting progress</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+     <div class="breadcrumbs">
+        <a href="../under_construction.html" shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>&gt;
+        <a href=""  shape="rect"></a>&gt;
+        <a href="" shape="rect"></a>
+    </div>
+    <h1 class="topictitle1">Reviewing and charting progress</h1>
+       <div class="note_important">
+          <span class="importanttitle">Important: </span>Plans modifying plans is not available in Netbeans plugin for Rational Team Concert. Following information relates to web user interface.
+      </div>
+    <p class="p">You can assess your team's progress for a release or for an iteration in several ways. Use the progress report in a plan to compare completed and estimated labor for the whole team. Use the Plans page in a plan to review work items by assigned team member, category, tags, or scheduled time. Use the Charts page in a plan to view a chart of open work items that are planned for this iteration.</p>
+    <div class="note">To track progress using these methods, your project must have at least one iteration with an iteration plan, and one team area. The most accurate tracking takes place when at least the following details are specified for all work items:
+        <ul>
+            <li>Owner</li>
+            <li>"Planned for" iteration</li>
+            <li>Estimated labor in minutes, hours, days, or weeks</li>
+        </ul>
+    </div>
+    <p class="p">Estimated time is calculated using three values in a work item: </p>
+    <ul>
+        <li>If the Estimate is the only available value, then that value is used.</li>
+        <li>If a Correction value is available, then that value is used. </li>
+        <li>If a Time Spent value is available and the work item has not been resolved, then that value is subtracted from the estimate or corrected estimate. If the Time Spent value is available and the work item has been resolved, then that value is used.</li>
+        <li>enerally, teams that follow the scrum process use time remaining to specify how much time is left to complete the work item. If Time Remaining value is set, the time spent is derived out of it (time spent=original|corrected estimate - time remaining) to calculate the estimated time.</li>
+     </ul>
+    <h2>About this task:</h2>
+    <ol>
+        <li>To open a plan, In the Web client, select the Plans link.</li>
+        <li>Using the progress report in a plan
+            <p class="p">   The progress report is displayed at the top of the plan. It shows a comparison of completed and expected work hours for the team in this iteration. It also reports the percentage of work items with planned estimates. The width of the progress indicator represents the full duration of the iteration. The length of the green bar shows how much work has been done. A bright green extension shows work completed ahead of plan. A red extension shows work that is behind plan (remaining estimated work exceeds the remaining available hours in the iteration). For more information, hover over the progress report. The percentage of items estimated reflects the quality of the planning. The green and red bars fill the indicator vertically as more items contain work estimates.  </p></li>
+        <li> Using the Charts page in a plan
+            <p class="p"> The default report for the Charts page in a plan is the "Open work items by type" report. This report displays open work items that are planned for an iteration and owned by the team area associated with this plan. Open work items are displayed by type (such as defect, enhancement, and task) and charted on an axis representing the weeks in the iteration. The number of open work items should trend towards zero as the project moves toward completion.</p>
+            <p class="p">To select a different report for the Charts page:</p>
+            <ol>
+                <li>In the Charts view, click Select Report.</li>
+                <li>Select one of the available reports, for example, Open vs. closed work items. The chart will display all open and closed work items.</li>
+            </ol>
+        </li>
+
+    </ol>
+
+
+    <h2 class="sectiontitle"></h2>
+    <div class="related-links">
+        <div class="familylinks"></div>
+    </div>
+    <hr />
+    <span class="runningfooter">
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                <param name="content" value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+                <param name="text" value="Feedback " />
+        </object>
+   </span>
+   <p>
+     <span class="runningheader" style="color: #666666;">Did this help? You can provide feedback at Jazz.net (registration required):
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content" value="https://jazz.net/forums/" />
+            <param name="text" value="Comment in the forums " />
+        </object> or
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content"      value="https://jazz.net/bugs/bugs.jsp" />
+            <param name="text" value="submit a bug " />
+        </object>
+     </span>
+  </p>
+  </body>
+</html>
+

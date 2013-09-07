@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Setting up a DB2 database</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_server_installation_setup_db2"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se__InstallRTCStandEditionAndEE.html"
+  shape="rect">Installing Rational Team Concert Standard edition
+  and Enterprise edition</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_se_sdb__SettingUpTheDatabase.html"
+  shape="rect">Setting up the database</a></div>
+  <a id="t_server_installation_setup_db2"
+  name="t_server_installation_setup_db2"></a>
+  <h1 class="topictitle1">Setting up a DB2 database</h1>Set up a
+  supported DB2&#174; or the bundled DB2 Workgroup Server database
+  to work with the 
+   <span class="keyword">Jazz&#8482; Team Server </span> . 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>This procedure assumes the following prerequisites have
+  been met. Consult your DB2 documentation or a DB2 database
+  administrator (DBA) for help. 
+  <ul class="ul">
+    <li class="li">Review the DB2 documentation to verify your
+    system meets the requirements and is configured correctly.</li>
+    <li class="li">DB2 is installed and running on a machine to be
+    used as the database server. This machine can be a different
+    one from that on which the 
+     <span class="keyword">Jazz Team Server </span> runs.</li>
+    <li class="li">You reviewed 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/jazzdocs/index.jsp?topic=/com.ibm.team.install.doc/topics/c_plan_database_db2.html" />
+      <param name="text" value="Special DB2 instructions " />
+    </object>.</li>
+    <li class="li">The user performing these instructions has
+    system admin authority on the DB2 database. 
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> On Linux&#174;, to get system
+    admin authority on the DB2 database, sudo to the DB2 user
+    db2fenc1 and run bash.</div></li>
+  </ul></div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>To set up a DB2 database: 
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+     <span class="cmd">Create the database in the DB2 Command
+    Window. </span> The example commands create a new database called
+    JAZZ. These commands run in the DB2 Command Window. The Command
+    Window can be opened from the application Start menu under the
+    DB2 Command Line Tools menu. 
+    <ul class="ul">
+      <li class="li">On Windows&#174;: 
+      <pre class="pre">
+db2 create database JAZZ on c: using codeset UTF-8 territory en
+PAGESIZE 8192
+</pre></li>
+      <li class="li">On Linux: 
+      <pre class="pre">
+db2 create database JAZZ using codeset UTF-8 territory en PAGESIZE
+8192
+</pre></li>
+    </ul>
+    <div class="note">
+     <span class="notetitle">Note: </span> To ensure proper handling
+    of Unicode content, the database character set must be UTF-8
+    encoding. Because the AUDITABLE_LINKS table does not fit in the
+    default page size of 4K on Windows, set the page size to at
+    least 8K.</div>
+    <div class="note_tip">
+     <span class="tiptitle">Tip: </span> If the database is not
+    running, the command 
+     <span class="cmdname">db2start </span> starts DB2.</div></li>
+    <li class="li step stepexpand">
+       <span class="cmd">Locate the file 
+       <span class="filepath">teamserver.properties </span> in the
+      directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz </span> and rename it to 
+       <span class="filepath">
+      teamserver.derby.properties </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Locate the file 
+       <span class="filepath">teamserver.db2.properties </span> in the
+      directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz </span> and rename it to 
+       <span class="filepath">teamserver.properties </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Specify the database and connection details
+      in the file 
+       <span class="filepath">teamserver.properties </span> . </span> 
+      <p class="p">The default connection specification connects to
+      a DB2 database that runs on localhost on port 50000. The
+      database is called JAZZ, and both the user name and password
+      are db2admin. If the default values were used when setting up
+      your database, the teamserver.properties file might already
+      be configured correctly. If not, change this information to
+      match your configuration.</p>
+      <ol class="ol substeps" type="a">
+        <li class="li substep substepexpand">
+           <span class="cmd">Open the file 
+           <span class="filepath">teamserver.properties </span> in a
+          text editor. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Locate the following lines: </span> 
+          <pre class="pre"
+          id="t_server_installation_setup_db2__db2-props">
+<a id="t_server_installation_setup_db2__db2-props"
+name="t_server_installation_setup_db2__db2-props">
+</a>com.ibm.team.repository.db.vendor = DB2
+com.ibm.team.repository.db.jdbc.location=//localhost:50000/JAZZ:user=db2admin;password={password};
+com.ibm.team.repository.db.jdbc.password=db2admin
+</pre>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Edit the value of 
+           <span class="parmname parmname">
+          com.ibm.team.repository.db.jdbc.location </span> for your
+          DB2 server and database. </span> 
+          <div class="note_tip">
+           <span class="tiptitle">Tip: </span> In the DB2 Command
+          Window, run the command 
+          <kbd class="userinput">db2 get dbm cfg </kbd>, then find
+          the line that contains SVCENAME, which indicates the DB2
+          port name or number. If this command displays a number,
+          use it as the port number (in place of 50000 in the
+          example above). If the command returns a non-numeric
+          name, determine what port number was assigned for this
+          name and use that port number. On Linux, the file 
+           <span class="filepath">/etc/services </span> contains the
+          mapping between port names and numbers, and on Windows,
+          the file 
+           <span class="filepath">
+          C:\windows\system32\drivers\etc\services </span> contains
+          the mapping. For more information, ask your database
+          administrator or consult the database
+          documentation.</div>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Edit the value of 
+           <span class="parmname parmname">
+          com.ibm.team.repository.db.jdbc.location </span> for your
+          DB2 user name. </span> 
+          <div class="note">
+           <span class="notetitle">Note: </span> The DB2 user must
+          have permissions to create tables, tablespaces, and
+          modify the database configuration. DB2 users are created
+          by the operating system.</div>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Specify the user password in the
+          property 
+           <span class="parmname parmname">
+          com.ibm.team.repository.db.jdbc.password </span> . </span> 
+          <div class="note">
+           <span class="notetitle">Note: </span> Do not change the
+          password={password} text in the 
+           <span class="parmname parmname">
+          com.ibm.team.repository.db.jdbc.location </span> property.</div>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">If necessary, change the property 
+           <span class="parmname parmname">
+          com.ibm.team.repository.db.db2.content.tablespace.location </span> to
+          a path on your 
+           <span class="keyword">Jazz Team Server </span> where the
+          main tablespace can be created. </span> 
+          <div class="note">
+           <span class="notetitle">Note: </span> If this value is not
+          changed from the default of 
+          <strong class="b">content_tablespace </strong>, the
+          tablespace is created under the database storage
+          location. On Windows, if a new path is specified, it must
+          be specified by using double backslashes, for example:
+          com.ibm.team.repository.db.db2.content.tablespace.location=c:\\db2\\jazz\\content_tablespace.</div>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <div class="section result">
+    <div class="tasklabel">
+      <strong>Results </strong>
+    </div>
+    <p class="p">You are finished setting up your database.
+    Continue with 
+    <a class="xref"
+    href="inst_se_sdb_CreatJTServerDTOnDB2_andOracle.html"
+    title="Create the database tables using the repository tools.">
+    Creating the Jazz Team Server database tables on DB2 and
+    Oracle</a>.</p>
+  </div>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

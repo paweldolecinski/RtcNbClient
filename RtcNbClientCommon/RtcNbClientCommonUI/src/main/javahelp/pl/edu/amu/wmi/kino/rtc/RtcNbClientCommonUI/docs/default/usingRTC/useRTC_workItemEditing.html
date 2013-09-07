@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Work Item editing</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <h1 class="topictitle1">Editing work item</h1>
+        <div class="note">A work item is a way of keeping track of the tasks and issues that your team needs to address during the development cycle. </div>
+     <p class="p"> You can edit Work Item using:</p>
+    <ul>
+        <li><a href="#Netbeans"> Netbeans </a></li>
+        <li><a href="#Web"> Web UI </a></li>
+    </ul>
+    <a name="Netbeans"></a>
+    <h2 class="sectiontitle"> Editing  work items in Netbeans:</h2>
+     <div class="note_important">
+          This topic refers to the predefined layout of the work item editor. Administrators can customize the layout. Therefore, the layout that you see might be different
+     </div>
+    <ol>
+        <li>On <span class="keyword">RTC tab  </span>expand a <span class="keyword"> project area </span>, and navigate to a query listed under <span class="keyword">Work Items </span>folder. </li>
+        <li>Double-click on a <span class="keyword">query </span> name or right-click a query and click <span class="keyword">Open </span>. </li>
+        <li>Now,<span class="keyword"> work items view</span> will be opened. In this view you see a list of work items. Depends on definened layout of the work item you can see different attributes of work items.</li>
+        <li>Right-click on <span class="keyword">work item </span> name that you want to edit and click<span class="keyword"> Edit </span></li>
+        <li>A tab with <span class="keyword">work item editor </span> will be opened. On this view you can choose work item attribute that you want to edit.Below you have details of work item editor.</li>
+    </ol>
+
+  <p class="p">Use <span class="keyword">work item editor</span> to: </p>
+        <ul><li><a href="#details"> see details of selected work item,</a>  </li>
+            <li><a href="#details">update work item. </a></li></ul>
+
+
+    <a name="details"></a>
+  
+    <p class="p">To see details of work item use one of the following tabs: </p>
+    <ul>
+        <li><span class="keyword">Overview</span> : display most important information about work item.  </li>
+        <li><span class="keyword">Links </span>: here you can add attachments and download  existing. </li>
+        <li><span class="keyword">Approvals </span>: display a list of approvers and enable creating new ones. </li>
+        <li><span class="keyword">History: </span>: display a history of editing the work item. </li>
+    </ul>
+    <a name="update"></a>
+
+    <p class="p">Depends on yours priviliges you can edit different sets of work items attributes. Below you have a description of the most important updates you are able to do as the work item owner.  As the work item creator you can edit each attribute of the work item.</p>
+    <ul>
+        <li><span class="keyword">Before you begin your work : </span> select Start Working from the State property drop-down list.</li>
+        <li><span class="keyword">To add comments : </span> if you have a question or comment, in the Discussion section under all comments enter your text and then click Add comment button. All subscribers of the work item receive notification of your comment when you save the work item. When you add a comment, you are added as a subscriber. Another way to collaborate with team members is to enter the @ sign followed by a team member's user ID in a comment or the description</li>
+        <li><span class="keyword">To resolve a work item : </span>select Resolve from the State property drop-down list. In the adjacent Resolution property drop-down list, select an entry, such as Fixed, Works For Me, or Duplicate that describes how you resolved the work item. Enter a comment in the Discussion section that further explains your actions. If you resolve a work item as a duplicate, you also need to specify the other work item in the Links section on the Links tab. </li>
+        <li><span class="keyword">To add attachments: </span> click link tab on the bottom od work item editor.</li>
+    </ul>
+ <div class="note_important">
+          <span class="importanttitle">Important: </span> Click <span class="keyword">Save</span>  after each update of work item. </div>
+
+ <a name="Web"></a>
+     <h2 class="sectiontitle"> Editing  work items in Web user interface:</h2>
+   <ol>
+       <li>Click the <span class="keyword"> Work Items </span> link in the Web header.</li>
+       <li>In the left panel click choosen query </li>
+       <li>Click choosen work item.</li>
+       <li>Enter or select values for the following fields on the Overview tab (asterisks identify required fields):
+       <ul><li> <span class="keyword">Summary: </span> A brief headline that identifies the work item.</li>
+                 <li> <span class="keyword">Type: </span>  The type of work item, such as Defect, Task, and so on. </li>
+                 <li> <span class="keyword">Severity: </span> An indication of the impact of the work item, such as Minor, Normal, Major, or Critical. </li>
+                 <li> <span class="keyword">Found In: </span> The release that the work item refers to.</li>
+                 <li> <span class="keyword">Filed Against: </span> A category that identifies the component or functional area that the work item belongs to. For example, your project might have GUI, Build, and Documentation categories. Each category is associated with a team area; that team is responsible for responding to the work item.</li>
+            </ul></li>
+         
+                 <li> To attach a file, click <span class="keyword">Browse </span>and navigate to the file location </li>
+                 <li> To add subscribers, click <span class="keyword">Add </span>in the <span class="keyword">Subscribers </span> area. Enter part or all of a user's name, then select the user from the <span class="keyword">Matching User Names </span>list. Click <span class="keyword">Add </span>. Subscribers receive E-mail notification whenever someone modifies the work item. When you create a work item, you are added as a subscriber to that work item. To stop receiving notifications, you can remove yourself as a subscriber by selecting your name and clicking <span class="keyword">Remove.</span></li>
+                 <li> To link the work item to another work item, in the Links area click the down arrow next to Add and select the option that represents the type of relationship you wish to establish. For example, you can establish a parent-child relationship between work items; mark a work item as a duplicate of another work item; or indicate that one work item is blocked by another work item.
+</li>
+   </ol>
+    <div class="related-links">
+        <p class="p"> <span class="keyword">Related topics</span></p>
+        <div class="familylinks">
+            <span> To see details about work items go to  : <a href="useRTC_workItem.html">Work item.</a></span>
+        </div>
+    </div>
+    <hr />
+    <span class="runningfooter">
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+                <param name="content" value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+                <param name="text" value="Feedback " />
+        </object>
+   </span>
+   <p>
+     <span class="runningheader" style="color: #666666;">Did this help? You can provide feedback at Jazz.net (registration required):
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content" value="https://jazz.net/forums/" />
+            <param name="text" value="Comment in the forums " />
+        </object> or
+        <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+            <param name="content"      value="https://jazz.net/bugs/bugs.jsp" />
+            <param name="text" value="submit a bug " />
+        </object>
+     </span>
+  </p>
+  </body>
+</html>
+

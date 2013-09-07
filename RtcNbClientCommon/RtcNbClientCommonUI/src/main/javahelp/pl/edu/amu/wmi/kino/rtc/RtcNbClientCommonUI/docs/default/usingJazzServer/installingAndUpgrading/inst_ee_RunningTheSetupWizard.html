@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Running the setup wizard</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_server_installation_setup_wizard"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ee__InstallingRationalTeamConcertExpressEdition.html"
+  shape="rect">Installing Rational Team Concert Express
+  edition</a></div>
+  <a id="t_server_installation_setup_wizard"
+  name="t_server_installation_setup_wizard"></a>
+  <h1 class="topictitle1">Running the setup wizard</h1>Running the
+  setup wizard verifies that the server is operating properly and
+  guides you through the steps configure the server. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <p class="p">To verify that the 
+   <span class="keyword">Jazz&#8482; Team Server </span> is connecting
+  to the database, look at the server log or console output. The
+  connection and database information is echoed on its first
+  access. The directory 
+  <var class="varname">JazzInstallDir</var>/server/logs is used for
+  the server log files.</p>
+  <p class="p">This procedure assumes your server is available
+  using the hostname localhost and the default ports 9443. If
+  necessary, replace localhost with your server hostname and
+  replace the port 9443.</p>
+  <div class="li step">
+     <span class="cmd">Start the setup wizard to configure your
+    server. Use the URL 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://localhost:9443/jazz/setup" />
+      <param name="text"
+      value="https://localhost:9443/jazz/setup " />
+    </object>. </span> 
+    <div class="p">The default user name and password are
+    case-sensitive: 
+    <ul class="ul" compact="compact">
+      <li class="li">The user name is ADMIN.</li>
+      <li class="li">The password is ADMIN.</li>
+    </ul>If you configured the LDAP directory Web container, log in
+    with a JazzAdmin user that is defined in your LDAP
+    directory.</div>
+    <div class="p">Choose a setup path. The setup wizard has two
+    main paths. 
+    <ul class="ul">
+      <li class="li">The 
+      <strong class="b">Fast Path Setup </strong>uses the default
+      configuration. If you want to get the server running quickly,
+      the fast path setup is a good option. During the Fast Path
+      Setup, setup 
+      <ul class="ul">
+        <li class="li">the user registry.</li>
+      </ul></li>
+      <li class="li">The 
+      <strong class="b">Custom Setup </strong>guides you through the
+      detailed server configuration, including the ability to
+      enable e-mail notifications. During the Custom Setup, you set
+      up the following items: 
+      <ul class="ul">
+        <li class="li">Database</li>
+        <li class="li">E-mail notification</li>
+        <li class="li">User registry</li>
+      </ul>
+      <div class="note">
+       <span class="notetitle">Note: </span> By default, the server is
+      configured to use Derby as the database. To use another
+      database, such as DB2, select the custom setup path and
+      complete Step 2: Configure Database.</div></li>
+    </ul></div>
+    <p class="p">When the initial setup is complete, additional
+    options can be configured from the 
+     <span class="keyword">Jazz Team Server </span> Admin Web user
+    interface by using the URL 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://localhost:9443/jazz/admin" />
+      <param name="text"
+      value="https://localhost:9443/jazz/admin " />
+    </object>.</p>
+  </div>
+  <div class="tasklabel">
+    <strong>What to do next </strong>
+  </div>If the server setup wizard does not load, check the
+  following items: 
+  <ul class="ul">
+    <li class="li">Verify that the application server has started.
+    Use the URL 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content" value="http://localhost:9080" />
+      <param name="text" value="http://localhost:9080 " />
+    </object>.</li>
+    <li class="li">Verify the 
+     <span class="keyword">Jazz Team Server </span> has started by
+    logging in to the 
+     <span class="keyword">Jazz Team Server </span> Admin Web UI using
+    the URL 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://localhost:9443/jazz/admin" />
+      <param name="text"
+      value="https://localhost:9443/jazz/admin " />
+    </object>. If the page does not load or the server has errors,
+    the server did not start correctly.</li>
+    <li class="li">The URI root for the 
+     <span class="keyword">Jazz Team Server </span> path must be
+    /jazz. For example https://example.com:9443/jazz must be used
+    rather than https://example.com:9443.</li>
+  </ul>
+  <div class="related-links">
+    <div class="familylinks"></div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link"
+      href="../administering/adm__TroubleshootingServerIssues.html"
+      title="You can use the administrative Web interface to troubleshoot server issues.">
+      Troubleshooting server issues</a>
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

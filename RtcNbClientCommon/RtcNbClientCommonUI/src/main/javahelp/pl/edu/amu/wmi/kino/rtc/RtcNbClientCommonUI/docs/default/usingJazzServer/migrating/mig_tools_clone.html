@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>-clone</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="r_repotools_clone"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt; 
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt; 
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a>&gt; 
+  <a href="../../usingJazzServer/migrating/mig_tools__RepositoryToolsOverview.html"
+  shape="rect">Repository Tools Overview</a></div>
+  <a id="r_repotools_clone" name="r_repotools_clone"></a>
+  <h1 class="topictitle1">-clone</h1>Repotools command that creates
+  a clone of a repository. 
+  <h2 class="sectiontitle">Purpose</h2>The 
+   <span class="synph">
+     <span class="kwd">clone </span> 
+   </span> command duplicates a repository database via a TAR file.
+  Do not use the 
+   <span class="synph">
+     <span class="kwd">clone </span> 
+   </span> command to copy data from one repository database to
+  another; use the 
+   <span class="synph">
+     <span class="kwd">copy </span> 
+   </span> command for those use cases. A legitimate use case for the
+  
+   <span class="synph">
+     <span class="kwd">clone </span> 
+   </span> command is if you need to work around the limitation of
+  250 developer licenses per 
+   <span class="keyword">Jazz&#8482; Team Server </span> . See the
+  Technote at jazz.net that describes how to use the 
+   <span class="synph">
+     <span class="kwd">clone </span> 
+   </span> command to work around the 250 developer license
+  limitation. 
+  <h2 class="sectiontitle">Parameters</h2>
+  <table border="1" cellpadding="4" cellspacing="0"
+  class="simpletable" summary="">
+    <tr class="sthead">
+      <th align="left" class="stentry" id="d8070e51"
+      valign="bottom">Attribute</th>
+      <th align="left" class="stentry" id="d8070e53"
+      valign="bottom">Description</th>
+      <th align="left" class="stentry" id="d8070e55"
+      valign="bottom">Required</th>
+      <th align="left" class="stentry" id="d8070e57"
+      valign="bottom">Default</th>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">toFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Path to
+      the TAR file.</td>
+      <td class="stentry" headers="d8070e55" valign="top">Yes</td>
+      <td class="stentry" headers="d8070e57" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">target.teamserver.properties </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Path to
+      the target teamserver.properties file.</td>
+      <td class="stentry" headers="d8070e55" valign="top">Yes</td>
+      <td class="stentry" headers="d8070e57" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">source.teamserver.properties </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Path to
+      the source teamserver.properties file.</td>
+      <td class="stentry" headers="d8070e55" valign="top">No</td>
+      <td class="stentry" headers="d8070e57" valign="top">
+      teamserver.properties</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">logFile </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Path to
+      the log file.</td>
+      <td class="stentry" headers="d8070e55" valign="top">No</td>
+      <td class="stentry" headers="d8070e57" valign="top">
+      repotools_clone.log</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">overwrite </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Whether
+      to allow the file specified by the toFile option to be
+      overwritten. Legal values: yes, no, true and false.</td>
+      <td class="stentry" headers="d8070e55" valign="top">No</td>
+      <td class="stentry" headers="d8070e57" valign="top">No</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">noPrompt </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Do not
+      prompt before creating the tables prior to importing.</td>
+      <td class="stentry" headers="d8070e55" valign="top">No</td>
+      <td class="stentry" headers="d8070e57" valign="top">N/A</td>
+    </tr>
+    <tr class="strow">
+      <td class="stentry" headers="d8070e51" valign="top">
+         <span class="synph">
+           <span class="kwd">noVerify </span> 
+         </span> 
+      </td>
+      <td class="stentry" headers="d8070e53" valign="top">Do not
+      perform imported data verification.</td>
+      <td class="stentry" headers="d8070e55" valign="top">No</td>
+      <td class="stentry" headers="d8070e57" valign="top">N/A</td>
+    </tr>
+  </table>
+  <div class="example">
+    <h2 class="title">Example</h2>
+    <pre class="pre">
+repotools -clone toFile=export.tar
+target.teamserver.properties=db.properties
+</pre>
+  </div>
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

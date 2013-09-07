@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Migrating Jazz repository after upgrading Jazz Team
+    Server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="migratingrepositoryafterupgradingjazzteamserver"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a></div>
+  <a id="migratingrepositoryafterupgradingjazzteamserver"
+  name="migratingrepositoryafterupgradingjazzteamserver"></a>
+  <h1 class="topictitle1">Migrating Jazz repository after upgrading
+  
+   <span class="keyword">Jazz Team Server </span> </h1>Repository
+  migration is the process of converting the contents of the
+  database from one format to another. Repository migration is
+  necessary when you are upgrading the 
+   <span class="keyword">Jazz&#8482; Team Server </span> from version
+  X to version Y, where version Y has schema changes. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>You must do data migration if there are any schema changes
+  between the two 
+   <span class="keyword">Jazz Team Server </span> versions. You must
+  have extracted the compressed files of 
+   <span class="keyword">Jazz Team Server </span> of both version X
+  and Y.</div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>Generally, data migration is a two step process: 
+  <ul class="ul">
+    <li class="li">Exporting data that is there in the version X of
+    Jazz repository to a TAR file.</li>
+    <li class="li">Importing data from the TAR file to the version
+    Y of Jazz repository.</li>
+  </ul>
+  <p class="p">
+    <img alt="repository migration diagram" class="image"
+    src="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/images/repository_migration.gif" />
+  </p>
+  <div class="p">You can use the repotools application for export
+  and import operation. 
+  <div class="note">
+   <span class="notetitle">Note: </span> 
+   <span class="keyword">Jazz Team Server </span> must be stopped when
+  you migrate the repository. Migration might take a long time
+  depending on your machine's configuration, operating system,
+  database, and so on. Therefore, schedule your outage
+  appropriately.</div></div>
+  <p class="p">
+    <strong class="b">Migrating the full text directory </strong>
+  </p>
+  <div class="p">The Jazz Team Server manages a directory outside
+  the database that stores all data that is necessary to process
+  full text queries. The location of the directory is configured in
+  the 
+  <samp class="codeph">teamserver.properties </samp>file under the 
+  <samp class="codeph">
+  com.ibm.team.fulltext.indexLocation </samp>property. When
+  migrating your database and want to use the previous directory
+  that was used for indexing, you must ensure that the location
+  used in the 
+  <samp class="codeph">-rebuildTextIndices </samp>repository tool
+  matches the location used by the server. When starting the server
+  or running the 
+  <samp class="codeph">-rebuildTextIndices </samp>command, the
+  absolute path to the location of the full text directory is
+  printed in the log files. You can check the server log file and
+  the 
+  <samp class="codeph">repotools_rebuildTextIndicies </samp>log file
+  to compare both directories. 
+  <div class="note_tip">
+   <span class="tiptitle">Tip: </span> If the configured directory in
+  the 
+  <samp class="codeph">teamserver.properties </samp>file is a
+  relative path, a warning will be printed in the log file. It is
+  recommended to configure this property to be an absolute
+  directory path.</div>For more information about creating full
+  text indices, see 
+  <a class="xref" href="mig_tools_rebuildTextIndices.html"
+  title="Repotools command that rebuilds the database text indices.">
+  -rebuildTextIndices</a>.</div>
+  <p class="p">
+   <span class="keyword">Jazz Team Server </span> migration is a very
+  intensive process that can take a fair amount of time depending
+  on the size of your data being migrated. Here is a checklist of
+  things to look out for to avoid common pitfalls.</p>
+  <div class="p">
+  <strong class="b">Operating system </strong>: 
+  <ul class="ul">
+    <li class="li">On Windows, ensure that "write caching on disk"
+    is enabled for all disks involved</li>
+    <li class="li">On Windows, disable the "Windows Indexing
+    Service"</li>
+    <li class="li">Ensure that your temp directory, database, and
+    the .tar file are on the fastest drive (ideally,
+    striped/RAID/10 disk)</li>
+    <li class="li">On Linux (for DB2), ensure that you have
+    properly tuned the kernel according to the DB2 administration
+    topic here: 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="http://publib.boulder.ibm.com/infocenter/db2luw/v9r5/topic/com.ibm.db2.luw.qb.server.doc/doc/t0008238.html" />
+      <param name="text"
+      value="http://publib.boulder.ibm.com/infocenter/db2luw/v9r5/topic/com.ibm.db2.luw.qb.server.doc/doc/t0008238.html " />
+    </object></li>
+  </ul></div>
+  <div class="p">
+  <strong class="b">Jazz Team Server setup </strong>: 
+  <ul class="ul">
+    <li class="li">Setup the following properties (in
+    teamserver.properties) to ensure that your fastest disk is
+    being accessed: 
+    <pre class="pre">
+com.ibm.team.repository.tmpdir
+com.ibm.team.scm.vcs.tmpdir
+com.ibm.team.scm.tmpdir
+com.ibm.team.fulltext.indexLocation
+</pre></li>
+  </ul></div>
+  <div class="p">
+  <strong class="b">DB2 </strong>: 
+  <ul class="ul">
+    <li class="li">DB2 by default tries to grow the buffer pool
+    size as large as necessary. Unless you have disabled this, DB2
+    should perform well out of the box.</li>
+    <li class="li">To check the buffer pool, do the following: 
+    <ol class="ol">
+      <li class="li">Connect to the Jazz database you want to
+      import into by typing the following in the command prompt: 
+      <pre class="pre">
+db2 connect to &lt;databaseName&gt;
+</pre></li>
+      <li class="li">Then, run the following command: 
+      <pre class="pre">
+db2 "select bufferpoolid, bpname from syscat.bufferpools"
+</pre>This will output a bufferpool identifier in this format: 
+      <pre class="pre">
+BUFFERPOOLID BPNAME
+------------ ----------------------------------
+           1 IBMDEFAULTBP
+
+  1 record(s) selected.
+</pre></li>
+      <li class="li">In the above example, the buffer pool
+      identifier is 1. Next, run the following command: 
+      <pre class="pre">
+db2mtrk -d
+</pre>This will output data similar to the following: 
+      <pre class="pre">
+Tracking Memory on: 2009/06/04 at 22:19:17
+
+Memory for database: &lt;databaseName&gt;
+   utilh       pckcacheh   other       catcacheh   
+<strong class="b">bph (1)  </strong>     bph (S32K)
+   64.0K       384.0K      128.0K      128.0K      
+<strong class="b">95.4M  </strong>       832.0K
+
+   bph (S16K)  bph (S8K)   bph (S4K)   shsorth     lockh       dbh
+   576.0K      448.0K      384.0K      64.0K       2.5M       
+20.8M
+
+   apph (269)  apph (268)  apph (267)  apph (266)  apph (265)  apph
+(262)
+   64.0K       64.0K       64.0K       64.0K       64.0K      
+64.0K
+
+   appshrh
+   128.0K
+</pre>The 
+      <strong class="b">bold </strong>output indicates the allocated
+      buffer pool size for your database.</li>
+    </ol></li>
+  </ul></div>
+  <div class="p">
+  <strong class="b">Oracle </strong>: 
+  <ul class="ul">
+    <li class="li">Disable recycle bin - this keeps track of all
+    elements that get deleted, fills up the disk and can
+    effectively cause problems. Run the following commands in
+    sqlplus: 
+    <pre class="pre">
+"ALTER SYSTEM SET RECYCLEBIN" = 'OFF' 
+"PURGE RECYCLEBIN"
+</pre></li>
+    <li class="li">Disable statistic history retention - this keeps
+    track of the runtime of past methods: 
+    <pre class="pre">
+"exec dbms_stats.ALTER_STATS_HISTORY_RETENTION (0)"
+"exec dbms_stats.PURGE_STATS ( current_timestamp )"
+</pre></li>
+    <li class="li">Ensure that Oracle tablespace spans only a
+    single file</li>
+  </ul></div>
+  <p class="p">To start the migration:</p>
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+     <span class="cmd">Stop 
+     <span class="keyword">Jazz Team Server </span> of version
+    X. </span> To stop 
+     <span class="keyword">Jazz Team Server </span> , run 
+    <samp class="codeph">server.shutdown.sh </samp>for Linux or 
+    <samp class="codeph">server.shutdown.bat </samp>for Windows
+    packaged in 
+     <span class="filepath">[installDir]/jazz/server </span> .</li>
+    <li class="li step stepexpand">
+       <span class="cmd">Make a backup of the Jazz repository. The
+      backup is just a prevention measure in case something goes
+      wrong with migration. </span> 
+      <ol class="ol substeps" type="a">
+        <li class="li substep">
+           <span class="cmd">For Derby, make an archive copy of the
+          entire database directory. </span> 
+        </li>
+        <li class="li substep">
+           <span class="cmd">For DB2, use the DB2 backup command to
+          generate a database archive file with date and time
+          information in the specified target directory. </span> 
+        </li>
+      </ol>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Make a backup of the full text index. The
+      location of the full text index is specified in the
+      com.ibm.team.fulltext.indexLocation property of the
+      teamserver.properties file. </span> 
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Run repotools to export the data in the
+    repository. </span> The scripts, 
+    <samp class="codeph">repotools.sh </samp>for Linux and 
+    <samp class="codeph">repotools.bat </samp>for Windows, are
+    packaged in 
+     <span class="filepath">
+    [installDir]/jazz/server </span> directory. 
+    <p class="p">Example: 
+    <samp class="codeph">repotools -export
+    toFile=./file_name.tar </samp></p>
+    <div class="note">
+     <span class="notetitle">Note: </span> Log information and error
+    messages are displayed on the console and a log file. The log
+    file contains debug information about number of items exported,
+    time to export items, errors and other useful information. The
+    log file is created by default in the same directory as the
+    repotools script. You can change the location of the log file
+    by using the logFile parameter.</div>You have now exported the
+    contents of the repository to a TAR file.</li>
+    <li class="li step stepexpand">
+       <span class="cmd">Copy the 
+       <span class="cmdname">teamserver.properties </span> file from 
+       <span class="filepath">[installDir]/jazz/server </span> of
+      version X to 
+       <span class="filepath">[installDir]/jazz/server </span> of
+      version Y. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">From version Y, run repotools to import the
+      data from the TAR file to the repository. </span> 
+      <div class="p">Example: 
+      <samp class="codeph">repotools -import
+      fromFile=./file_name.tar </samp>
+      <div class="note_important">
+       <span class="importanttitle">Important: </span> If your
+      database is not Derby, you must create a new database before
+      running the import tool.</div>
+      <div class="note">
+       <span class="notetitle">Note: </span> The 
+      <samp class="codeph">-import </samp>option logs information
+      about the items imported and skipped, as well as errors
+      during the import.</div></div>
+    </li>
+  </ol>
+  <div class="tasklabel">
+    <strong>What to do next </strong>
+  </div>You can now start the 
+   <span class="keyword">Jazz Team Server </span> of version Y. 
+  <div class="related-links"></div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

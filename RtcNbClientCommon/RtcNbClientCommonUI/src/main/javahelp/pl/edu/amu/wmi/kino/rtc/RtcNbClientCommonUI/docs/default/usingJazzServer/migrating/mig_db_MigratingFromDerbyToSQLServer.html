@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Migrating from Derby to SQL Server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_migrating_derby_to_sql"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt; 
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt; 
+  <a href="../../usingJazzServer/migrating/mig___MigratingTheJazzTeamServer.html"
+  shape="rect">Migrating</a>&gt; 
+  <a href="../../usingJazzServer/migrating/mig_db__content.html"
+  shape="rect">Migrating the database</a></div>
+  <a id="t_migrating_derby_to_sql" name="t_migrating_derby_to_sql">
+  </a>
+  <h1 class="topictitle1">Migrating from Derby to SQL
+  Server</h1>This topic shows the steps to change the 
+   <span class="keyword">Jazz&#8482; Team Server </span> database from
+  Derby to SQL Server. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>This assumes you are migrating the database and not
+  changing the version of your server at the same time. If you plan
+  to migrate and change the server version make sure you use the
+  repotools version that matches your target server. 
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Stop the 
+       <span class="keyword">Jazz Team Server </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Backup the database using the database
+      commands. This is a precautionary measure in case something
+      goes wrong. </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">In the directory 
+      <var class="varname">JazzInstallDir</var>/server/conf/jazz,
+      edit the file 
+       <span class="filepath">
+      teamserver.sqlserver.properties </span> to ensure that the
+      target properties accurately describe the SQL Server database
+      to which you are migrating. Review the contents of the file 
+       <span class="filepath">teamserver.properties </span> and copy
+      over any necessary changes to 
+       <span class="filepath">
+      teamserver.sqlserver.properties </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Run repotools to copy the contents of the
+    Jazz repository from the Derby database described by
+    teamserver.properties to the SQL Server database described by
+    teamserver.sqlserver.properties. The scripts, 
+     <span class="cmdname">repotools.sh </span> for Linux&#174;, and 
+     <span class="cmdname">repotools.bat </span> for Windows&#174; are
+    packaged in the directory 
+     <span class="filepath">
+    <var class="varname">
+    JazzInstallDir</var>/server </span> . </span> The following is an
+    example command using repotools. See the repotools
+    documentation for more information. 
+    <pre class="pre">
+repotools -copy toFile=temp.tar
+target.teamserver.properties=teamserver.sqlserver.properties
+</pre></li>
+    <li class="li step stepexpand">
+       <span class="cmd">Rename the file 
+       <span class="filepath">teamserver.properties </span> in the
+      directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz </span> to 
+       <span class="filepath">
+      teamserver.derby.properties </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Rename the file 
+       <span class="filepath">
+      teamserver.sqlserver.properties </span> in the directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/conf/jazz </span> to 
+       <span class="filepath">teamserver.properties </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Start the server. </span> 
+    </li>
+  </ol>
+
+  <div class="related-links">
+    <div class="relconcepts">
+      <strong>Related concepts </strong>
+      <br />
+      <a class="link" href="mig_tools__RepositoryToolsOverview.html"
+      title="The Repository Tools Application is a standalone application that provides a way to manage a Jazz repository database.">
+      Repository Tools overview</a>
+    </div>
+    <div class="reltasks">
+      <strong>Related tasks </strong>
+      <br />
+      <a class="link"
+    href="../installingAndUpgrading/inst_se_sdb_SettingUpASQLServerDatabase.html">
+    Setting up a SQL Server database</a>
+    <br />
+      <a class="link"
+      href="../installingAndUpgrading/inst_se_ss__StartingTheServer.html"
+      title="This topic describes the different options for running the server startup scripts.">
+      Starting and Stopping the
+       <span class="keyword">Jazz Team Server </span> </a>
+    </div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

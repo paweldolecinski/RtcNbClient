@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Installing the client using a .zip file</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_client_zip_installation"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_client_InstallingRTCClientM.html"
+  shape="rect">Installing Rational Team Concert Client</a></div>
+  <a id="t_client_zip_installation"
+  name="t_client_zip_installation"></a>
+  <h1 class="topictitle1">Installing the client using a .zip
+  file</h1>The client is distributed as a downloadable .zip file. 
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Download the client package file. </span> 
+      <div class="p">You should download the 
+       <span class="keyword">Rational Team
+      Concert&#8482; </span> client .zip file. 
+      <div class="note">
+       <span class="notetitle">Note: </span> If you want to install
+      the client into an existing Eclipse workbench, use the IBM
+      Installation Manager. The IBM Installation Manager install
+      prompts you for the workbench you want to extend and takes
+      care of managing future workbench updates, rollbacks, and
+      modifications</div></div>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Install the client distribution. Extract
+      the .zip file to an installation directory of your choice
+      (for example, 
+       <span class="filepath">/opt/IBM/ </span> on Linux&#174; or 
+       <span class="filepath">c:\IBM </span> on Windows&#174;,).
+      Relative to the installation directory you choose, the client
+      path is 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Start the client. Double click on the 
+       <span class="filepath">TeamConcert.exe </span> application in
+      the directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse </span> . </span> 
+    </li>
+    <li class="li step stepexpand">
+     <span class="cmd">Connect to the server. </span> The easiest way
+    to connect to a server is using the Team Invitation. If you do
+    not have an invitation you can connect manually. 
+    <ol class="ol substeps" type="a">
+      <li class="li substep substepexpand">
+         <span class="cmd">Click 
+         <span class="menucascade">
+         <span class="uicontrol">File </span> &gt; 
+         <span class="uicontrol">Accept team
+        invitation </span>  </span> . The wizard guides you through the
+        process. </span> 
+        <div class="note">
+         <span class="notetitle">Note: </span> If you do not have an
+        invitation you need the URI or URL from your server admin.
+        (an example format is: https://example.com:9443/jazz).
+        Click on the 
+         <span class="uicontrol">connecting to an existing project
+        area </span> hyperlink that appears in the bottom right
+        corner of the 
+         <span class="uicontrol">Accept Team
+        Invitation </span> window.</div>
+      </li>
+      <li class="li substep substepexpand">
+         <span class="cmd">Follow the instructions in the wizard to
+        set up your connection. </span> 
+      </li>
+    </ol></li>
+  </ol>
+  <div class="example">
+    <div class="tasklabel">
+      <strong>Example </strong>
+    </div>
+    <div class="p">
+    <strong class="b">Trouble Shooting </strong>: Here are some
+    suggested problem management techniques. 
+    <ul class="ul">
+      <li class="li">Start with an empty workspace.</li>
+      <li class="li">The client and the server builds must match.
+      Make sure the build ID's match for both the client and server
+      distributions.</li>
+      <li class="li">Make sure the server is up. Confirm using the
+      status URL: 
+       <span class="filepath">
+      https://example.com:9443/jazz </span> .</li>
+      <li class="li">On Linux, if you want to start the client from
+      outside of the directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse </span> you must change
+      each file in 
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse/links/ and include the
+      absolute path to the named directory. By default, relative
+      paths are used. For example, 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/client/eclipse/links/build.link </span> contains
+      the text "path=
+       <span class="filepath">jazz/build </span> ". If your client is
+      installed in the directory /home/username/teamconcert, edit
+      the file to look like "path=
+       <span class="filepath">
+      /home/username/teamconcert/jazz/client/eclipse/build </span> ".</li>
+    </ul></div>
+  </div>
+  <div class="tasklabel">
+    <strong>What to do next </strong>
+  </div>
+
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>

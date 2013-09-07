@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Install: pl/edu/amu/wmi/kino/rtc/client/connections/Installer.class
+OpenIDE-Module-Localizing-Bundle: pl/edu/amu/wmi/kino/rtc/client/connections/Bundle.properties
+OpenIDE-Module-Layer: pl/edu/amu/wmi/kino/rtc/client/connections/layer.xml
+OpenIDE-Module-Public-Packages: pl.edu.amu.wmi.kino.rtc.client.connections.api.*, pl.edu.amu.wmi.kino.rtc.client.favorites.api.**,pl.edu.amu.wmi.kino.rtc.client.experimental.*
+OpenIDE-Module-Requires: org.netbeans.api.javahelp.Help
+AutoUpdate-Show-In-Client: false

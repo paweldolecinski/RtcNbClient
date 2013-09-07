@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'  ?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see &lt;http://www.gnu.org/licenses/>.
+
+-->
+
+   <!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+            "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+
+   <toc version="2.0">
+    <tocitem text="Rational Team Concert" expand="false" target="rtc">
+        
+        <tocitem text="Product Overview" target="productOverview.contents">
+            <tocitem text="Jazz overview" target="productOverview.JazzOverview">
+                <tocitem text="Jazz technology platform design goals" target="productOverview.DesignGoalsOfTheJazzTechnologyPlatform"/>
+                <tocitem text="Jazz technology platform architecture" target="productOverview.JazzTechnologyPlatformArchitecture"/>
+                <tocitem text="Jazz Kernel components" target="productOverview.JazzKernelComponents"/>
+            </tocitem>
+            <tocitem text="Rational Products overwiew" target="productOverview.RationalProductsOverview">
+                <tocitem text="Rational Team Concert overview:" target="productOverview.RTC.contents">
+                    <tocitem text="Rational Team Concert architecture" target="productOverview.IBMRationalTeamConcertQuickReference"/>
+                    <tocitem text="Rational Team Concert client for Netbeans" target="productOverview.NetbeansClient"/>
+                    <tocitem text="What's new in RTC 2.0.0.1." target="productOverview.What'SNewInRationalTeamConcert_2_0_0_1"/>
+                    <tocitem text="Rational Team Concert Web client UI" target="productOverview.RationalTeamConcertWebClientUserInterface"/>
+                    <tocitem text="RTC 2.0 edition and licenses" target="productOverview.RTC20EditionAndLicences"/>
+                    <tocitem text="Notices for Rational Team Concert" target="productOverview.DocumentationNoticesForIBMRationalTeamConcert"/>
+                </tocitem>
+                <tocitem text="Rational Quality Manager" target="productOverview.RationalProductsOverview.RationalQualityManager"/>
+                <tocitem text="Rational Requirements Composer" target="productOverview.RationalProductsOverview.RationalRequirementsComposer"/>
+                <tocitem text="Rational Project Conductor" target="productOverview.RationalProductsOverview.RationalProjectConductor"/>
+            </tocitem>
+       </tocitem>
+       <tocitem text="Getting started">
+                <tocitem text="Lesson 1: Setting up a project as team Adminstrator.." target="gettingStarted.lesson1"/>
+                <tocitem text="Lesson 2: Planning work of your team" target="gettingStarted.lesson2"/>
+                <tocitem text="Lesson 3: Getting connected via Netbeans client." target="gettingStarted.lesson3"/>
+                <tocitem text="Lesson 4: Working with work items." target="gettingStarted.lesson4"/>
+                
+       </tocitem>
+       <tocitem text="Using jazz server" target="usingJazzServer.contents">
+                <tocitem text="Installing and upgrading. " target="usingJazzServer.InstallingAndUpgrading.contents">
+                    <tocitem text="Upgrading to Rational Team Concert 2.0" target="usingJazzServer.installingAndUpgrading.inst_UpgradingToRationalTeamConcert_2_0"/>
+                    <tocitem text="Instalation Overview" target="usingJazzServer.installingAndUpgrading.inst_InstallationOverview"/>
+                    <tocitem text="Planning the installation" target="usingJazzServer.installingAndUpgrading.inst_pla_PlanningTheInstallation">
+                        <tocitem text="Installation planning overview" target="usingJazzServer.installingAndUpgrading.inst_pla_InstallationPlanningOverview"/>
+                        <tocitem text="Installation planning worksheet" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_InstallationPlanningWorksheet">
+                            <tocitem text="Choosing an application server" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_ChoosingAnApplicationServer"/>
+                        </tocitem>
+                        <tocitem text="Choosing a database" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_cd_ChoosingADatabase">
+                            <tocitem text="Special DB2 instructions" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_cd_SpecialDB2_instructions"/>
+                        </tocitem>
+                        <tocitem text="Choosing a user management method" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ChoosingAUserManagementMethod">
+                            <tocitem text="Managing users with Apache Tomcat user database" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithApacheTomcatUserDatabase"/>
+                            <tocitem text="Managing users with Lightweight Directory Access Protocol (LDAP)" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithLightweightDirectoryAccessProtocol_(LDAP)"/>
+                            <tocitem text="Managing users with a custom realm" target="usingJazzServer.installingAndUpgrading.inst_pla_pw_umm_ManagingUsersWithACustomRealm"/>
+                        </tocitem>
+                        <tocitem text="Special server instructions" target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_SpecialServerInstructions">
+                            <tocitem text="Special instructions for Linux" target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sif_SpecialInstructionsForLinux">
+                                <tocitem text="Installing Rational Team Concert with security enhanced Linux" target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sif_InstallRTCWithSecurityEnhancedLinux"/>
+                            </tocitem>
+							<tocitem text="Security certificates" target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_SecurityCertificates">
+								<tocitem text="Installing a security certificate" target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_InstallingASecurityCertificate"/>
+								<tocitem text="Disabling security certificate settings"  target="usingJazzServer.installingAndUpgrading.inst_pla_ssi_sc_DisablingSecurityCertificateSettings"/>
+							</tocitem>
+						</tocitem>
+					</tocitem>
+					<tocitem text="Installing Rational Team Concert Express-C Edition" target="usingJazzServer.installingAndUpgrading.inst_exc_InstallingRationalTeamConcertExpressCEdition">
+						<tocitem text="Express-C edition installation overview" target="usingJazzServer.installingAndUpgrading.inst_exc_ExpressCEditionInstallationOverview"/>
+						<tocitem text="Preparing to install the Express-C edition" target="usingJazzServer.installingAndUpgrading.inst_exc_PreparingToInstallTheExpressCEdition"/>
+						<tocitem text="Installing the Express-C edition srver" target="usingJazzServer.installingAndUpgrading.inst_exc_InstallingTheExpressCEditionServer"/>
+						<tocitem text="Starting the Apache Tomcat server" target="usingJazzServer.installingAndUpgrading.inst_exc_StartingTheApacheTomcatServer"/>
+						<tocitem text="Running the setup wizard" target="usingJazzServer.installingAndUpgrading.inst_exc_RunningTheSetupWizard"/>
+						<tocitem text="Completing the Express-C edition installation"  target="usingJazzServer.installingAndUpgrading.inst_exc_CompletingTheExpressCEditionInstallation"/>
+					</tocitem>
+					<tocitem text="Installing Rational Team Concert Express edition" target="usingJazzServer.installingAndUpgrading.inst_ee_InstallingRationalTeamConcertExpressEdition">
+						<tocitem text="Express edition installation overview" target="usingJazzServer.installingAndUpgrading.inst_ee_ExpressEditionInstallationOverview"/>
+						<tocitem text="Preparing to install Express edition" target="usingJazzServer.installingAndUpgrading.inst_ee_PreparingToInstallExpressEdition"/>
+						<tocitem text="Installing the Express edition" target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEdition">
+							<tocitem text="Installing the Express edition from the IBM installation manager" target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEditionFromTheIBMInstallationManager"/>
+							<tocitem text="Installing the Express edition from the zip file" target="usingJazzServer.installingAndUpgrading.inst_ee_iee_InstallingTheExpressEditionFromTheZipFile"/>
+						</tocitem>
+						<tocitem text="Setting up the database"	target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpTheDatabase">
+							<tocitem text="Setting up a DB2 database" target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpADB2_database"/>
+							<tocitem text="Setting up an oracle database" target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpAnOracleDatabase"/>
+							<tocitem text="Setting up a SQL server database" target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_SettingUpASQLServerDatabase"/>
+							<tocitem text="Creating the Jazz Team Server Database Tables on DB2 and Oracle"  target="usingJazzServer.installingAndUpgrading.inst_ee_sdb_CreatingTheJazzTeamServerDatabaseTablesOnDB2_andOracle"/>
+						</tocitem>
+						<tocitem text="Starting the server" target="usingJazzServer.installingAndUpgrading.inst_ee_ss_StartingTheServer">
+							<tocitem text="Starting the Apache Tomcat server" target="usingJazzServer.installingAndUpgrading.inst_ee_ss_StartingTheApacheTomcatServer"/>
+							<tocitem text="Running Jazz Team Server in Apache Tomcat as a windows service" target="usingJazzServer.installingAndUpgrading.inst_ee_ss_RunningJazzTeamServerInApacheTomcatAsAWindowsService"/>
+							<tocitem text="Deploying Jazz Team server into an existing Apache Tomcat" target="usingJazzServer.installingAndUpgrading.inst_ee_ss_DeployingJazzTeamServerIntoAnExistingApacheTomcat"/>
+							<tocitem text="Setting up a Web Sphere application server" target="usingJazzServer.installingAndUpgrading.inst_ee_ss_SettingUpAWebSphereApplicationServer"/>
+						</tocitem>
+						<tocitem text="Running the setup wizard" target="usingJazzServer.installingAndUpgrading.inst_ee_RunningTheSetupWizard"/>
+						<tocitem text="Completing the installation" target="usingJazzServer.installingAndUpgrading.inst_ee_CompletingTheInstallation"/>
+					</tocitem>
+					<tocitem text="Installing Rational Team Concert Standard edition and Enterprise edition" target="usingJazzServer.installingAndUpgrading.inst_se_InstallingRationalTeamConcertStandardEditionAndEnterpriseEdition">
+						<tocitem text="Standard and Enterprise editions installation overview" target="usingJazzServer.installingAndUpgrading.inst_se_StandardAndEnterpriseEditionsInstallationOverview"/>
+						<tocitem text="Preparing to install the standard or Enterprise edition" target="usingJazzServer.installingAndUpgrading.inst_se_PreparingToInstallTheStandardOrEnterpriseEdition"/>
+						<tocitem text="Installing the Standard or Enterprise Edition" target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEdition">
+							<tocitem text="Installing the Standard or Enterprise edition from the IBM installation manager" target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEditionFromTheIBMInstallationManager"/>
+							<tocitem text="Installing the Standard or Enterprise edition from the zip file" target="usingJazzServer.installingAndUpgrading.inst_se_in_InstallingTheStandardOrEnterpriseEditionFromTheZipFile"/>
+						</tocitem>
+						<tocitem text="Setting up the database"	target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpTheDatabase">
+							<tocitem text="Setting up a DB2 database" target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpADB2_database"/>
+							<tocitem text="Setting up an oracle database" target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpAnOracleDatabase"/>
+							<tocitem text="Setting up a SQL server database" target="usingJazzServer.installingAndUpgrading.inst_se_sdb_SettingUpASQLServerDatabase"/>
+							<tocitem text="Creating the Jazz Team server database tables on DB2 and oracle" target="usingJazzServer.installingAndUpgrading.inst_se_sdb_CreatingTheJazzTeamServerDatabaseTablesOnDB2_andOracle"/>
+						</tocitem>
+						<tocitem text="Starting the server" target="usingJazzServer.installingAndUpgrading.inst_se_ss_StartingTheServer">
+							<tocitem text="Starting the Apache Tomcat server" target="usingJazzServer.installingAndUpgrading.inst_se_ss_StartingTheApacheTomcatServer"/>
+							<tocitem text="Running Jazz Team Server in Apache Tomcat as a Windows service" target="usingJazzServer.installingAndUpgrading.inst_se_ss_RunningJazzTeamServerInApacheTomcatAsAWindowsService"/>
+							<tocitem text="Deploying Jazz Team Server into an existing Apache Tomcat" target="usingJazzServer.installingAndUpgrading.inst_se_ss_DeployingJazzTeamServerIntoAnExistingApacheTomcat"/>
+							<tocitem text="Setting up a Web Sphere application server"	target="usingJazzServer.installingAndUpgrading.inst_se_ss_SettingUpAWebSphereApplicationServer"/>
+						</tocitem>
+						<tocitem text="Running the setup wizard" target="usingJazzServer.installingAndUpgrading.inst_se_RunningTheSetupWizard"/>
+						<tocitem text="Completing the installation" target="usingJazzServer.installingAndUpgrading.inst_se_CompletingTheInstallation"/>
+					</tocitem>
+					<tocitem text="Deploying jazz.war on WebSphere Application Server for high availability environments" target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA">
+						<tocitem text="Setting up a basic high availability configuration" target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.SettingUpABasicHighAvailabilityConfiguration"/>
+						<tocitem text="Taking the primary server offline " target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.TakingThePrimaryServerOffline"/>
+						<tocitem text="Restoring the primary server " target="usingJazzServer.installingAndUpgrading.DeployingJazzWarOnWebSphereASforHA.RestoringThePrimaryServer"/>
+					</tocitem>
+					<tocitem text="Installing the Build System Toolkit" target="usingJazzServer.installingAndUpgrading.InstallingTheBuildSystemToolkit">
+						<tocitem text="Installing the Build System Toolkit from a .zip file" target="usingJazzServer.installingAndUpgrading.InstallBuildSystemToolkitZipFile"/>
+						<tocitem text="Installing the Build System Toolkit from the IBM Installation " target="usingJazzServer.installingAndUpgrading.InstallBuildSystemToolkitIBMInstallationManager"/>
+					</tocitem>
+					<tocitem text="Installing Rational Team Concert Connectors" target="usingJazzServer.installingAndUpgrading.InstallingRationalTeamConcertConnectors">
+						<tocitem text="Installing Rational Team Concert ClearCase Connector" target="usingJazzServer.installingAndUpgrading.InstallingRTC_CCConnector">
+							<tocitem text="Installing Rational Team Concert ClearCase Connector using the IBM Installation Manager " target="usingJazzServer.installingAndUpgrading.InstallRTC_CCConnectorIBMInstallationManager"/>
+							<tocitem text="Installing Rational Team Concert ClearCase Connector from a .zip file " target="usingJazzServer.installingAndUpgrading.InstallRTC_CCConnectorZip"/>
+						</tocitem>
+						<tocitem text="Installing Rational Team Concert ClearQuest Connector " target="usingJazzServer.installingAndUpgrading.InstallRTC_CCQuestConnector">
+							<tocitem text="Installing Rational Team Concert ClearQuest Connector using the IBM Installation Manager" target="usingJazzServer.installingAndUpgrading.InstallRTC_CQConnectorIBMInstallationManager"/>
+							<tocitem text="Installing Rational Team Concert ClearQuest Connector from a .zip file " target="usingJazzServer.installingAndUpgrading.InstallRTC_CQConnectorZipFile"/>
+						</tocitem>
+					</tocitem>
+					<tocitem text="Installing Rational Team Concert Client " target="usingJazzServer.installingAndUpgrading.InstallingRTCClient">
+						<tocitem text=" Client installation overview" target="usingJazzServer.installingAndUpgrading.ClientInstallationOverview"/>
+                                                <tocitem text=" Installing the Netbeans plugin for Rational Team Concert" target="usingJazzServer.installingAndUpgrading.NetbeansInstallationOverview"/>
+                                                <tocitem text="Installing Eclipse and Visual Studio Client">
+                                                    <tocitem text=" Installing the client using the IBM Installation Manager" target="usingJazzServer.installingAndUpgrading.InstallClientIBMInstallationManager"/>
+                                                    <tocitem text=" Installing the client using a .zip file" target="usingJazzServer.installingAndUpgrading.InstallClientZip"/>
+                                                </tocitem>
+						
+						
+					</tocitem>
+					<tocitem text=" Release notes - Rational Team Concert V 2.0" target="usingJazzServer.installingAndUpgrading.ReleaseNotesRTCV_2_0"/>
+                </tocitem>
+                
+                <tocitem text="Migrating" target="usingJazzServer.migrating">
+                    <tocitem text="Migrating Jazz repository after upgrading Jazz Team Server"
+                    target="usingJazzServer.migrating.MigratingJazzRepositoryAfterUpgradingJazz"/>
+                    <tocitem text="Migrating the application server" target="usingJazzServer.migrating.migratingTheApplicationServer.content">
+                        <tocitem text="Migrating from Apache Tomcat to WebSphere Application Server" target="usingJazzServer.migrating.migratingTheApplicationServer.tomcatToWeb"/>
+                    </tocitem>
+                    <tocitem text="Migrating the database" target="usingJazzServer.migrating.migratingTheDatabase.content">
+                        <tocitem text="Migrating from Derby to DB2" target="usingJazzServer.migrating.migratingTheDatabase.derbyToDb2"/>
+                        <tocitem text="Migrating from Derby to Oracle" target="usingJazzServer.migrating.migratingTheDatabase.derbyToOracle"/>
+                        <tocitem text="Migrating from Derby to SQL Server" target="usingJazzServer.migrating.migratingTheDatabase.derbyToSqlServer"/>
+                    </tocitem>
+                    <tocitem text="Repository Tools Overview" target="usingJazzServer.migrating.repositoryToolsOverview">
+                        <tocitem text="Backing up the Jazz Team Server" target="usingJazzServer.migrating.repositoryToolsOverview.backupServer"/>
+                        <tocitem text="-addTables" target="usingJazzServer.migrating.repositoryToolsOverview.addTables"/>
+                        <tocitem text="-archiveUser" target="usingJazzServer.migrating.repositoryToolsOverview.archiveUser"/>
+                        <tocitem text="-clone" target="usingJazzServer.migrating.repositoryToolsOverview.clone"/>
+                        <tocitem text="-convertTomcatUsers" target="usingJazzServer.migrating.repositoryToolsOverview.convertTomcatUsers"/>
+                        <tocitem text="-copy" target="usingJazzServer.migrating.repositoryToolsOverview.copy"/>
+                        <tocitem text="-createTables" target="usingJazzServer.migrating.repositoryToolsOverview.createTables"/>
+                        <tocitem text="-createUser" target="usingJazzServer.migrating.repositoryToolsOverview.createUser"/>
+                        <tocitem text="-createUsers" target="usingJazzServer.migrating.repositoryToolsOverview.createUsers"/>
+                        <tocitem text="-dropTables" target="usingJazzServer.migrating.repositoryToolsOverview.dropTables"/>
+                        <tocitem text="-export" target="usingJazzServer.migrating.repositoryToolsOverview.export"/>
+                        <tocitem text="-exportUsers" target="usingJazzServer.migrating.repositoryToolsOverview.exportUsers"/>
+                        <tocitem text="-help" target="usingJazzServer.migrating.repositoryToolsOverview.help"/>
+                        <tocitem text="-importUsers" target="usingJazzServer.migrating.repositoryToolsOverview.importUsers"/>
+                        <tocitem text="-import" target="usingJazzServer.migrating.repositoryToolsOverview.import"/>
+                        <tocitem text="-importUsers" target="usingJazzServer.migrating.repositoryToolsOverview.importUsers"/>
+                        <tocitem text="-isServerRunning" target="usingJazzServer.migrating.repositoryToolsOverview.isServerRunning"/>
+                        <tocitem text="-listLicenses" target="usingJazzServer.migrating.repositoryToolsOverview.listLicenses"/>
+                        <tocitem text="-rebuildIndices" target="usingJazzServer.migrating.repositoryToolsOverview.rebuildIndices"/>
+                        <tocitem text="-rebuildTextIndices" target="usingJazzServer.migrating.repositoryToolsOverview.rebuildTextIndices"/>
+                        <tocitem text="-syncUsers" target="usingJazzServer.migrating.repositoryToolsOverview.syncUsers"/>
+                        <tocitem text="-verify" target="usingJazzServer.migrating.repositoryToolsOverview.verify"/>
+                    </tocitem>
+                </tocitem>
+                <tocitem text="Administering" target="usingJazzServer.administering.AdministeringTheJazzTeamServerThroughWebUI">
+                    <tocitem text="Logging in to the Admin Web UI" target="usingJazzServer.administering.loggingIntoAdminWebUI"/>
+                    <tocitem text="Managing license keys" target="usingJazzServer.administering.managingLicenceKeys"/>
+                    <tocitem text="Managing floating client access licenses" target="usingJazzServer.administering.managingFloatingLicencesAccess"/>
+                    <tocitem text="Monitoring floating licence usage" target="usingJazzServer.administering.managingFloatingLicencesUsage"/>
+                    <tocitem text="Managing users" target="usingJazzServer.administering.managingUsers">
+                        <tocitem text="Creating a user" target="usingJazzServer.administering.managingUsers.creatingUser"/>
+                        <tocitem text="Managing client access licenses" target="usingJazzServer.administering.managingUsers.managingClientAccessLicences"/>
+                        <tocitem text="Assigning default licenses" target="usingJazzServer.administering.managingUsers.assigningDefaultLicences"/>
+                        <tocitem text="Disabling the default administrative user" target="usingJazzServer.administering.managingUsers.disablingDefaultAdministrativeUser"/>
+                        <tocitem text="Archiving a user" target="usingJazzServer.administering.managingUsers.archivingUser"/>
+                    </tocitem>
+                    <tocitem text="Configuring the server" target="usingJazzServer.administering.configuringServer">
+                        <tocitem text="Configuring e-mail settings" target="usingJazzServer.administering.configuringServer.configuringEmailSettings"/>
+                        <tocitem text="Configuring database connections" target="usingJazzServer.administering.configuringServer.configuringDatabaseConnections"/>
+                        <tocitem text="Configuring feed settings" target="usingJazzServer.administering.configuringServer.configuringFeedSettings"/>
+                        <tocitem text="Configuring themes" target="usingJazzServer.administering.configuringServer.configuringThemes"/>
+                        <tocitem text="Configuring OAuth" target="usingJazzServer.administering.configuringServer.configuringOAuth">
+                            <tocitem text="Creating a consumer key" target="usingJazzServer.administering.configuringServer.configuringOAuth.creatingConsumerKey"/>
+                            <tocitem text="Approving a consumer key" target="usingJazzServer.administering.configuringServer.configuringOAuth.approvingConsumerKey"/>
+                            <tocitem text="Editing a key" target="usingJazzServer.administering.configuringServer.configuringOAuth.editingKey"/>
+                            <tocitem text="Deleting a key" target="usingJazzServer.administering.configuringServer.configuringOAuth.deletingKey"/>
+                        </tocitem>
+                        <tocitem text="Configuring server-to-server communication" target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication">
+                            <tocitem text="Establishing server-to-server communication" target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.establishingServerToServerCommunication"/>
+                            <tocitem text="Editing entries from the server friends list" target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.editingEntriesFromServerFriendsList"/>
+                            <tocitem text="Deleting entries from the server friends list" target="usingJazzServer.administering.configuringServer.configuringServerToServerCommunication.deletingEntriesFromServerFriendsList"/>
+                        </tocitem>
+                        <tocitem text="Configuring advanced properties" target="usingJazzServer.administering.configuringServer.configuringAdvancedProperties"/>
+                        <tocitem text="Filtering advanced properties" target="usingJazzServer.administering.configuringServer.filteringAdvancedProperties"/>
+                        <tocitem text="Storing passwords in a clear text file" target="usingJazzServer.administering.configuringServer.storingPasswordsClearText"/>
+                        <tocitem text="Modifying the profile.ini files" target="usingJazzServer.administering.configuringServer.modifyingProfileIni"/>
+                        <tocitem text="Customizing the log file" target="usingJazzServer.administering.configuringServer.customizingLog"/>
+                        <tocitem text="Using the LDAP sync task" target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask">
+                            <tocitem text="Using the LDAP sync task feed" target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask.usingLDAPsyncTaskFeed"/>
+                            <tocitem text="Modifying the LDAP sync task" target="usingJazzServer.administering.configuringServer.usingLDAPsyncTask.modifyingLDAPsyncTask"/>
+                        </tocitem>
+                        <tocitem text="Troubleshooting server issues" target="usingJazzServer.administering.troubleshootingServerIssues"/>
+                    </tocitem>
+                </tocitem>
+       </tocitem>
+       <tocitem text="Using  Rational Team Concert">
+             <tocitem text="Project, teams, and processes">
+                    <tocitem text="Project and process concepts">
+                        <tocitem text="Workflow for projects, teams, and processes" target="usingRationalTeamConcert.Wokflow"/>
+                        <tocitem text="Repository"  target="usingRationalTeamConcert.Repository"/>
+                        <tocitem text="Project area" target="usingRationalTeamConcert.ProjectArea"/>
+                        <tocitem text="Work item category" target="usingRationalTeamConcert.WorkItemCategory"/>
+                        <tocitem text="Process" target="usingRationalTeamConcert.Process"/>
+                        <tocitem text="Development line" target="usingRationalTeamConcert.DevelopmentLine"/>
+                        <tocitem text="Iteration" target="usingRationalTeamConcert.Iteration"/>
+                        <tocitem text="Roles" target="usingRationalTeamConcert.Roles"/>
+                        <tocitem text="Behavior" target="usingRationalTeamConcert.Behavior"/>
+                        <tocitem text="Permission" target="usingRationalTeamConcert.Permission"/>
+                        <tocitem text="Timeline" target="usingRationalTeamConcert.Timeline"/>
+                    </tocitem>
+               </tocitem>
+               <tocitem text="Plans and work item management" target="usingRationalTeamConcert.PlanAndWorkItemManagement">
+                    <tocitem text=" Plans concepts">
+                     <tocitem text="Project Release plan" target="usingRationalTeamConcert.ProjectReleasePlan"/>
+                     <tocitem text="Team Release plan" target="usingRationalTeamConcert.TeamReleasePlan"/>
+                     <tocitem text="Iteration plan" target="usingRationalTeamConcert.IterationPlan"/>
+                     <tocitem text="Schedule Risk Assessment plan" target="usingRationalTeamConcert.ScheduleRiskAssessmentPlan"/>
+                    </tocitem>
+                </tocitem>
+        
+                <tocitem text="Repository connection">
+                <tocitem text="Connecting to the Repository" target="usingRationalTeamConcert.ConnectionToArepository"/>
+                </tocitem>
+                <tocitem text="Work Items">
+                    <tocitem text="Work Item concepts">
+                        <tocitem text="Work Items" target="usingRationalTeamConcert.WorkItems"/>
+                    </tocitem>
+                    <tocitem text="Working with  Work Items">
+                        <tocitem text="Creating Work Items" target="usingRationalTeamConcert.CreatingWorkItems"/>
+                        <tocitem text="Editing Work Items" target="usingRationalTeamConcert.EditingWorkItems"/>
+                       
+                        <tocitem text="Finding Work Items">
+                           <tocitem text="About Finding Work Items" target="usingRationalTeamConcert.FindingWorkItems"/>
+                           <tocitem text="Using predefined queries" target="usingRationalTeamConcert.FindingWorkItems.UsingPredefinedQueries"/>
+                           <tocitem text="Creating queries" target="usingRationalTeamConcert.FindingWorkItems.CreatingdQueries"/>
+                        </tocitem>
+                    </tocitem>
+                </tocitem>
+                <tocitem text="Source control">
+                     <tocitem text="General idea of source control in Rational Team Concert" target="usingRationalTeamConcert.GeneralIdeaOfSourceControl"/>
+                </tocitem>
+              </tocitem>
+
+
+       </tocitem>
+</toc>

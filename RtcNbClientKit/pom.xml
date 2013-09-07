@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2009-2011 RtcNbClient Team (http://rtcnbclient.wmi.amu.edu.pl/)
+
+This file is part of RtcNbClient.
+
+RtcNbClient is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+RtcNbClient is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RtcNbClient. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>RtcNbClient</artifactId>
+        <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+        <version>0.2.3.9-SNAPSHOT</version>
+    </parent>
+    <artifactId>RtcNbClientKit</artifactId>
+    <packaging>nbm</packaging>
+    <name>RtcNbClient Kit</name>
+    <description>
+        This module providers support for RTC.
+    Current version may be used for work item managment.
+    </description>
+<!--  We cannot put Ms, BETAs and RCs  because it will be not respected by autoupdate
+If you need to change this module update its version by adding/changing sixth number-->
+
+    <version>3.0.0.0.0</version>
+    
+    <dependencies>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientPlansKit</artifactId>
+            <version>${plans.kit.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientReportsKit</artifactId>
+            <version>${reports.kit.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientWorkItemsKit</artifactId>
+            <version>${workitems.kit.version}</version>
+            <type>nbm</type>
+        </dependency>
+        <dependency>
+            <groupId>pl.edu.amu.wmi.kino.rtc</groupId>
+            <artifactId>RtcNbClientCommonKit</artifactId>
+            <version>${common.kit.version}</version>
+            <type>nbm</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+

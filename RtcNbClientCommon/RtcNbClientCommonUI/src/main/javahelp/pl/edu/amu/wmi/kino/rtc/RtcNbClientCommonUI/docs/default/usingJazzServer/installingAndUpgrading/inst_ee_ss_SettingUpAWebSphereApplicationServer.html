@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="helpIndexHtml" lang="en" xml:lang="en"
+xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org"
+    name="generator" />
+    <title>Setting up a WebSphere Application Server</title>
+    <link href="nbdocs:/org/netbeans/modules/usersguide/ide.css"
+    rel="stylesheet" type="text/css" />
+    <link href="nbdocs://pl.edu.amu.wmi.kino.rtc.RtcClientConnection/pl/edu/amu/wmi/kino/rtc/RtcClientConnection/docs/default/style.css"
+    rel="stylesheet" type="text/css" />
+  </head>
+  <body id="t_server_installation_setup_was"
+  onload="javascript:resizeAtPageLoad();"
+  onresize="javascript:resizeAllImages();">
+  <div class="breadcrumbs">
+  <a href="../../under_construction.html" shape="rect">Rational
+  Team Concert</a>&gt;
+  <a href="../../usingJazzServer/useJazz_content.html"
+  shape="rect">Using jazz server</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst__content.html"
+  shape="rect">Installing and upgrading.</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ee__InstallingRationalTeamConcertExpressEdition.html"
+  shape="rect">Installing Rational Team Concert Express
+  edition</a>&gt;
+  <a href="../../usingJazzServer/installingAndUpgrading/inst_ee_ss__StartingTheServer.html"
+  shape="rect">Starting the server</a></div>
+  <a id="t_server_installation_setup_was"
+  name="t_server_installation_setup_was"></a>
+  <h1 class="topictitle1">Setting up a WebSphere Application
+  Server</h1>This topic describes how to set up the 
+   <span class="keyword">Jazz&#8482; Team Server </span> to work with
+  WebSphere&#174; Application Server. This setup assumes that you
+  are installing the 
+   <span class="keyword">Jazz Team Server </span> on the same machine
+  as the Websphere Application Server. 
+  <div class="section prereq">
+  <div class="tasklabel">
+    <strong>Before you begin </strong>
+  </div>Before beginning these steps, you should have the following
+  completed: 
+  <ul class="ul">
+    <li class="li">WebSphere Application server is already
+    installed.</li>
+    <li class="li">The database is created and the 
+     <span class="filepath">teamserver.properties </span> file is
+    updated with your database settings.</li>
+    <li class="li">Refer to your WebSphere documentation for
+    security setup and turn off the case-insensitive property. 
+    <div class="note">
+     <span class="notetitle">Note: </span> Although Websphere and many
+    LDAP directories allow you to log in case-insensitive, 
+     <span class="keyword">Jazz Team Server </span> stores user
+    records with user IDs in exact case as they are imported. When
+    you log in to the 
+     <span class="keyword">Jazz Team Server </span> , the user record
+    is retrieved from the list of users and the case must match
+    exactly.</div></li>
+    <li class="li">Java&#8482; 2 Security option should be turned
+    off. If this option is turned on in WebSphere Application
+    Server it will cause the 
+     <span class="keyword">Jazz Team Server </span> .war to fail to
+    start.</li>
+    <li class="li">Ensure that the WAS security setting "Use
+    available authentication data when an unprotected URI is
+    accessed" is checked. If you are using the WAS Integrated
+    Solutions Console, you can do this by: 
+    <ol class="ol">
+      <li class="li">Navigating to Security -&gt; Secure
+      administration, applications, and infrastructure -&gt; Web
+      Security - General Settings.</li>
+      <li class="li">Selecting the checkbox for "Use available
+      authentication data when an unprotected URI is
+      accessed".</li>
+    </ol></li>
+    <li class="li">The 
+     <span class="keyword">Jazz Team Server </span> includes the files
+    required to run a complete Apache Tomcat-based server. For a
+    WebSphere installation you only need a subset of the 
+     <span class="keyword">Jazz Team Server </span> files and you
+    should place them in a directory on your WebSphere server
+    machine. Further instructions refer to this as the 
+     <span class="keyword">Jazz Team Server </span> installation
+    directory, or 
+     <span class="filepath">
+      <var class="varname">JazzInstallDir</var>
+     </span> for short. From this directory, use: 
+    <ul class="ul">
+      <li class="li">The file 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/tomcat/webapps/jazz.war </span> .</li>
+      <li class="li">The directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/update-site </span> .</li>
+      <li class="li">The directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/conf. </span> </li>
+      <li class="li">The default repository database in 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/repositoryDB </span> .</li>
+      <li class="li">The repository tools in 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/repotools </span> .</li>
+      <li class="li">The directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>server/license-update-site. </span> </li>
+      <li class="li">The directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/nl1-update-site. </span> </li>
+      <li class="li">The directory 
+       <span class="filepath">
+      <var class="varname">
+      JazzInstallDir</var>/server/nl2-update-site. </span> </li>
+    </ul></li>
+  </ul>
+  <div class="note_tip">
+   <span class="tiptitle">Tip: </span> When using the IBM&#174;
+  Installation Manager the 
+   <span class="keyword">Jazz Team Server </span> files can be
+  installed into a Web application directory. During the
+  installation process, you should not install the included Apache
+  Tomcat application server; this makes the Installation Manager
+  ask for a Web Application directory and install only the files
+  needed for WebSphere. The default directory is C:\Program
+  Files\IBM\JazzTeamServer on Windows&#174; or
+  /opt/IBM/JazzTeamServer on Linux&#174;. The installation
+  directory is referred to as 
+  <var class="varname">JazzInstallDir</var>in this procedure. If
+  you use the IBM Installation Manager to install the files into
+  the WebSphere Application Server Web applications directory, then
+  you do not need to manually move the files as described
+  above.</div></div>
+  <div class="tasklabel">
+    <strong>About this task </strong>
+  </div>
+  <div class="note">
+   <span class="notetitle">Note: </span> This document does not teach
+  the configuration of WebSphere authentication or SSL, which is a
+  complex topic. Detailed information about the various
+  authentication and encryption options for WebSphere is covered in
+  the WebSphere Information Center. For more information, go to the
+  
+  <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+    <param name="content"
+    value="http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/index.jsp" />
+    <param name="text" value=" WebSphere Information Center " />
+  </object>and search for 
+  <kbd class="userinput">Securing applications and their
+  environment </kbd>. The Jazz Web UI requires that authentication
+  be configured in order to perform authorization and personalize
+  the application.</div>
+  <ol class="ol steps">
+    <li class="li step stepexpand">
+       <span class="cmd">Review and update the database location in
+      the 
+       <span class="filepath">
+      teamserver.properties </span> file </span> 
+      <pre class="pre"
+      id="t_server_installation_setup_was__d6662e711">
+<a id="t_server_installation_setup_was__d6662e711"
+name="t_server_installation_setup_was__d6662e711">
+</a>com.ibm.team.repository.db.vendor = DB2
+com.ibm.team.repository.db.jdbc.location=//localhost:50000/JAZZ:user=db2admin;password={password};
+com.ibm.team.repository.db.jdbc.password=db2admin
+</pre>
+      <div class="note">
+       <span class="notetitle">Note: </span> This is a sample DB2
+      configuration. The teamserver.properties should be updated
+      depending on the database vendor (Oracle/MS-SQL).</div>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Verify or update the WebSphere Application
+      Server level. </span> 
+      <p class="p">
+       <span class="keyword">Jazz Team Server </span> requires
+      WebSphere Application Server Version 6.1 with the IBM Java
+      SDK 1.5 SR5 or later Cumulative Fix applied or WebSphere
+      Application Server Version 7.0 with at least 7.0.0.3
+      installed. The IBM Java SDK 1.5 SR6 SDK update is available
+      from 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+        <param name="content"
+        value="http://www-1.ibm.com/support/docview.wss?rs=180&amp;uid=swg24017492" />
+        <param name="text"
+        value="http://www-1.ibm.com/support/docview.wss?rs=180&amp;amp;uid=swg24017492 " />
+      </object>. With WebSphere 6.1 and the GA IBM Java SDK, Jazz
+      starts to report "proxy errors" after some number of
+      operations.</p>
+      <p class="p">You must obtain the corresponding WebSphere
+      Application Server i-fixes for fixes to IBM Java SDK 1.5 SR9
+      or IBM Java SDK 1.6 SR4 that are necessary for 
+       <span class="keyword">IBM Rational Team
+      Concert&#8482; </span> 2.0 to run correctly. Otherwise, some
+      services in the server might not start correctly. The i-fixes
+      are available under their corresponding WebSphere Application
+      Server APARs. For IBM Java SDK 1.5/WebSphere Application
+      Server 6.1, the APAR is PK85942 and you can download the
+      files from 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+
+value="ftp://ftp.software.ibm.com/software/websphere/appserv/support/fixes/PK85942/"/>
+      <param name="text" value="
+ ftp://ftp.software.ibm.com/software/websphere/appserv/support/fixes/PK85942/" />
+    </object>.
+      Install at least WebSphere Application Server 6.1 fixpack 19
+      before installing the JRE i-fix. For IBM Java SDK
+      1.6/WebSphere Application Server 7.0, the APAR is PK 86771
+      and you can download the files from 
+      <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+
+value="ftp://ftp.software.ibm.com/software/websphere/appserv/support/fixes/PK867
+71/"/>
+      <param name="text" value="
+ftp://ftp.software.ibm.com/software/websphere/appserv/support/fixes/PK86771/" />
+    </object>.</p>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Update the JVM arguments. </span> 
+      <p class="p">The 
+       <span class="keyword">Jazz Team Server </span> needs some
+      specific settings on the Java Virtual Machine in which it is
+      run.</p>
+      <p class="p">First, it needs to know where to find some
+      configuration files. This is done by setting a system
+      property JAZZ_HOME. This property uses a URL rather than a
+      simple path, so the value should be specified as a
+      file://-style URL.</p>
+      <p class="p">The second property which is required for the
+      Jazz JVM is to provide it with more than the default maximum
+      memory allocation, using the -Xmx setting. This should be set
+      based on the size of the team supported by the server and the
+      memory capacity of the server where 
+       <span class="keyword">Jazz Team Server </span> is running. A
+      typical medium-size team can use a value of -Xmx1000M,
+      providing 1000 MB of heap memory for the 
+       <span class="keyword">Jazz Team Server </span> process.</p>
+      <p class="p">If you are connecting to an Oracle or SQL Server
+      database then you need to add a property named "ORACLE_JDBC"
+      or "SQLSERVER_JDBC". Set the property to the absolute file
+      path (not a URL) to the appropriate jdbc drivers.</p>
+      <p class="p">There are a couple other system properties which
+      need to be set to control some behavior of the server, they
+      are included below. Here are the specifics of setting these
+      JVM properties in the WebSphere Administrative Console,
+      substitute 
+       <span class="filepath">
+        <var class="varname">JazzInstallDir</var>
+       </span> with your 
+       <span class="keyword">Jazz Team Server </span> installation
+      directory:</p>
+      <ol class="ol substeps" type="a">
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="menucascade">
+           <span class="uicontrol">Servers </span> &gt; 
+           <span class="uicontrol">Application
+          Servers </span>  </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="uicontrol">server1 </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="menucascade">
+           <span class="uicontrol">Java and Process
+          Management </span> &gt; 
+           <span class="uicontrol">Process
+          Definition </span>  </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="uicontrol">Java Virtual
+          Machine </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Add the value 100 to the 
+           <span class="uicontrol">Initial Heap </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Add the value 1000 to the 
+           <span class="uicontrol">Maximum Heap Size </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Apply </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Logging and Tracing </span> . Click
+          
+           <span class="uicontrol">Change Log Detail Levels </span> .
+          The 
+           <span class="keyword">Jazz Team Server </span> uses the
+          BIRT reporting engine. To prevent BIRT informational
+          entries from being written to the WebSphere log file, set
+          the logging level to 
+           <span class="uicontrol">severe </span> for the
+          org.eclipse.birt.* packages. Click 
+           <span class="uicontrol">Apply </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Custom Properties </span>  </span> 
+        </li>
+        <li class="li substep substepexpand">
+         <span class="cmd">Add the following properties: </span> Click
+        
+         <span class="uicontrol">New </span> ; enter the 
+         <span class="uicontrol">Name </span> and 
+         <span class="uicontrol">Value </span> ; then click OK. 
+        <ul class="ul">
+          <li class="li">
+          <strong class="b">Name </strong>: java.awt.headless 
+          <strong class="b">Value </strong>: true</li>
+          <li class="li">
+          <strong class="b">Name </strong>:
+          org.eclipse.emf.ecore.plugin.EcorePlugin.doNotLoadResourcesPlugin
+          
+          <strong class="b">Value </strong>: true</li>
+          <li class="li">
+          <strong class="b">Name </strong>: JAZZ_HOME 
+          <strong class="b">Value </strong>: file:///
+          <var class="varname">
+          JazzInstallDir</var>/server/conf</li>
+        </ul></li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Save </span> directly to the master
+          configuration. </span> 
+        </li>
+      </ol>
+    </li>
+    <li class="li step stepexpand">
+       <span class="cmd">Restart Websphere to install the Jazz
+      Application </span> 
+      <div class="p">In the following command line examples, 
+      <var class="varname">WASInstallDir</var>represents the
+      location where WebSphere Application Server is installed on
+      your server. 
+      <ul class="ul">
+        <li class="li">On Windows, the default value for WebSphere
+        installation directory is: 
+        <pre class="pre">
+C:\Program Files\IBM\WebSphere\AppServer
+</pre>
+        <div class="p">You can restart the server with the
+        following commands on Windows: 
+        <pre class="pre">
+cd 
+<var class="varname">WASInstallDir</var>\bin 
+stopServer.bat server1 [for a secure server, include: -username
+{LDAP_User} -password {LDAP_Password}] 
+startServer.bat server1
+</pre></div></li>
+        <li class="li">On Linux, the default value for WebSphere
+        installation directory is: 
+        <pre class="pre">
+/opt/IBM/WebSphere/AppServer
+</pre>
+        <div class="p">You can restart the server with the
+        following commands on Linux: 
+        <pre class="pre">
+cd 
+<var class="varname">WASInstallDir</var>/bin 
+./stopServer.sh server1 [for a secure server, include: -username
+{LDAP_User} -password {LDAP_Password}] 
+./startServer.sh server1
+</pre></div></li>
+      </ul></div>
+      <ol class="ol substeps" type="a">
+        <li class="li substep substepexpand">
+           <span class="cmd">Open the Admin console for your
+          WebSphere Application Server. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="menucascade">
+           <span class="uicontrol">Applications </span> &gt; 
+           <span class="uicontrol">Install New
+          Application </span>  </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Under 
+           <span class="uicontrol">Path to new Application </span> ,
+          click Local file system. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Under 
+           <span class="uicontrol">Full path </span> enter: </span> 
+          <pre class="pre">
+<var class="varname">JazzInstallDir</var>/server/jazz.war
+</pre>
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Set 
+           <span class="uicontrol">Context Root </span> to
+          /jazz. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Next </span> and continue through
+          the remaining 
+           <span class="uicontrol">Install New
+          Application </span> steps. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Finish </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click 
+           <span class="uicontrol">Save </span> directly to the master
+          configuration. </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Click on 
+           <span class="menucascade">
+           <span class="uicontrol">Applications </span> &gt; 
+           <span class="uicontrol">Enterprise
+          Applications </span>  </span> . </span> 
+        </li>
+        <li class="li substep substepexpand">
+           <span class="cmd">Select the box next to jazz_war; click 
+           <span class="uicontrol">Start </span> . </span> 
+          <p class="p">A green arrow should appear indicating the
+          application started successfully.</p>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <div class="tasklabel">
+    <strong>What to do next </strong>
+  </div>After the server is started, proceed to 
+  <a class="xref" href="inst_ee_RunningTheSetupWizard.html"
+  title="Running the setup wizard verifies that the server is operating properly and guides you through the steps configure the server.">
+  Running the setup wizard</a>. 
+  <p class="p">For more information about this topic visit the
+  following links:</p>
+  <p class="p">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/learn/LearnItem.jsp?href=content/tech-notes/jazz-team-server-1_0-was-setup/index.html" />
+      <param name="text"
+      value="https://jazz.net/learn/LearnItem.jsp?href=content/tech-notes/jazz-team-server-1_0-was-setup/index.html " />
+    </object>
+  </p>
+  <p class="p">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/wiki/bin/view/Main/WASSetupFAQ" />
+      <param name="text"
+      value="https://jazz.net/wiki/bin/view/Main/WASSetupFAQ " />
+    </object>
+  </p>
+  <div class="related-links">
+    <div class="familylinks"></div>
+  </div>
+  <hr />
+   <span class="runningfooter">
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://www14.software.ibm.com/webapp/iwm/web/signup.do?source=rdf" />
+      <param name="text" value="Feedback " />
+    </object>
+   </span> 
+  <p>
+     <span class="runningheader" style="color: #666666;">Did this help?
+    You can provide feedback at Jazz.net (registration required): 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/forums/" />
+      <param name="text" value="Comment in the forums " />
+    </object>or 
+    <object classid="java:org.netbeans.modules.javahelp.BrowserDisplayer">
+
+      <param name="content"
+      value="https://jazz.net/bugs/bugs.jsp" />
+      <param name="text" value="submit a bug " />
+    </object> </span> 
+  </p></body>
+</html>
