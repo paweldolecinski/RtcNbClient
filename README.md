@@ -3,7 +3,9 @@ RtcNbClient
 
 Rational Team Concert Client for NetBeans IDE
 
-Application building
+Read Wiki pages for more information.
+
+## Building application
 
 1. Build RTC API libraries
 Before we start building application we need to prepare RTC API libraries. Libs are prepared with python script. You can download Python 2.7 from http://python.org/ 
@@ -21,3 +23,13 @@ next builds are done with command
 mvn install	
 Maven will start building application. At first run it will download all required packages, so it may take a while. 
 Created package will be stored in Maven repository and in RtcNbClientApplication/target/ module directory
+
+##  Releasing a New Version
+
+1. Check module versions
+2. Increase module kit versions
+3. Add wiki page about new version
+4. Add content on module kits wiki pages
+5. Upload autoupdate site to SourceForge
+6. Upload zipped source code to SourceForge
+7. Upload zip distribution to SourceForge
